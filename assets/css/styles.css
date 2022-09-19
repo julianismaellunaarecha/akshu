@@ -1,0 +1,10 @@
+nav ol li {
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    text-align: center;
+    float: left;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
