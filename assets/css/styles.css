@@ -1,3 +1,7 @@
+nav {
+    display: inline-block;
+}
+
 nav ol li {
     text-decoration: none;
     list-style: none;
@@ -5,5 +9,36 @@ nav ol li {
     text-align: center;
     float: left;
     display: block;
-    padding: 14px 16px;
+    padding: 0px 16px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.column {
+    flex: 50%;
+}
+
+.noabra{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.ypodria{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.nospan{
+    text-transform: uppercase;
+    font-size: 200%;
+}
+
+.restodeltexto{
+    font-size: 75%;
 }
