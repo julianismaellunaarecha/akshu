@@ -42,3 +42,14 @@ nav ol li {
 .restodeltexto{
     font-size: 75%;
 }
+
+#imagenlola{
+    max-width: 270px;
+    max-height: auto;
+}
+
+#idmensajeerror{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
