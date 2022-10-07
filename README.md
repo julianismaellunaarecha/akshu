@@ -1,30 +1,41 @@
-<table>
-  <tr>
-    <td style="font-weight: bold; font-size:32px">
-        <a href="https://akshu.ar" 
-        style="display: flex; align-items: center;">
-            <img src="assets/icons/akshu.svg" 
-            alt="Akshu" style="height:75px; object-fit: contain;"/> 
-                Akshu
-        </a>
-    </td>
-    <td style="font-weight: bold; font-size:22px"> 
-        <a href="https://akshu.ar" 
-        style="display: flex; align-items: center; justify-content: center;"> 
-                https://akshu.ar 
-        </a>
-    </td>
-  </tr>
-  <tr style="font-weight: bold;">
-    <td>Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.</td>
-    <td>
-        <a href="https://codoacodo.bue.edu.ar" 
-        style="display: flex; align-items: center; justify-content: center;">
-            <img src="assets/img/codoacodoweb.png" alt="Codo a Codo" style="height:100px; object-fit: contain;"/>
-        </a>
-    </td>
-  </tr>
-</table>
+<div style="display: flex;
+ align-items: center;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ ">
+     <a href="https://akshu.ar"
+    style="font-size:32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;">
+    <img src="assets/icons/akshu.svg"
+        alt="Akshu" style="height:75px; object-fit: contain;"/>
+        Akshu
+    </a>
+    <a href="https://akshu.ar" 
+        style="font-size:22px;
+        font-weight: bold;">
+        https://akshu.ar
+    </a>
+</div>
+
+#
+
+<div style="display: flex;
+ align-items: center;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ ">
+     <span href="https://akshu.ar"
+    style="font-weight: bold;
+    display: flex;
+    align-items: center;">
+    Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.
+    </span>
+    <a href="https://codoacodo.bue.edu.ar">
+        <img src="assets/img/codoacodoweb.png" alt="Codo a Codo" style="height:100px; object-fit: contain;"/>
+    </a>
+</div>
 
 
 ## **Integrantes**
