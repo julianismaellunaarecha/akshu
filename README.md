@@ -1,17 +1,16 @@
+# [Akshu](https://akshu.ar)
+
 <a href="https://akshu.ar">
     <img src="assets/icons/akshu.svg"
         alt="Akshu" style="height:75px; object-fit: contain;"/> 
 </a>
-        
-# [Akshu](https://akshu.ar)
-
 
 ## [https://akshu.ar](https://akshu.ar)
 
-
-**Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.** <span href="https://codoacodo.bue.edu.ar">
+**Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.** 
+<a href="https://codoacodo.bue.edu.ar">
         <img src="assets/img/codoacodoweb.png" alt="Codo a Codo" style="height:100px; object-fit: contain;"/>
-        </span>
+</a>
 
 
 ## **Integrantes**
