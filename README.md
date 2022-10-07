@@ -13,6 +13,7 @@
         <img src="assets/img/codoacodoweb.png" alt="Codo a Codo" style="height:100px; object-fit: contain;"/>
 </a>
 
+*El proyecto es una presentacion de una tienda web de venta de productos y/o servicios.*
 
 ## **Integrantes**
 
