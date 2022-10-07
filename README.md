@@ -1,27 +1,21 @@
-# **Akshu**
-
 <table>
   <tr>
-    <td>
+    <td style="font-weight: bold; font-size:32px">
         <a href="https://akshu.ar" 
         style="display: flex; align-items: center;">
             <img src="assets/icons/akshu.svg" 
             alt="Akshu" style="height:75px; object-fit: contain;"/> 
-            <h2 style="font-weight: bold;">
                 Akshu
-            </h2>
         </a>
     </td>
-    <td> 
+    <td style="font-weight: bold; font-size:22px"> 
         <a href="https://akshu.ar" 
         style="display: flex; align-items: center; justify-content: center;"> 
-            <h2 style="font-weight: bold;">
                 https://akshu.ar 
-            </h2>
         </a>
     </td>
   </tr>
-  <tr>
+  <tr style="font-weight: bold;">
     <td>Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.</td>
     <td>
         <a href="https://codoacodo.bue.edu.ar" 
@@ -39,16 +33,19 @@
 >
 > - Usuario GitHub: julian.arecha@gmail.com
 > - Link de Github: <https://github.com/julianismaellunaarecha>
+>
 
 > ### **GORJON, Federico**
 >
 > - Usuario GitHub: federicogorjon@yahoo.com.ar
 > - Link de Github: <https://github.com/Fedegorjon>
+>
 
 > ### **PONCE, Viviana Mercedes**
 >
 > - Usuario GitHub: vivianaponce@gmail.com
 > - Link de Github: <https://github.com/vmponce>
+>
 
 
 ## **Detalles tecnicos**
