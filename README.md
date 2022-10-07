@@ -1,41 +1,17 @@
-<div style="display: flex;
- align-items: center;
- flex-wrap: nowrap;
- justify-content: space-between;
- ">
-     <a href="https://akshu.ar"
-    style="font-size:32px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;">
+<a href="https://akshu.ar">
     <img src="assets/icons/akshu.svg"
-        alt="Akshu" style="height:75px; object-fit: contain;"/>
-        Akshu
-    </a>
-    <a href="https://akshu.ar" 
-        style="font-size:22px;
-        font-weight: bold;">
-        https://akshu.ar
-    </a>
-</div>
+        alt="Akshu" style="height:75px; object-fit: contain;"/> 
+</a>
+        
+# [Akshu](https://akshu.ar)
 
-#
 
-<div style="display: flex;
- align-items: center;
- flex-wrap: nowrap;
- justify-content: space-between;
- ">
-     <span href="https://akshu.ar"
-    style="font-weight: bold;
-    display: flex;
-    align-items: center;">
-    Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.
-    </span>
-    <a href="https://codoacodo.bue.edu.ar">
+## [https://akshu.ar](https://akshu.ar)
+
+
+**Proyecto TPO de HTML, CSS y JS para el programa Codo a Codo.** <span href="https://codoacodo.bue.edu.ar">
         <img src="assets/img/codoacodoweb.png" alt="Codo a Codo" style="height:100px; object-fit: contain;"/>
-    </a>
-</div>
+        </span>
 
 
 ## **Integrantes**
