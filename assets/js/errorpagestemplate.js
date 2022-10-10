@@ -44,7 +44,7 @@ document.getElementById("idfooter").innerHTML = `
 
 document.getElementById("idmensajeerror").innerHTML = `
 <div>
-    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="imagenlola">
+    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="idimagenlola">
 </div>
 <div>
     <p>Por favor</p>
