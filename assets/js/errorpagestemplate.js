@@ -1,9 +1,10 @@
 document.getElementById("idheader").innerHTML = `
-<nav>
+<div id="idbanner">PUBLICIDAD ANIMADA DEL SITIO</div>
+<nav id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogo">
             <a href="../../index.html">
-                <img src="../../assets/icons/akshu.png" alt="akshu" width="35" height="24" href="../../index.html"> 
+                <img src="../../assets/icons/akshu.png" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" width="35" height="24" href="../../index.html"> 
             </a>
             <a href="../../index.html">
                 Akshu
@@ -13,17 +14,17 @@ document.getElementById("idheader").innerHTML = `
             <form>
                 <input type="text" placeholder="Buscar producto o servicio" id="idinputform">
                 <button type="submit"  id="idbuttonform">
-                    <img src="../../assets/icons/searchicongoogle.svg" alt="Buscar" width="12" height="12">
+                    <img src="../../assets/icons/searchicongoogle.svg" alt="Imagen de una lupa que permite buscar productos o servicios tecnológicos provistos por Akshu" width="12" height="12">
                 </button>
             </form>
         </div>
     </div>
     <div id="idmenu">
         <ol>
-            <li>
+            <li id="idnavlineitem">
                 <a href="../../index.html">Inicio</a>
             </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="../../contacto.html">Contacto</a>
             </li>
         </ol>
@@ -32,20 +33,25 @@ document.getElementById("idheader").innerHTML = `
 `
 
 document.getElementById("idfooter").innerHTML = `
-Si usted cree que esto es un error del servidor, por favor comuniqueselo al
-<a href="../../contacto.html">administrador del portal</a>.
+<div id="iderrorcomun">
+    Si usted cree que esto es un error del servidor, por favor comuniqueselo al
+    <a href="../../contacto.html">administrador del portal</a>.
+</div>
+<div id="idderechos">
+    © Grupo akshu - Todos los derechos reservados
+</div>
 `
 
 document.getElementById("idmensajeerror").innerHTML = `
 <div>
-    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="imagenlola">
+    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="idimagenlola">
 </div>
 <div>
     <p>Por favor</p>
-    <p class="noabra"><span class="nospan">No</span> abra la puerta.</p>
-    <p class="restodeltexto">Puede haber una persona dentro,</p>
-    <p class="ypodria">y podria ser usted.</p>
-    <p class="restodeltexto">(Y eso generaria una paradoja <br>
+    <p id="idnoabra"><span id="idnospan">No</span> abra la puerta.</p>
+    <p id="idrestodeltexto">Puede haber una persona dentro,</p>
+    <p id="idypodria">y podria ser usted.</p>
+    <p id="idrestodeltexto">(Y eso generaria una paradoja <br>
         espacio-temporal que podria <br>
         acabar con el universo.)</p>
     <p>Gracias.</p>

@@ -1,5 +1,6 @@
 document.getElementById("idheader").innerHTML = `
-<nav>
+<div id="idbanner">PUBLICIDAD ANIMADA DEL SITIO</div>
+<nav id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogo">
             <a href="index.html">
@@ -20,22 +21,16 @@ document.getElementById("idheader").innerHTML = `
     </div>
     <div id="idmenu">
         <ol>
-            <li>
+            <li id="idnavlineitem">
                 <a href="index.html">Inicio</a>
             </li>
-            <li>
-                <a href="tienda.html">Tienda</a>
-            </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="cuenta.html">Cuenta</a>
             </li>
-            <li>
-                <a href="notificaciones.html">Notificaciones</a>
-            </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="carrito.html">Carrito</a>
             </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="contacto.html">Contacto</a>
             </li>
         </ol>
@@ -44,5 +39,7 @@ document.getElementById("idheader").innerHTML = `
 `
 
 document.getElementById("idfooter").innerHTML = `
-
+<div id="idderechos">
+    © Grupo akshu - Todos los derechos reservados
+</div>
 `

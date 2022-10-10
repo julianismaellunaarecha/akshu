@@ -1,79 +1,35 @@
-<<<<<<< HEAD:assets/css/styles.css
-* {
-    margin: 0%;
-    padding: 0%;   
-    box-sizing: border-box;   
-}
-
-html {
-    font-size:10px;
-    font-family: 'Poppins','Open Sans', Arial, Helvetica, sans-serif;    
-}
-
-.container {
-    display:grid;
-    grid-template-columns: [x0] 1fr [x1] 3fr [x2];
-    grid-template-rows: [y0] 0.25fr [y1] 0.25fr [y2] 1fr [y3] 0.25fr [y4];    
-=======
-.row {
+#idrow {
     display: flex;
     align-items: center;
     text-align: center;
->>>>>>> 16faf86f3955ff06fdb2f13a8d2f873009647b78:assets/css/error.css
 }
 
-.header {
-    grid-area:header;
-    background: black;
-    grid-column: x0/x2;
-    grid-row: y0/y1;
+#idcolumn {
+    flex: 50%;
 }
 
-.nav {
-    grid-area:nav;
-    background: yellow;   
-    grid-column: x0/x2;
-    grid-row: y1/y2;
-} 
-
-.aside {
-    grid-area: aside;
-    grid-column: x0/x1;
-    grid-row: y2/y3;
-    background: red;
- }
-
-.main {
-    grid-area: main;
-    grid-column: x1/x2;
-    grid-row: y2/y3;
-    background: purple;
+#idnoabra{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
- .article {
-    grid-area: article;
-    grid-column: x1/x2;
-    grid-row: y2/y3;
-    background:green;
-  } 
+#idypodria{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
 
-<<<<<<< HEAD:assets/css/styles.css
-.footer {
-    grid-area: footer;
-    background: blue;
-    grid-column: x0/x2;
-    grid-row: y3/y4;
-=======
-.nospan{
+#idnospan{
     text-transform: uppercase;
     font-size: 200%;
 }
 
-.restodeltexto{
+#idrestodeltexto{
     font-size: 75%;
 }
 
-#imagenlola{
+#idimagenlola{
     max-width: 270px;
     max-height: auto;
 }
@@ -82,5 +38,4 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
->>>>>>> 16faf86f3955ff06fdb2f13a8d2f873009647b78:assets/css/error.css
 }
