@@ -4,7 +4,7 @@ document.getElementById("idheader").innerHTML = `
     <div id="idlogoandsearch">
         <div id="idlogo">
             <a href="../../index.html">
-                <img src="../../assets/icons/akshu.png" alt="akshu" width="35" height="24" href="../../index.html"> 
+                <img src="../../assets/icons/akshu.png" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" width="35" height="24" href="../../index.html"> 
             </a>
             <a href="../../index.html">
                 Akshu
@@ -14,7 +14,7 @@ document.getElementById("idheader").innerHTML = `
             <form>
                 <input type="text" placeholder="Buscar producto o servicio" id="idinputform">
                 <button type="submit"  id="idbuttonform">
-                    <img src="../../assets/icons/searchicongoogle.svg" alt="Buscar" width="12" height="12">
+                    <img src="../../assets/icons/searchicongoogle.svg" alt="Imagen de una lupa que permite buscar productos o servicios tecnológicos provistos por Akshu" width="12" height="12">
                 </button>
             </form>
         </div>
