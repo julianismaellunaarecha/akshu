@@ -7,47 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshu - Contacto</title>
     <link rel="shortcut icon" href="assets/favicon/akshu.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/comun.css">
+    <link rel="stylesheet" href="assets/css/navigationbar.css">
+    <link rel="stylesheet" href="assets/css/contacto.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ol>
-                <li>
-                    <a href="index.html">
-                        <img src="assets/icons/akshu.png" alt="akshu" width="35" height="24" href="index.html"> Akshu
-                    </a>
-                </li>
-                <li>
-                    <form>
-                        <button type="submit">
-                            <img src="assets/icons/searchicongoogle.svg" alt="Buscar" width="12" height="12">
-                        </button>
-                        <input type="text" placeholder="Buscar producto o servicio">
-                    </form>
-                </li>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="tienda.html">Tienda</a>
-                </li>
-                <li>
-                    <a href="cuenta.html">Cuenta</a>
-                </li>
-                <li>
-                    <a href="notificaciones.html">Notificaciones</a>
-                </li>
-                <li>
-                    <a href="carrito.html">Carrito</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ol>
-        </nav>
+    <header id="idheader">
     </header>
+    <main>
+        <div class="container" id="formulario">
+            <form action="" method="post" accept-charset="UTF-8">
+                <div>
+                    <label for="apellido">Apellido:</label>
+                </div>
+                <div>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                    <span>*</span>
+                </div>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                </div>
+                <div>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    <span>*</span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <span>*</span>
+                </div>
+                <div>
+                    <label for="email">Telefono:</label>
+                </div>
+                <div>
+                    <input type="telefono" name="telefono" id="telefono" placeholder="Telefono">
+                    <span>(Opcional)</span>
+                </div>
+                <div>
+                    <label for="asunto">Asunto:</label>
+                </div>
+                <div>
+                    <input type="text" name="asunto" id="asunto" placeholder="Asunto de su mensaje" required>
+                    <span>*</span>
+                </div>
+                <div>
+                    <span>Motivo de contacto:</span>
+                </div>
+                <div>
+                    <label><input type="radio" name="motivo" value="consulta" checked>Consulta</label>
+                    <label><input type="radio" name="motivo" value="reclamo">Reclamo</label>
+                    <label><input type="radio" name="motivo" value="otro">Otro</label>
+                </div>
+                <div>
+                    <span>Mensaje:</span>
+                </div>
+                <div class="container" id="idcontainermensaje">
+                    <div id="idmensaje">
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje aqui."
+                        wrap="soft" required></textarea>
+                    </div>
+                    <div id="idmensajeobligatorio">*</div>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="assets/js/pagestemplate.js"></script>
 </body>
 
 </html>

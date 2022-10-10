@@ -1,0 +1,61 @@
+#idnav {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: relative;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
+}
+
+#idnavlineitem {
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+  float: left;
+  display: flex;
+  padding: 10px 10px;
+}
+
+#idlogoandsearch {
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  float: left;
+  display: flex;
+}
+
+#idmenu {
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#idlogo {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2rem;
+  flex-wrap: nowrap;
+  font-size: 32px;
+}
+
+#idsearchform {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+#idinputform {
+  padding: 0px 0px;
+}
+
+#idinputform {
+  padding: 0px 0px;
+}
