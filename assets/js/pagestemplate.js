@@ -1,4 +1,5 @@
 document.getElementById("idheader").innerHTML = `
+<div id="idbanner">PUBLICIDAD ANIMADA DEL SITIO</div>
 <nav id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogo">
@@ -38,5 +39,7 @@ document.getElementById("idheader").innerHTML = `
 `
 
 document.getElementById("idfooter").innerHTML = `
-
+<div id="idderechos">
+    © Grupo akshu - Todos los derechos reservados
+</div>
 `

@@ -4,8 +4,72 @@ a {
 }
 
 body {
-  margin: 0;
+  margin: 0%;
+  padding: 0%;   
+  box-sizing: border-box;
   font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol, Noto Color Emoji;
+}
+
+.article {
+  grid-area: article;
+  grid-column: x1/x2;
+  grid-row: y2/y3;
+  background:green;
+} 
+
+/* TODO arreglar y fijar el despliegue vertical del header y el footer. */
+
+.footer {
+  grid-area: footer;
+  background: blue;
+  grid-column: x0/x2;
+  grid-row: y3/y4;
+}
+
+.header {
+  grid-area:header;
+  grid-column: x0/x2;
+  grid-row: y0/y1;
+}
+
+.nav {
+  grid-area:nav;
+  background-color: rgba(0, 0, 0, 0.7);
+  grid-column: x0/x2;
+  grid-row: y1/y2;
+  text-transform: uppercase;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: relative;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
+} 
+
+.aside {
+  grid-area: aside;
+  grid-column: x0/x1;
+  grid-row: y2/y3;
+  background: red;
+}
+
+.main {
+  grid-area: main;
+  grid-column: x1/x2;
+  grid-row: y2/y3;
+  background: purple;
+}
+
+.html {
+  font-size:10px;
+  font-family: 'Poppins','Open Sans', Arial, Helvetica, sans-serif;    
+}
+
+.container {
+  display:grid;
+  grid-template-columns: [x0] 1fr [x1] 3fr [x2];
+  grid-template-rows: [y0] 0.25fr [y1] 0.25fr [y2] 1fr [y3] 0.25fr [y4];  
 }

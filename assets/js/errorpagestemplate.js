@@ -1,4 +1,5 @@
 document.getElementById("idheader").innerHTML = `
+<div id="idbanner">PUBLICIDAD ANIMADA DEL SITIO</div>
 <nav id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogo">
@@ -32,20 +33,25 @@ document.getElementById("idheader").innerHTML = `
 `
 
 document.getElementById("idfooter").innerHTML = `
-Si usted cree que esto es un error del servidor, por favor comuniqueselo al
-<a href="../../contacto.html">administrador del portal</a>.
+<div id="iderrorcomun">
+    Si usted cree que esto es un error del servidor, por favor comuniqueselo al
+    <a href="../../contacto.html">administrador del portal</a>.
+</div>
+<div id="idderechos">
+    © Grupo akshu - Todos los derechos reservados
+</div>
 `
 
 document.getElementById("idmensajeerror").innerHTML = `
 <div>
-    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="imagenlola">
+    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="idimagenlola">
 </div>
 <div>
     <p>Por favor</p>
-    <p class="noabra"><span class="nospan">No</span> abra la puerta.</p>
-    <p class="restodeltexto">Puede haber una persona dentro,</p>
-    <p class="ypodria">y podria ser usted.</p>
-    <p class="restodeltexto">(Y eso generaria una paradoja <br>
+    <p id="idnoabra"><span id="idnospan">No</span> abra la puerta.</p>
+    <p id="idrestodeltexto">Puede haber una persona dentro,</p>
+    <p id="idypodria">y podria ser usted.</p>
+    <p id="idrestodeltexto">(Y eso generaria una paradoja <br>
         espacio-temporal que podria <br>
         acabar con el universo.)</p>
     <p>Gracias.</p>
