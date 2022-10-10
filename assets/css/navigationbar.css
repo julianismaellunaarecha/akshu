@@ -1,4 +1,4 @@
-nav {
+#idnav {
   background-color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   display: flex;
@@ -10,7 +10,7 @@ nav {
   font-weight: bold;
 }
 
-nav ol li {
+#idnavlineitem {
   text-decoration: none;
   list-style: none;
   list-style-type: none;
@@ -41,6 +41,7 @@ nav ol li {
   align-items: center;
   letter-spacing: 0.2rem;
   flex-wrap: nowrap;
+  font-size: 32px;
 }
 
 #idsearchform {

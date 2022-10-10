@@ -1,5 +1,5 @@
 document.getElementById("idheader").innerHTML = `
-<nav>
+<nav id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogo">
             <a href="../../index.html">
@@ -20,10 +20,10 @@ document.getElementById("idheader").innerHTML = `
     </div>
     <div id="idmenu">
         <ol>
-            <li>
+            <li id="idnavlineitem">
                 <a href="../../index.html">Inicio</a>
             </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="../../contacto.html">Contacto</a>
             </li>
         </ol>

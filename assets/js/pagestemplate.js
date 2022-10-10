@@ -1,5 +1,5 @@
 document.getElementById("idheader").innerHTML = `
-<nav>
+<nav id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogo">
             <a href="index.html">
@@ -13,29 +13,23 @@ document.getElementById("idheader").innerHTML = `
             <form>
                 <input type="text" placeholder="Buscar producto o servicio" id="idinputform">
                 <button type="submit"  id="idbuttonform">
-                    <img src="assets/icons/searchicongoogle.svg" alt="Buscar" width="12" height="12">
+                    <img src="assets/icons/searchicongoogle.svg" alt="boton para buscar" width="12" height="12">
                 </button>
             </form>
         </div>
     </div>
     <div id="idmenu">
         <ol>
-            <li>
+            <li id="idnavlineitem">
                 <a href="index.html">Inicio</a>
             </li>
-            <li>
-                <a href="tienda.html">Tienda</a>
-            </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="cuenta.html">Cuenta</a>
             </li>
-            <li>
-                <a href="notificaciones.html">Notificaciones</a>
-            </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="carrito.html">Carrito</a>
             </li>
-            <li>
+            <li id="idnavlineitem">
                 <a href="contacto.html">Contacto</a>
             </li>
         </ol>
