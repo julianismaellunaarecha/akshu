@@ -6,60 +6,69 @@ a {
 body {
   margin: 0%;
   padding: 0%;   
-  box-sizing: border-box;   
+  box-sizing: border-box;
   font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol, Noto Color Emoji;
 }
 
-article {
+.article {
   grid-area: article;
   grid-column: x1/x2;
   grid-row: y2/y3;
   background:green;
 } 
 
-footer {
+/* TODO arreglar y fijar el despliegue vertical del header y el footer. */
+
+.footer {
   grid-area: footer;
   background: blue;
   grid-column: x0/x2;
   grid-row: y3/y4;
 }
 
-header {
+.header {
   grid-area:header;
-  background: black;
   grid-column: x0/x2;
   grid-row: y0/y1;
 }
 
-nav {
+.nav {
   grid-area:nav;
-  background: yellow;   
+  background-color: rgba(0, 0, 0, 0.7);
   grid-column: x0/x2;
   grid-row: y1/y2;
+  text-transform: uppercase;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: relative;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
 } 
 
-aside {
+.aside {
   grid-area: aside;
   grid-column: x0/x1;
   grid-row: y2/y3;
   background: red;
 }
 
-main {
+.main {
   grid-area: main;
   grid-column: x1/x2;
   grid-row: y2/y3;
   background: purple;
 }
 
-html {
+.html {
   font-size:10px;
   font-family: 'Poppins','Open Sans', Arial, Helvetica, sans-serif;    
 }
 
-container {
+.container {
   display:grid;
   grid-template-columns: [x0] 1fr [x1] 3fr [x2];
   grid-template-rows: [y0] 0.25fr [y1] 0.25fr [y2] 1fr [y3] 0.25fr [y4];  
