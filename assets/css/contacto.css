@@ -1,12 +1,11 @@
-
-#formulario{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+#formulario {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-#idcontainermensaje{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
+#idcontainermensaje {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
 }

@@ -36,10 +36,10 @@ document.getElementById("idheader").innerHTML = `
         </ol>
     </div>
 </nav>
-`
+`;
 
 document.getElementById("idfooter").innerHTML = `
 <div id="idderechos">
     © Grupo akshu - Todos los derechos reservados
 </div>
-`
+`;
