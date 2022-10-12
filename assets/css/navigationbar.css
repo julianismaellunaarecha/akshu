@@ -6,8 +6,7 @@
   margin-bottom: 0;
   position: relative;
   justify-content: space-around;
-  color: white;
-  font-weight: bold;
+  color: white; 
 } 
 
 #idnavlineitem {
@@ -17,6 +16,9 @@
   float: left;
   display: flex;
   padding: 10px 10px;
+  font-family:'Poppins'; 
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 #idlogoandsearch {
@@ -41,7 +43,10 @@
   align-items: center;
   letter-spacing: 0.2rem;
   flex-wrap: nowrap;
-  font-size: 32px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.2rem;
 }
 
 #idsearchform {

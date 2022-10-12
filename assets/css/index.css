@@ -3,9 +3,7 @@
 /*Implementación de la visual de los principales productos*/
 /*Otra información de interés*/
 
-p {
-  font-size: 14px;
-}
+
 
 /*Revisar porque el tamaño de la fuente del contenido dependerá de la totalidad de información que éste contenga...*/
-/*Probar para ver como queda*/
+/*Achicar en la medida que el contenido aumente*/

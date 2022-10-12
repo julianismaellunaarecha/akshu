@@ -1,28 +1,31 @@
-
 /*Agrego fuentes para titulaciones y contenido en funcion del análisis de la estética, colores y diseño*/
 
 @font-face {
   font-family: 'Poppins';
-  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('fonts/OpenSans-Regular.ttf') format('truetype');      
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');      
+}
+
+:root { 
+  font-size: 10px; /* Tamaño base */
+  font-style:normal;
+  color:black;
+  background-color: white; 
+  font-family: 'Poppins','Open Sans', Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+  Segoe UI Symbol, Noto Color Emoji;   
 }
 
 body {
   margin: 0%;
   padding: 0%;   
-  box-sizing: border-box;
-  font-family: 'Poppins','Open Sans', Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  
-  font-style:normal;
-  font-size: 10px; 
-  color:black;
-  background-color: white;
+  box-sizing: border-box; 
+  font-family: 'Open Sans';
+  font-size: 1.5rem;
 }
 
 a {

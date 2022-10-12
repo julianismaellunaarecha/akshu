@@ -1,7 +1,8 @@
   .container {
     display:grid;
-    grid-template-columns: [x0] 1fr [x1] 3fr [x2];
-    grid-template-rows: [y0] 0.25fr [y1] 1fr [y2] 0.25fr [y3];  
+    grid-template-columns: [x0] 30vw [x1] 70vw [x2];
+    grid-template-rows: [y0] 1fr [y1] auto [y2] 1fr [y3];  
+    /*alternativo: [y0] 160px [y1] auto [y2] 100px [y3];  */
    }
 
   .header {
@@ -41,5 +42,5 @@
     grid-area: footer;
     background: blue;
     grid-column: x0/x2;
-    grid-row: y3/y4;
+    grid-row: y2/y3;
    } 
