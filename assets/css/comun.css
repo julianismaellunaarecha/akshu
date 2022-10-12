@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');      
+}
+
+
+/* .html {
+  
+  font-family: 'Poppins','Open Sans', Arial, Helvetica, sans-serif;    
+} */
+
 a {
   text-decoration: none;
   color: inherit;
@@ -7,25 +24,21 @@ body {
   margin: 0%;
   padding: 0%;   
   box-sizing: border-box;
-  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: 'Open Sans', Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol, Noto Color Emoji;
+  
+  font-style:normal;
+  font-size: 20px;
+  color:black;
 }
-
-.article {
-  grid-area: article;
-  grid-column: x1/x2;
-  grid-row: y2/y3;
-  background:green;
-} 
 
 /* TODO arreglar y fijar el despliegue vertical del header y el footer. */
 
-.footer {
-  grid-area: footer;
-  background: blue;
-  grid-column: x0/x2;
-  grid-row: y3/y4;
+.container {
+  display:grid;
+  grid-template-columns: [x0] 1fr [x1] 3fr [x2];
+  grid-template-rows: [y0] 0.25fr [y1] 1fr [y2] 0.25fr [y3];  
 }
 
 .header {
@@ -38,7 +51,7 @@ body {
   grid-area:nav;
   background-color: rgba(0, 0, 0, 0.7);
   grid-column: x0/x2;
-  grid-row: y1/y2;
+  grid-row: y0/y1;
   text-transform: uppercase;
   display: flex;
   padding-left: 0;
@@ -49,21 +62,10 @@ body {
   font-weight: bold;
 } 
 
-.aside {
-  grid-area: aside;
-  grid-column: x0/x1;
-  grid-row: y2/y3;
-  background: red;
+.footer {
+  grid-area: footer;
+  background: blue;
+  grid-column: x0/x2;
+  grid-row: y3/y4;
 }
 
-.main {
-  grid-area: main;
-  grid-column: x1/x2;
-  grid-row: y2/y3;
-  background: purple;
-}
-
-.html {
-  font-size:10px;
-  font-family: 'Poppins','Open Sans', Arial, Helvetica, sans-serif;    
-}
