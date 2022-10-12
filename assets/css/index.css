@@ -1,23 +1,9 @@
+/*Estilos para el ASIDE que permite la navegación por categoría de los productos del sitio*/
+/*Implementación del carrousel*/
+/*Implementación de la visual de los principales productos*/
+/*Otra información de interés*/
 
-.aside {
-    grid-area: aside;
-    grid-column: x0/x1;
-    grid-row: y1/y2;
-    background: red;
-  }
-  
-  .main {
-    grid-area: main;
-    grid-column: x1/x2;
-    grid-row: y1/y2;
-    background: purple;
-  }
 
-  .article {
-    grid-area: article;
-    grid-column: x1/x2;
-    grid-row: y1/y2;
-    background:green;
-  } 
 
-  
+/*Revisar porque el tamaño de la fuente del contenido dependerá de la totalidad de información que éste contenga...*/
+/*Achicar en la medida que el contenido aumente*/

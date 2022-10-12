@@ -1,71 +1,40 @@
+/*Agrego fuentes para titulaciones y contenido en funcion del análisis de la estética, colores y diseño*/
+
 @font-face {
   font-family: 'Poppins';
-  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
-
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('fonts/OpenSans-Regular.ttf') format('truetype');      
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');      
 }
 
+:root { 
+  font-size: 10px; /* Tamaño base */
+  font-style:normal;
+  color:black;
+  background-color: white; 
+  font-family: 'Poppins','Open Sans', Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+  Segoe UI Symbol, Noto Color Emoji;   
+}
 
-/* .html {
-  
-  font-family: 'Poppins','Open Sans', Arial, Helvetica, sans-serif;    
-} */
+body {
+  margin: 0%;
+  padding: 0%;   
+  box-sizing: border-box; 
+  font-family: 'Open Sans';
+  font-size: 1.5rem;
+}
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-body {
-  margin: 0%;
-  padding: 0%;   
-  box-sizing: border-box;
-  font-family: 'Open Sans', Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  
-  font-style:normal;
-  font-size: 20px;
-  color:black;
-}
-
 /* TODO arreglar y fijar el despliegue vertical del header y el footer. */
 
-.container {
-  display:grid;
-  grid-template-columns: [x0] 1fr [x1] 3fr [x2];
-  grid-template-rows: [y0] 0.25fr [y1] 1fr [y2] 0.25fr [y3];  
-}
-
-.header {
-  grid-area:header;
-  grid-column: x0/x2;
-  grid-row: y0/y1;
-}
-
-.nav {
-  grid-area:nav;
-  background-color: rgba(0, 0, 0, 0.7);
-  grid-column: x0/x2;
-  grid-row: y0/y1;
-  text-transform: uppercase;
-  display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  position: relative;
-  justify-content: space-around;
-  color: white;
-  font-weight: bold;
-} 
-
-.footer {
-  grid-area: footer;
-  background: blue;
-  grid-column: x0/x2;
-  grid-row: y3/y4;
-}
+/*Al repensar para el todo se analiza que Son dos maquetados en grid: uno en index y otro en el resto de las páginas*/
+/*Se pasan por lo tanto a dos css de maquetados distintos: 1) maquetaindex.css 2) maquetarestante.css*/
 
