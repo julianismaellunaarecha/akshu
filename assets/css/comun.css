@@ -15,23 +15,11 @@ body {
 /* TODO arreglar y fijar el despliegue vertical del header y el footer. */
 
 .footer {
-  grid-area: footer;
   background: blue;
-  grid-column: x0/x2;
-  grid-row: y3/y4;
-}
-
-.header {
-  grid-area: header;
-  grid-column: x0/x2;
-  grid-row: y0/y1;
 }
 
 .nav {
-  grid-area: nav;
   background-color: rgba(0, 0, 0, 0.7);
-  grid-column: x0/x2;
-  grid-row: y1/y2;
   text-transform: uppercase;
   display: flex;
   padding-left: 0;
