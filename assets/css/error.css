@@ -1,41 +1,41 @@
 #idrow {
-    display: flex;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 #idcolumn {
-    flex: 50%;
+  flex: 50%;
 }
 
-#idnoabra{
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-weight: bold;
+#idnoabra {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
-#idypodria{
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-weight: bold;
+#idypodria {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
-#idnospan{
-    text-transform: uppercase;
-    font-size: 200%;
+#idnospan {
+  text-transform: uppercase;
+  font-size: 200%;
 }
 
-#idrestodeltexto{
-    font-size: 75%;
+#idrestodeltexto {
+  font-size: 75%;
 }
 
-#idimagenlola{
-    max-width: 270px;
-    max-height: auto;
+#idimagenlola {
+  max-width: 270px;
+  max-height: auto;
 }
 
-#idmensajeerror{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#idmensajeerror {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

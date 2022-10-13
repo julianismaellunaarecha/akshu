@@ -1,23 +1,25 @@
+#idmain {
+  background: purple;
+  display: flex;
+  align-items: space-between;
+  flex-direction: row;
+}
 
-.aside {
-    grid-area: aside;
-    grid-column: x0/x1;
-    grid-row: y1/y2;
-    background: red;
-  }
-  
-  .main {
-    grid-area: main;
-    grid-column: x1/x2;
-    grid-row: y1/y2;
-    background: purple;
-  }
+#idaside {
+  background: red;
+}
 
-  .article {
-    grid-area: article;
-    grid-column: x1/x2;
-    grid-row: y1/y2;
-    background:green;
-  } 
+#idarticle {
+  background: green;
+}
 
-  
+#idcarrousel{
+  background: rosybrown;
+}
+
+#idsection{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}

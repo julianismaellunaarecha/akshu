@@ -30,7 +30,7 @@ document.getElementById("idheader").innerHTML = `
         </ol>
     </div>
 </nav>
-`
+`;
 
 document.getElementById("idfooter").innerHTML = `
 <div id="iderrorcomun">
@@ -40,7 +40,7 @@ document.getElementById("idfooter").innerHTML = `
 <div id="idderechos">
     © Grupo akshu - Todos los derechos reservados
 </div>
-`
+`;
 
 document.getElementById("idmensajeerror").innerHTML = `
 <div>
@@ -56,4 +56,4 @@ document.getElementById("idmensajeerror").innerHTML = `
         acabar con el universo.)</p>
     <p>Gracias.</p>
 </div>
-`
+`;
