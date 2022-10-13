@@ -2,13 +2,17 @@ document.getElementById("idheader").innerHTML = `
 <div id="idbanner">PUBLICIDAD ANIMADA DEL SITIO</div>
 <nav id="idnav">
     <div id="idlogoandsearch">
-        <div id="idlogo">
-            <a href="../../index.html">
-                <img src="../../assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" width="35" height="24" href="../../index.html"> 
-            </a>
-            <a href="../../index.html">
-                Akshu
-            </a>
+        <div id="idlogocontainer">
+            <div id="idlogo">
+                <a href="../../index.html">
+                    <img src="../../assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" id="idlogoimagen" href="../../index.html"> 
+                </a>
+            </div>
+            <div id="idmarca">
+                <a href="../../index.html">
+                    Akshu
+                </a>
+            </div>
         </div>
         <div id="idsearchform">
             <form>

@@ -8,6 +8,7 @@
   justify-content: space-around;
   color: white;
   font-weight: bold;
+  text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 #idnavlineitem {
@@ -20,8 +21,8 @@
 }
 
 #idlogoandsearch {
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
   flex-wrap: wrap;
   float: left;
   display: flex;
@@ -35,16 +36,23 @@
   flex-wrap: nowrap;
 }
 
-#idlogo {
-  padding: 10px 10px;
+#idlogocontainer {
   display: flex;
-  align-items: flex-start;
-  letter-spacing: 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   flex-wrap: nowrap;
+}
+
+#idlogoimagen{
+  height: 34px;
+}
+
+#idmarca{
+  letter-spacing: 0.2rem;
   font-family: 'Skygraze', serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #E6C705;
-  text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 #idsearchform {
