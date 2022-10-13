@@ -1,20 +1,16 @@
 #idmain {
-  background: purple;
   display: flex;
   align-items: space-between;
   flex-direction: row;
 }
 
 #idaside {
-  background: red;
 }
 
 #idarticle {
-  background: green;
 }
 
 #idcarrousel{
-  background: rosybrown;
 }
 
 #idsection{

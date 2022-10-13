@@ -38,10 +38,13 @@
 #idlogo {
   padding: 10px 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   letter-spacing: 0.2rem;
   flex-wrap: nowrap;
-  font-size: 32px;
+  font-family: 'Skygraze', serif;
+  font-size: 1.4rem;
+  color: #E6C705;
+  text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 #idsearchform {

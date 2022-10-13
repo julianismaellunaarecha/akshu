@@ -4,7 +4,7 @@ document.getElementById("idheader").innerHTML = `
     <div id="idlogoandsearch">
         <div id="idlogo">
             <a href="../../index.html">
-                <img src="../../assets/icons/akshu.png" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" width="35" height="24" href="../../index.html"> 
+                <img src="../../assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" width="35" height="24" href="../../index.html"> 
             </a>
             <a href="../../index.html">
                 Akshu
