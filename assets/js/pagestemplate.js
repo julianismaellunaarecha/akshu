@@ -25,7 +25,7 @@ myFunction();
 document.getElementById("idheader").innerHTML = `
 <div id="idprueba">Pagina de prueba para TPO</div>
 <div id="idbanner">
-    <a href="ofertas.html">5% de descuento en OFERTAS.</a>
+    <a href="ofertas.html">Hasta 35% de descuento en OFERTAS.</a>    
 </div>
 <nav id="idnav">
     <div id="idlogoandsearch">
@@ -54,6 +54,9 @@ document.getElementById("idheader").innerHTML = `
         <ol>
             <li id="idnavlineitem">
                 <a href="index.html">Inicio</a>
+            </li>
+            <li id="idnavlineitem">
+                <a href="quienessomos.html">Quienes somos</a>
             </li>
             <li id="idnavlineitem">
                 <a href="cuenta.html">Cuenta</a>
