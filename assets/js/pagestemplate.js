@@ -40,6 +40,9 @@ document.getElementById("idheader").innerHTML = `
         </ol>
     </div>
 </nav>
+<div id="mensajebienvenidacontenedor">
+    <h3 id="mensajebienvenida">Lo mejor de la tecnologia en un solo lugar.</h3>
+</div>
 `;
 
 document.getElementById("idfooter").innerHTML = `

@@ -23,12 +23,6 @@
 > - Link de Github: <https://github.com/julianismaellunaarecha>
 >
 
-> ### **GORJON, Federico**
->
-> - Usuario GitHub: federicogorjon@yahoo.com.ar
-> - Link de Github: <https://github.com/Fedegorjon>
->
-
 > ### **PONCE, Viviana Mercedes**
 >
 > - Usuario GitHub: vivianaponce@gmail.com

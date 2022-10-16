@@ -40,6 +40,7 @@ body {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  background-color: #ebe3ff;
 }
 
 .footer {
@@ -59,4 +60,15 @@ body {
   justify-content: space-around;
   color: white;
   font-weight: bold;
+}
+
+.header {
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0rem;
+  background: linear-gradient(0deg, #ebe3ff 0%, #fffa9a 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
 }
