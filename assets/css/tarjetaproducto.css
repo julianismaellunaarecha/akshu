@@ -1,0 +1,40 @@
+#idproducto {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  height: 40vw;
+  max-width: 420px;
+  max-height: 250px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  transform-origin: center;
+}
+
+#idimagenproducto {
+  padding: 10px 10px;
+  display: block;
+  max-width: 200px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+#idtitulodeproducto {
+  padding: 10px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#idpreciodelproducto {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#iddescripciondelproducto {
+  overflow: hidden;
+  max-height: 2rem;
+  text-justify: distribute;
+  font-size: 0.75rem;
+}

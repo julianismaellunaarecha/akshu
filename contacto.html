@@ -1,82 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head id="idhead">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshu - Contacto</title>
+    <meta name="author" content="Grupo akshu">
     <link rel="shortcut icon" href="assets/favicon/akshu.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/comun.css">
-    <link rel="stylesheet" href="assets/css/navigationbar.css">
     <link rel="stylesheet" href="assets/css/contacto.css">
+    <title>Akshu - Contacto</title>
 </head>
 
 <body>
     <header id="idheader">
     </header>
     <main>
-        <div class="container" id="formulario">
-            <form action="" method="post" accept-charset="UTF-8">
-                <div>
-                    <label for="apellido">Apellido:</label>
-                </div>
-                <div>
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-                    <span>*</span>
-                </div>
-                <div>
-                    <label for="nombre">Nombre:</label>
-                </div>
-                <div>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                    <span>*</span>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                    <span>*</span>
-                </div>
-                <div>
-                    <label for="email">Telefono:</label>
-                </div>
-                <div>
-                    <input type="telefono" name="telefono" id="telefono" placeholder="Telefono">
-                    <span>(Opcional)</span>
-                </div>
-                <div>
-                    <label for="asunto">Asunto:</label>
-                </div>
-                <div>
-                    <input type="text" name="asunto" id="asunto" placeholder="Asunto de su mensaje" required>
-                    <span>*</span>
-                </div>
-                <div>
-                    <span>Motivo de contacto:</span>
-                </div>
-                <div>
-                    <label><input type="radio" name="motivo" value="consulta" checked>Consulta</label>
-                    <label><input type="radio" name="motivo" value="reclamo">Reclamo</label>
-                    <label><input type="radio" name="motivo" value="otro">Otro</label>
-                </div>
-                <div>
-                    <span>Mensaje:</span>
-                </div>
-                <div class="container" id="idcontainermensaje">
-                    <div id="idmensaje">
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje aqui."
-                            wrap="soft" required></textarea>
+        <div id="idcontacto">
+            <div class="container" id="idformulario">
+                <form action="" method="post" accept-charset="UTF-8">
+                    <div>
+                        <label for="apellido">Apellido:</label>
                     </div>
-                    <div id="idmensajeobligatorio">*</div>
+                    <div>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                    </div>
+                    <div>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <label for="email">Telefono:</label>
+                    </div>
+                    <div>
+                        <input type="telefono" name="telefono" id="telefono" placeholder="Telefono">
+                        <span>(Opcional)</span>
+                    </div>
+                    <div>
+                        <label for="asunto">Asunto:</label>
+                    </div>
+                    <div>
+                        <input type="text" name="asunto" id="asunto" placeholder="Asunto de su mensaje" required>
+                        <span>*</span>
+                    </div>
+                    <div>
+                        <span>Motivo de contacto:</span>
+                    </div>
+                    <div>
+                        <label><input type="radio" name="motivo" value="consulta" checked>Consulta</label>
+                        <label><input type="radio" name="motivo" value="reclamo">Reclamo</label>
+                        <label><input type="radio" name="motivo" value="otro">Otro</label>
+                    </div>
+                    <div>
+                        <span>Mensaje:</span>
+                    </div>
+                    <div class="container" id="idcontainermensaje">
+                        <div id="idmensaje">
+                            <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                                placeholder="Ingrese su mensaje aqui." wrap="soft" required></textarea>
+                        </div>
+                        <div id="idmensajeobligatorio">*</div>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+            <div id="idinfocontacto">
+                <iframe id="idmapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.9848862299971!2d-58.37978547078013!3d-34.60569019877868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbf0becc648b%3A0xdbe6d15242d1db0c!2sGrupo%20Akshu!5e0!3m2!1ses-419!2sar!4v1665917679290!5m2!1ses-419!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="idinfo">
+                    <div>Grupo Akshu</div>
+                    <div>Horario de atencion: Lunes a Sabados de 18 a 20 hs.</div>
+                    <div>Telefono: 1133333333</div>
+                    <div>Email: akshu@akshu.ar</div>
+                    <div>Redes sociales: </div>
+                    <div></div>
                 </div>
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
+            </div>
         </div>
     </main>
+
+
+
+
     <footer class="footer" id="idfooter">
     </footer>
     <script src="assets/js/pagestemplate.js"></script>

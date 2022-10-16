@@ -1,0 +1,114 @@
+#idcartas {
+  position: relative;
+  width: 380px;
+  height: 250px;
+  max-width: 380px;
+  max-height: 250px;
+  margin: 0;
+  color: black;
+  perspective: 1000px;
+  transform-origin: center;
+}
+#idcartascontenido {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: translateZ(-30vw) rotateY(0);
+  -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+  animation: carousel 20s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+#idcartascontenido.step-animation {
+  -webkit-animation: carousel 16s infinite steps(1) forwards;
+  animation: carousel 16s infinite steps(1) forwards;
+}
+#idcarta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70vw;
+  height: 40vw;
+  max-width: 430px;
+  max-height: 300px;
+  border-radius: 10px;
+  transform-origin: center;
+  background-color: rgba(244, 233, 255, 0.638);
+  box-shadow: 0 10px 40px rgba(165, 76, 255, 0.4);
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#idcarta:nth-child(1) {
+  transform: rotateY(0) translateZ(35vw);
+}
+#idcarta:nth-child(2) {
+  transform: rotateY(120deg) translateZ(35vw);
+}
+#idcarta:nth-child(3) {
+  transform: rotateY(240deg) translateZ(35vw);
+}
+
+@-webkit-keyframes carousel {
+  0%,
+  17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%,
+  45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%,
+  72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%,
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+@keyframes carousel {
+  0%,
+  17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%,
+  45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%,
+  72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%,
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+#idimagenproductocarta {
+  padding: 10px 10px;
+  display: block;
+  max-width: 300px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+#idtitulodeproductocarta {
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#idpreciodelproductocarta {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
