@@ -22,7 +22,7 @@
   justify-content: space-around;
  }
 
-span {
+.grupoa {
   font-weight: bold;  
   text-decoration-line:underline;
   animation-name: cambiarTamanio;
@@ -37,8 +37,8 @@ span {
  100% {font-size: 1.3rem;}
 }
 
-a {
-  color:white;
+.ingresa {
+  text-decoration-line: underline;
 }
 
 #grupoakshu {
