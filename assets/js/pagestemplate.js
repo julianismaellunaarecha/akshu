@@ -85,7 +85,7 @@ document.getElementById("idheader").innerHTML = `
 
 document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
-    <span id="idlogocontainer">
+    <span id="idlogocontainer" class="hidden">
         <span id="idlogo">
             <a href="index.html">
                 <img src="assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" id="idlogoimagen" href="index.html"> 
