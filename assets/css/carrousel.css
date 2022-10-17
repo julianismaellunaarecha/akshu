@@ -9,6 +9,7 @@
   perspective: 1000px;
   transform-origin: center;
 }
+
 #idcartascontenido {
   position: absolute;
   width: 100%;
@@ -34,10 +35,12 @@
   height: 40vw;
   max-width: 430px;
   max-height: 300px;
+  min-width: 430px;
+  min-height: 300px;
   border-radius: 10px;
   transform-origin: center;
-  background-color: rgba(244, 233, 255, 0.638);
-  box-shadow: 0 10px 40px rgba(165, 76, 255, 0.4);
+  background-color: rgba(244, 233, 255, 0.9);
+  box-shadow: 0 10px 40px rgba(165, 76, 255, 0.8);
   padding: 10px 10px;
   display: flex;
   flex-direction: column;

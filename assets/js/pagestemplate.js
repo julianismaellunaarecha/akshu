@@ -1,4 +1,4 @@
-function myFunction() {
+function loadStyles() {
   const tarjetaproductolinknode = document.createElement("link");
   tarjetaproductolinknode.setAttribute("href", "assets/css/tarjetaproducto.css");
   tarjetaproductolinknode.setAttribute("rel", "stylesheet");
@@ -18,9 +18,14 @@ function myFunction() {
   comunlinknode.setAttribute("href", "assets/css/comun.css");
   comunlinknode.setAttribute("rel", "stylesheet");
   document.getElementById("idhead").appendChild(comunlinknode);
+
+  const marcolinknode = document.createElement("link");
+  marcolinknode.setAttribute("href", "assets/css/marco.css");
+  marcolinknode.setAttribute("rel", "stylesheet");
+  document.getElementById("idhead").appendChild(marcolinknode);
 }
 
-myFunction();
+loadStyles();
 
 document.getElementById("idheader").innerHTML = `
 <div id="idprueba">Pagina de prueba para TPO</div>
