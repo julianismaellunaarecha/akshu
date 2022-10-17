@@ -79,8 +79,30 @@ document.getElementById("idheader").innerHTML = `
 `;
 
 document.getElementById("idfooter").innerHTML = `
-<div id="idderechos">
-    © Grupo akshu - Todos los derechos reservados
+<div id="idfootercontainer">
+    <span id="idlogocontainer">
+        <span id="idlogo">
+            <a href="index.html">
+                <img src="assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" id="idlogoimagen" href="index.html"> 
+            </a>
+        </span>
+        <span id="idmarca">
+            <a href="index.html">
+                Akshu
+            </a>
+        </span>
+    </span>
+    <span id="idderechos">© Grupo akshu - Todos los derechos reservados</span>
+    <span id="idicons">
+        <i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i>
+        <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i>
+        <i class="fa-brands fa-youtube fa-xl" id="idyoutube"></i>
+        <i class="fa-brands fa-twitter fa-xl" id="idtwitter"></i>
+        <i class="fa-brands fa-linkedin fa-xl" id="idlinkedin"></i>
+        <i class="fa-brands fa-github fa-xl" id="idgithub"></i>
+        <i class="fa-brands fa-stack-overflow fa-xl" id="idstackoverflow"></i>
+        <i class="fa-brands fa-twitch fa-xl" id="idtwitch"></i>
+    </span>
 </div>
 `;
 
