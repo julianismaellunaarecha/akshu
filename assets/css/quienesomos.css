@@ -1,0 +1,56 @@
+.container {
+  display:grid;
+  grid-template-columns: [x0] 100vw [x1];
+  grid-template-rows: [y0] auto [y1] auto [y2];
+ }
+
+.section1 {
+  grid-area: section1;
+  grid-column: x0/x1;
+  grid-row: y0/y1;
+ }
+
+ .section2 {
+  grid-area: section2;
+  grid-column: x0/x1;
+  grid-row: y1/y2;
+ }
+
+#qsomos {
+  padding: 25px;
+  text-align: center;
+  justify-content: space-around;
+ }
+
+.grupoa {
+  font-weight: bold;  
+  text-decoration-line:underline;
+  animation-name: cambiarTamanio;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  font-size:1.3rem;  
+}
+
+@keyframes cambiarTamanio {
+  0% {font-size: 1rem;} 
+  50% {font-size: 1.2rem;}
+ 100% {font-size: 1.3rem;}
+}
+
+.ingresa {
+  text-decoration-line: underline;
+}
+
+#grupoakshu {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align:center;
+}
+
+#grupoakshu img {
+  width: 20vw;
+  height: 45vh;
+}
