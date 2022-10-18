@@ -49,6 +49,11 @@ body {
   padding: 0%;
   box-sizing: border-box;
   background-color: #ffdd09;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .footer {
@@ -141,13 +146,20 @@ body {
   background-size: cover;
 }
 
-#idbanner {
+#idbanner{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+}
+
+#idbannerofertas {
   font-weight: bolder;
   letter-spacing: 0.2rem;
   animation: color-banner 2s infinite;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes color-banner {
@@ -172,11 +184,8 @@ body {
 }
 
 #idprueba {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-grow: 0;
   font-weight: bolder;
-  letter-spacing: 1rem;
   animation: color-prueba 20s infinite;
 }
 
@@ -197,4 +206,17 @@ body {
 
 .hidden{
   visibility: hidden;
+}
+
+.invisible{
+  display: none;
+}
+
+.marcoimagen{
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+}
+
+.pointer {
+  cursor: pointer;
 }

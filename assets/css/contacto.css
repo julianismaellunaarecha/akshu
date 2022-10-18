@@ -2,16 +2,21 @@
   padding: 20px 20px;
   display: flex;
   align-items: center;
-  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
 #idformulario {
   padding: 20px 20px;
+}
+
+#idformcontacto{
   display: flex;
-  align-items: center;
+  align-items: space-around;
+  justify-content: space-around;
   flex-direction: column;
+  gap: 20px;
 }
 
 #idinfocontacto{
@@ -33,6 +38,6 @@
   font-weight: bold;
 }
 
-#idmapa{
-
+#mensaje{
+  height: 50px;
 }
