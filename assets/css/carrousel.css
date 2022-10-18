@@ -2,8 +2,8 @@
   position: relative;
   width: 380px;
   height: 250px;
-  max-width: 380px;
-  max-height: 250px;
+  max-width: 420px;
+  max-height: 240px;
   margin: 0;
   color: black;
   perspective: 1000px;
@@ -33,10 +33,10 @@
   bottom: 0;
   width: 70vw;
   height: 40vw;
-  max-width: 430px;
-  max-height: 300px;
-  min-width: 430px;
-  min-height: 300px;
+  max-width: 450px;
+  max-height: 275px;
+  min-width: 450px;
+  min-height: 275px;
   border-radius: 10px;
   transform-origin: center;
   background-color: rgba(244, 233, 255, 0.9);
@@ -98,14 +98,13 @@
 #idimagenproductocarta {
   padding: 10px 10px;
   display: block;
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 275px;
+  max-height: 175px;
   width: auto;
   height: auto;
 }
 
 #idtitulodeproductocarta {
-  padding: 10px 10px;
   font-size: 1rem;
   font-weight: bold;
 }

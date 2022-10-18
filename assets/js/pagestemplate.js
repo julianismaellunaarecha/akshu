@@ -28,9 +28,11 @@ function loadStyles() {
 loadStyles();
 
 document.getElementById("idheader").innerHTML = `
-<div id="idprueba">Pagina de prueba para TPO</div>
-<div id="idbanner">
-    <a href="ofertas.html">Hasta 35% de descuento en OFERTAS.</a>    
+<div  id="idbanner">
+    <span id="idprueba">Pagina de prueba para TPO</span>
+    <span id="idbannerofertas">
+        <a href="ofertas.html" id="idmensajeoferta">Hasta 35% de descuento en OFERTAS.</a>    
+    </span>
 </div>
 <nav id="idnav">
     <div id="idlogoandsearch">

@@ -5,7 +5,7 @@ fetch("https://fakestoreapi.com/products?limit=3")
     json.forEach((element) => {
       outputdivs += `
           <div class="producto" id="idcarta">
-            <div><img src="${element.image}" alt="${element.description}" id="idimagenproductocarta"></div>
+            <div><img class="marcoimagen" src="${element.image}" alt="${element.description}" id="idimagenproductocarta"></div>
             <div id="idpreciodelproductocarta"> $ ${element.price}</div>
             <div id="idtitulodeproductocarta">${element.title}</div>
           </div>
