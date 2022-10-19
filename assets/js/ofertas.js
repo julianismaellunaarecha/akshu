@@ -1,10 +1,5 @@
-function precisePrice(x) {
-  return x.toPrecision(3);
-}
-
-function precise(x) {
-  return x.toFixed();
-}
+import precisePrice from "./comun.js";
+import precise from "./comun.js";
 
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
@@ -18,7 +13,7 @@ fetch("https://fakestoreapi.com/products")
         let precio = precisePrice(element.price - (element.price * descuento) / 100);
         outputspans += `
                 <span class="producto" id="idproducto">
-                  <div class="imagendelproducto"><img src="${element.image}" alt="${element.description}" id="idimagenproducto"></div>
+                  <div class="imagendelproducto"><img class="marcoimagen" src="${element.image}" alt="${element.description}" id="idimagenproducto"></div>
                   <div class="preciodelproducto" id="idpreciodelproducto"> 
                   <span class="oldprice"> $ ${element.price} </span>
                   <span class="newprice"> $ ${precio} </span>
