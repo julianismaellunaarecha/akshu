@@ -10,12 +10,12 @@ fetch("https://fakestoreapi.com/products")
         let descuento = precise(
           element.rating.rate * 10 >= 35 ? 35 : element.rating.rate * 10
         );
-        let precio = precisePrice(element.price - (element.price * descuento) / 100);
+        let precio = precisePrice((element.price - (element.price * descuento) / 100)*300);
         outputspans += `
                 <span class="producto" id="idproducto">
                   <div class="imagendelproducto"><img class="marcoimagen" src="${element.image}" alt="${element.description}" id="idimagenproducto"></div>
                   <div class="preciodelproducto" id="idpreciodelproducto"> 
-                  <span class="oldprice"> $ ${element.price} </span>
+                  <span class="oldprice"> $ ${element.price * 300} </span>
                   <span class="newprice"> $ ${precio} </span>
                   <span class="discount"> -${descuento} %</span>
                   </div> 

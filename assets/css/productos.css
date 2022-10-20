@@ -6,17 +6,6 @@
   flex-grow: 1;
 }
 
-#idarticle {
-}
-
-#idseccion {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 65px;
-}
-
 #idofertas {
   padding: 10px 20px;
   display: flex;
@@ -49,5 +38,72 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   row-gap: 10px;
-  column-gap: 20px;
+  column-gap: 0px;
+}
+
+.hide {
+  animation: hide .3s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+.show {
+    animation: show .3s ease 0s 1 normal forwards;    
+    transform-origin: center;
+}
+
+@keyframes hide {
+  0%{
+    margin: 10px;
+    padding: 10px;
+    display: initial;
+    visibility: visible;
+    transform: scale(1);        
+  }
+  100% {
+    margin: 0px;
+    padding: 0px;
+    visibility: hidden;
+    display: none;
+    transform: scale(0);        
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+@keyframes show {
+  0%{
+    margin: 0px;
+    padding: 0px;
+    visibility: hidden;
+    display: none;
+    transform: scale(0);     
+    width: 0;
+    height: 0;
+    margin: 0;   
+  }
+  100% {
+    margin: 10px;
+    padding: 10px;
+    visibility: visible;
+    display: initial;
+    transform: scale(1);    
+  }
+}
+
+.filtros{
+  margin: 10px;
+  padding: 10px;
+}
+
+.categoria{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.filter:hover {
+  cursor: pointer;
+}
+
+.producto{
+  margin: 10px;
+  padding: 10px;
 }
