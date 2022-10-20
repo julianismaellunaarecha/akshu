@@ -14,7 +14,7 @@ fetch("https://fakestoreapi.com/products?limit=3")
       outputdivs += `
           <div class="producto" id="idcarta">
             <div><img class="marcoimagen" src="${element.image}" alt="${element.description}" id="idimagenproductocarta"></div>
-            <div id="idpreciodelproductocarta"> $ ${element.price}</div>
+            <div id="idpreciodelproductocarta"> $ ${element.price * 300}</div>
             <div id="idtitulodeproductocarta">${element.title}</div>
           </div>
       `;
@@ -36,7 +36,7 @@ fetch("https://fakestoreapi.com/products/category/electronics?limit=3")
       outputspans += `
                 <span class="producto" id="idproducto">
                   <div class="imagendelproducto"><img class="marcoimagen" src="${element.image}" alt="${element.description}" id="idimagenproducto"></div>
-                  <div class="preciodelproducto" id="idpreciodelproducto"> $ ${element.price}</div>
+                  <div class="preciodelproducto" id="idpreciodelproducto"> $ ${element.price * 300}</div>
                   <div class="titulodeproducto" id="idtitulodeproducto">${element.title}</div>
                   <div class="descripciondelproducto" id="iddescripciondelproducto">${element.description} 
                   </div>
@@ -76,7 +76,7 @@ fetch("https://fakestoreapi.com/products")
                     }" alt="${
           element.description
         }" id="idimagenproducto"> <span class="preciodelproductofav"> $ ${
-          element.price
+          element.price * 300
         }</span></div>
                     <div class="descripciondelproducto half">${
                       element.description

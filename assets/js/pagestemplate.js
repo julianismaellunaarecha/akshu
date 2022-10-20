@@ -9,16 +9,6 @@ function loadStyles() {
   navigationbarlinknode.setAttribute("rel", "stylesheet");
   document.getElementById("idhead").appendChild(navigationbarlinknode);
 
-  const carrousellinknode = document.createElement("link");
-  carrousellinknode.setAttribute("href", "assets/css/carrousel.css");
-  carrousellinknode.setAttribute("rel", "stylesheet");
-  document.getElementById("idhead").appendChild(carrousellinknode);
-
-  const comunlinknode = document.createElement("link");
-  comunlinknode.setAttribute("href", "assets/css/comun.css");
-  comunlinknode.setAttribute("rel", "stylesheet");
-  document.getElementById("idhead").appendChild(comunlinknode);
-
   const marcolinknode = document.createElement("link");
   marcolinknode.setAttribute("href", "assets/css/marco.css");
   marcolinknode.setAttribute("rel", "stylesheet");
