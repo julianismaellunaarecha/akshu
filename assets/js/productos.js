@@ -1,95 +1,37 @@
-import { precisePrice, precise } from "./comun.js";
+import {productos} from "./producto.js";
+import {categorias} from "./categoria.js";
 
-let productsJson = await fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((json) => {
-    return json;
-  });
+let filteredProductos = productos;
 
-let categoriesJson = await fetch("https://fakestoreapi.com/products/categories")
-  .then((res) => res.json())
-  .then((json) => {
-    return json;
-  });
-
-function retrieveCategory(x) {
-  switch (x) {
-    case "electronics":
-      return "electronicos";
-    case "jewelery":
-      return "joyeria";
-    case "men's clothing":
-      return "indumentariamasculina";
-    case "women's clothing":
-      return "indumentariafemenina";
-    default:
-      return "todo";
-  }
-}
-
-function retrieveCategoryName(x) {
-  switch (x) {
-    case "electronics":
-      return "Electronicos";
-    case "jewelery":
-      return "Joyeria";
-    case "men's clothing":
-      return "Indumentaria masculina";
-    case "women's clothing":
-      return "Indumentaria femenina";
-    default:
-      return "Todo";
-  }
-}
-
-function addHtmlToProducts() {
+async function addHtmlToProducts() {
   let outputspansprod = ``;
-  for (let product of productsJson) {
-    let categoria = retrieveCategory(product.category);
-    if (product.rating.rate <= 3 && product.category != "electronics") {
-      let descuento = precise(
-        product.rating.rate * 10 >= 35 ? 35 : product.rating.rate * 10
-      );
-      let precio = precisePrice(
-        (product.price - (product.price * descuento) / 100)
-      );
+  for (let product of filteredProductos) {
+    if (product.descuento != 0) {
       outputspansprod += `
-              <div class="producto ${categoria}" id="idproducto">
-                <div class="imagendelproducto"><img class="marcoimagen" src="${
-                  product.image
-                }" alt="${product.description}" id="idimagenproducto"></div>
+              <div class="producto ${product.categoria}" id="idproducto">
+                <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
                 <div class="preciodelproducto" id="idpreciodelproducto"> 
-                <span class="oldprice"> $ ${product.price * 300} </span>
-                <span class="newprice"> $ ${precio  * 300} </span>
-                <span class="discount"> -${descuento} %</span>
+                <span class="oldprice"> $ ${product.precioAntiguo} </span>
+                <span class="newprice"> $ ${product.precio} </span>
+                <span class="discount"> -${product.descuento} %</span>
                 </div> 
-                <div class="titulodeproducto" id="idtitulodeproducto">${
-                  product.title
-                }</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">${
-                  product.description
-                } 
+                <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
+                <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
                 </div>
                 <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
+                <i class="fa-solid fa-cart-plus"></i>
               </div>
               `;
     } else {
       outputspansprod += `
-              <div class="producto ${categoria}" id="idproducto">
-                <div class="imagendelproducto"><img class="marcoimagen" src="${
-                  product.image
-                }" alt="${product.description}" id="idimagenproducto"></div>
-                <div class="preciodelproducto" id="idpreciodelproducto"> $ ${
-                  product.price * 300
-                }</div>
-                <div class="titulodeproducto" id="idtitulodeproducto">${
-                  product.title
-                }</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">${
-                  product.description
-                } 
+              <div class="producto ${product.categoria}" id="idproducto">
+                <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
+                <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio}</div>
+                <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
+                <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
                 </div>
                 <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
+                <i class="fa-solid fa-cart-plus"></i>
               </div>
 
               `;
@@ -98,16 +40,14 @@ function addHtmlToProducts() {
   document.getElementById("idlistadoproductos").innerHTML = outputspansprod;
 }
 
-function addHtmlToCategories() {
+async function addHtmlToCategories() {
   let outputspanscat = `
   <h4 class="titulocategoria filtercategory" id="idtitulocategoria">Categorias</h4>
   <div class="filter all" id="todo">Todo</div>
   `;
-  for (let category of categoriesJson) {
-    let categoria = retrieveCategory(category);
-    let categorianombre = retrieveCategoryName(category);
+  for (let category of categorias) {
     outputspanscat += `
-    <div class="filter ${categoria}" id="${categoria}">${categorianombre}</div>
+    <div class="filter ${category.categoria}" id="${category.categoria}">${category.categorianombre}</div>
               `;
   }
   document.getElementById("idfiltros").innerHTML = outputspanscat;
@@ -116,49 +56,28 @@ function addHtmlToCategories() {
 addHtmlToProducts();
 addHtmlToCategories();
 
-const filters = document.querySelectorAll(".filter");
-
-filters.forEach((filter) => {
-  filter.addEventListener("click", function () {
-    let selectedFilter = filter.getAttribute("id");
-    let itemsToHide = [];
-    let itemsToShow = document.querySelectorAll(".producto");
-
-    itemsToHide.forEach((el) => {
-      el.classList.add("hide");
-      el.classList.remove("show");
-    });
-
-    itemsToShow.forEach((el) => {
-      el.classList.remove("hide");
-      el.classList.add("show");
-    });
-
-    if (selectedFilter != "todo") {
-      itemsToHide = document.querySelectorAll(
-        `.producto:not(.${selectedFilter})`
-      );
-      itemsToShow = document.querySelectorAll(`.producto .${selectedFilter}`);
-      console.log(selectedFilter);
-      console.log(itemsToHide);
-      console.log(itemsToShow);
-    }
-    if (selectedFilter == "todo") {
-      itemsToHide = [];
-      itemsToShow = document.querySelectorAll(".producto");
-      console.log(selectedFilter);
-      console.log(itemsToHide);
-      console.log(itemsToShow);
-    }
-
-    itemsToHide.forEach((el) => {
-      el.classList.add("hide");
-      el.classList.remove("show");
-    });
-
-    itemsToShow.forEach((el) => {
-      el.classList.remove("hide");
-      el.classList.add("show");
+async function filterProducts() {
+  const filters = document.querySelectorAll(".filter");
+  filters.forEach((filter) => {
+    filter.addEventListener("click", function () {
+      let selectedFilter = filter.getAttribute("id");
+      filteredProductos = [];
+      if (selectedFilter != "todo") {
+        productos.forEach((el) => {
+          if (selectedFilter == el.categoria) {
+            filteredProductos.push(el);
+          }
+        });
+      } else {
+        filteredProductos = productos;
+      }
+      addHtmlToProducts();
     });
   });
-});
+}
+
+filterProducts();
+
+export default function retnull() {
+  return ``;
+}

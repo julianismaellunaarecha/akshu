@@ -1,38 +1,26 @@
-import { precisePrice, precise } from "./comun.js";
+import {productos} from "./producto.js";
 
-fetch("https://fakestoreapi.com/products")
-  .then((res) => res.json())
-  .then((json) => {
-    let outputspans = ``;
-    json.forEach((element) => {
-      if (element.rating.rate <= 3 && element.category != "electronics") {
-        let descuento = precise(
-          element.rating.rate * 10 >= 35 ? 35 : element.rating.rate * 10
-        );
-        let precio = precisePrice(
-          element.price - (element.price * descuento) / 100
-        );
-        outputspans += `
-                <span class="producto" id="idproducto">
-                  <div class="imagendelproducto"><img class="marcoimagen" src="${
-                    element.image
-                  }" alt="${element.description}" id="idimagenproducto"></div>
-                  <div class="preciodelproducto" id="idpreciodelproducto"> 
-                  <span class="oldprice"> $ ${element.price * 300} </span>
-                  <span class="newprice"> $ ${precio * 300} </span>
-                  <span class="discount"> -${descuento} %</span>
-                  </div> 
-                  <div class="titulodeproducto" id="idtitulodeproducto">${
-                    element.title
-                  }</div>
-                  <div class="descripciondelproducto" id="iddescripciondelproducto">${
-                    element.description
-                  } 
-                  </div>
-                  <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                </span>
-                `;
-      }
-    });
-    document.getElementById("idofertas").innerHTML = outputspans;
-  });
+async function ofertas() {
+  let outputspans = ``;
+  for (let productoOferta of productos) {
+    if (productoOferta.descuento != 0) {
+      outputspans += `
+      <span class="producto" id="idproducto">
+      <div class="imagendelproducto"><img class="marcoimagen" src="${productoOferta.urlImagen}" alt="${productoOferta.descripcion}" id="idimagenproducto"></div>
+      <div class="preciodelproducto" id="idpreciodelproducto"> 
+      <span class="oldprice"> $ ${productoOferta.precioAntiguo} </span>
+      <span class="newprice"> $ ${productoOferta.precio} </span>
+      <span class="discount"> -${productoOferta.descuento} %</span>
+      </div> 
+      <div class="titulodeproducto" id="idtitulodeproducto">${productoOferta.titulo}</div>
+      <div class="descripciondelproducto" id="iddescripciondelproducto">${productoOferta.descripcion} 
+      </div>
+      <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
+    </span>
+      `;
+    }
+  }
+  document.getElementById("idofertas").innerHTML = outputspans;
+}
+
+ofertas();
