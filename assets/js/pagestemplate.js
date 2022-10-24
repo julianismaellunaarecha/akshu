@@ -73,6 +73,17 @@ document.getElementById("idheader").innerHTML = `
             <li id="idnavlineitem">
                 <a href="contacto.html">Contacto</a>
             </li>
+            <li id="idnavlineitem">
+                <span>Carrito</span><i class="fa-solid fa-cart-shopping"></i>
+                <ol class="cart collapsible">
+                    <li>
+                        <div class="cart-products" id="idcartproducts"></div>
+                    </li>
+                    <li>
+                        <a href="carrito.html">Ir al carrito</a>
+                    </li>
+                </ol>
+            </li>
         </ol>
     </div>
 </nav>

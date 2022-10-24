@@ -16,6 +16,7 @@ fetch("https://fakestoreapi.com/products?limit=3")
             <div><img class="marcoimagen" src="${element.image}" alt="${element.description}" id="idimagenproductocarta"></div>
             <div id="idpreciodelproductocarta"> $ ${element.price * 300}</div>
             <div id="idtitulodeproductocarta">${element.title}</div>
+            <i class="fa-solid fa-cart-plus"></i>
           </div>
       `;
     });
@@ -41,6 +42,7 @@ fetch("https://fakestoreapi.com/products/category/electronics?limit=3")
                   <div class="descripciondelproducto" id="iddescripciondelproducto">${element.description} 
                   </div>
                   <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
+                  <i class="fa-solid fa-cart-plus"></i>
                 </span>
 
                 `;
@@ -65,22 +67,16 @@ fetch("https://fakestoreapi.com/products")
       <div class="sectionfav">
                 <div class="titulodeproducto itema half pointer" onclick="toggleDisplay('idmenu${i}')">
                   <span class="producttitlefav"> ${element.title} </span>
-                  <span class="ratingandcount"> ${
-                    element.rating.rate * 20
-                  }% de ${element.rating.count} votos </span>                  
+                  <span class="ratingandcount"> ${element.rating.rate * 20}% de ${element.rating.count} votos </span>                  
                 </div>
                 <div class="productof" ${style} id="idmenu${i}">  
                   <p>
-                    <div class="imagendelproductofav half"><img class="marcoimagen" src="${
-                      element.image
-                    }" alt="${
-          element.description
-        }" id="idimagenproducto"> <span class="preciodelproductofav"> $ ${
-          element.price * 300
-        }</span></div>
-                    <div class="descripciondelproducto half">${
-                      element.description
-                    }</div>
+                    <div class="imagendelproductofav half"><img class="marcoimagen" src="${element.image}" 
+                    alt="${element.description}" id="idimagenproducto"> 
+                      <span class="preciodelproductofav"> $ ${element.price * 300}</span>
+                    </div>
+                    <div class="descripciondelproducto half">${element.description}</div>
+                    <i class="fa-solid fa-cart-plus"></i>
                   </p>  
                 </div>  
       </div>

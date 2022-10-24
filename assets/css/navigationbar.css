@@ -66,3 +66,16 @@
 #idimgbusqueda{
   height: 0.6rem;
 }
+
+.collapsible {
+  position: absolute;
+  display: none;
+}
+
+li:hover>ol {
+  display: block;
+}
+
+.cart{
+  background-color:rgba(255, 255, 255, 0.7);
+}
