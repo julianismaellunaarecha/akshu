@@ -6,7 +6,7 @@ let filteredProductos = productos;
 async function addHtmlToProducts() {
   let outputspansprod = ``;
   for (let product of filteredProductos) {
-    if (product.descuento != 0) {
+    if (product.descuento > 0) {
       outputspansprod += `
               <div class="producto ${product.categoria}" id="idproducto">
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>

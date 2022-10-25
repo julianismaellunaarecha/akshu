@@ -65,9 +65,6 @@ document.getElementById("idheader").innerHTML = `
                 <a href="productos.html">Productos</a>
             </li>
             <li id="idnavlineitem">
-                <a href="carrito.html">Carrito</a>
-            </li>
-            <li id="idnavlineitem">
                 <a href="servicios.html">Servicios</a>
             </li>
             <li id="idnavlineitem">
