@@ -3,7 +3,7 @@ import {productos} from "./producto.js";
 async function ofertas() {
   let outputspans = ``;
   for (let productoOferta of productos) {
-    if (productoOferta.descuento != 0) {
+    if (productoOferta.descuento > 0) {
       outputspans += `
       <span class="producto" id="idproducto">
       <div class="imagendelproducto"><img class="marcoimagen" src="${productoOferta.urlImagen}" alt="${productoOferta.descripcion}" id="idimagenproducto"></div>
