@@ -1,71 +1,104 @@
-export let carrito = new Array();
+import { productos } from "./producto.js";
 
-export async function addToCart(producto, cantidad) {
-  const indx = carrito.findIndex((v) => v.product.id === producto.id);
-  if (indx != -1 && carrito[indx].cantidad > 0) {
-    carrito[indx].cantidad + cantidad;
-  } else if (carrito[indx].cantidad != 0) {
-    let itemCarrito = new ItemCarrito(producto, cantidad);
-    carrito.push(itemCarrito);
-  } else {
-    carrito.splice(indx);
-  }
-}
+// export function removeFromCart(producto, cantidad) {
+//   const indx = carrito.findIndex((v) => v.product.id === producto.id);
+//   if (indx != -1 && carrito[indx].cantidad > cantidad) {
+//     carrito[indx].cantidad - cantidad;
+//   } else {
+//     carrito.splice(indx);
+//   }
+// }
 
-export async function removeFromCart(producto, cantidad) {
-  const indx = carrito.findIndex((v) => v.product.id === producto.id);
-  if (indx != -1 && carrito[indx].cantidad > cantidad) {
-    carrito[indx].cantidad - cantidad;
-  } else {
-    carrito.splice(indx);
-  }
-}
-
-async function addHtmlToProducts() {
+async function addHtmlToProductsCarts() {
   let outputspansprod = `<div>El carrito esta vacio.</div>`;
-  if (carrito.length > 0) {
+  let existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
+  if (existingEntries.length > 0) {
+    let descuentoTotal = 0;
+    let precioTotal = 0;
     outputspansprod = ``;
-    for (let product of carrito) {
-      if (product.descuento > 0) {
-        outputspansprod += `
-              <div class="producto ${product.categoria}" id="idproducto">
-                <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
-                <div class="preciodelproducto" id="idpreciodelproducto"> 
-                <span class="oldprice"> $ ${product.precioAntiguo} </span>
-                <span class="newprice"> $ ${product.precio} </span>
-                <span class="discount"> -${product.descuento} %</span>
-                </div> 
-                <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
-                </div>
-                <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <i class="fa-solid fa-cart-plus"></i>
+    for (let existingEntry of existingEntries) {
+      const indx = productos.findIndex((v) => v.id == existingEntry.productoId);
+      console.log(indx);
+      if (productos[indx] != null) {
+        let precioProducto = productos[indx].precio * existingEntry.cantidad;
+        let descuentoProducto = productos[indx].precioAntiguo - productos[indx].precio;
+        descuentoTotal += descuentoProducto;
+        precioTotal += precioProducto;
+        if (productos[indx].descuento > 0) {
+          outputspansprod += `
+              <div class="producto ${productos[indx].categoria}" id="idproducto">
+                <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}" id="idimagenproducto"></span>
+                <span class="titulodeproducto" id="idtitulodeproducto">${productos[indx].titulo}</span>
+                <span class="preciodelproducto" id="idpreciodelproducto"> 
+                  <span class="oldprice"> $ ${productos[indx].precioAntiguo} </span>
+                  <span class="newprice"> $ ${productos[indx].precio} </span>
+                  <span class="discount"> -${productos[indx].descuento} %</span>
+                </span> 
+                <span class="cantidad">${existingEntry.cantidad}</span>
               </div>
               `;
-      } else {
-        outputspansprod += `
-              <div class="producto ${product.categoria}" id="idproducto">
-                <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
-                <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio}</div>
-                <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
-                </div>
-                <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <i class="fa-solid fa-cart-plus"></i>
+        } else {
+          outputspansprod += `
+              <div class="producto ${productos[indx].categoria}" id="idproducto">
+                <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}" id="idimagenproducto"></span>
+                <span class="titulodeproducto" id="idtitulodeproducto">${productos[indx].titulo}</span>
+                <span class="preciodelproducto" id="idpreciodelproducto"> $ ${productos[indx].precio}</span>
+                <span class="cantidad">${existingEntry.cantidad}</span>
               </div>
-
               `;
+        }
       }
     }
+    outputspansprod += `
+        <div class="total">
+          <span class="precio-total">${precioTotal}</span>
+          <span class="descuento-total">${descuentoTotal}</span>
+        </div>
+    `;
+    outputspansprod =`
+        <div class="total">
+          <span class="precio-total">${precioTotal}</span>
+          <span class="descuento-total">${descuentoTotal}</span>
+        </div>
+    ` + outputspansprod;
   }
   document.getElementById("idproductosencarrito").innerHTML = outputspansprod;
 }
 
-addHtmlToProducts();
+// export default class ItemCarrito {
+//   constructor(producto, cantidad) {
+//     this.producto = producto;
+//     this.cantidad = cantidad;
+//   }
+// }
 
-export default class ItemCarrito {
-  constructor(producto, cantidad) {
-    this.producto = producto;
-    this.cantidad = cantidad;
+export async function addToCart(productoId, cantidad) {
+  // Parse the JSON stored in allEntriesP
+  var existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
+  var entryItem = {
+    productoId: productoId,
+    cantidad: cantidad,
+  };
+  if (existingEntries != null) {
+    const indx = existingEntries.findIndex(
+      (v) => v.productoId === entryItem.productoId
+    );
+    if (indx >= 0) {
+      if (existingEntries[indx].cantidad >= 0) {
+        existingEntries[indx].cantidad =
+          +existingEntries[indx].cantidad + +cantidad;
+      } else {
+        existingEntries.push(entryItem);
+      }
+    } else {
+      existingEntries.push(entryItem);
+    }
+  } else {
+    existingEntries = [];
+    existingEntries.push(entryItem);
   }
+  localStorage.setItem("entry", JSON.stringify(entryItem));
+  localStorage.setItem("allEntriesInCart", JSON.stringify(existingEntries));
 }
+
+addHtmlToProductsCarts();

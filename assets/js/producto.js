@@ -13,6 +13,8 @@ export default class Producto{
         this.urlImagen = producto.image;
         this.cantidadDeOpiniones = producto.rating.count;
         this.percentageRating = producto.rating.rate * 20;
+        this.descuento = 0;
+        this.precio = producto.price * 300;
         if (producto.rating.rate <= 3 && producto.category != "electronics") {
             this.descuento = precise(
                 producto.rating.rate * 10 >= 35 ? 35 : producto.rating.rate * 10
@@ -20,9 +22,6 @@ export default class Producto{
             this.precio = precisePrice(
               (producto.price - (producto.price * this.descuento) / 100)
             ) * 300;
-        } else {
-            this.precio = producto.price * 300;
-            this.descuento = 0;
         }
         ;
 	}

@@ -1,9 +1,10 @@
-import {productos} from "./producto.js";
-import {categorias} from "./categoria.js";
+import { productos } from "./producto.js";
+import { categorias } from "./categoria.js";
+import { addToCart } from "./carrito.js";
 
 let filteredProductos = productos;
 
-async function addHtmlToProducts() {
+function addHtmlToProducts() {
   let outputspansprod = ``;
   for (let product of filteredProductos) {
     if (product.descuento > 0) {
@@ -19,7 +20,10 @@ async function addHtmlToProducts() {
                 <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
                 </div>
                 <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <i class="fa-solid fa-cart-plus"></i>
+                <input type="number" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
+                <div class="pointer addtocart" id="${product.id}">
+                  <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
+                </div>
               </div>
               `;
     } else {
@@ -40,7 +44,7 @@ async function addHtmlToProducts() {
   document.getElementById("idlistadoproductos").innerHTML = outputspansprod;
 }
 
-async function addHtmlToCategories() {
+function addHtmlToCategories() {
   let outputspanscat = `
   <h4 class="titulocategoria filtercategory" id="idtitulocategoria">Categorias</h4>
   <div class="filter all" id="todo">Todo</div>
@@ -56,7 +60,7 @@ async function addHtmlToCategories() {
 addHtmlToProducts();
 addHtmlToCategories();
 
-async function filterProducts() {
+function filterProducts() {
   const filters = document.querySelectorAll(".filter");
   filters.forEach((filter) => {
     filter.addEventListener("click", function () {
@@ -77,6 +81,20 @@ async function filterProducts() {
 }
 
 filterProducts();
+
+function addEventListererCarrito() {
+  const addItemsToCart = document.querySelectorAll(".addtocart");
+  addItemsToCart.forEach((addItemToCart) => {
+    addItemToCart.addEventListener("click", function () {
+      let idProducto = addItemToCart.getAttribute("id");
+      let cant = "cantidad" + idProducto;
+      let cantidad = document.getElementById(cant).value;
+      addToCart(idProducto, cantidad);
+    });
+  });
+}
+
+addEventListererCarrito();
 
 export default function retnull() {
   return ``;
