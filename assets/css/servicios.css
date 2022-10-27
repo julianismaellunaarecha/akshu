@@ -47,10 +47,9 @@
 
   .columnas{
   display: table-cell;
-  padding: 7px;
+  padding: 10px;
   border-top:none;  
   border-right: #636363 5px inset;  
   border-bottom:none;
   border-left: none; 
   }
-

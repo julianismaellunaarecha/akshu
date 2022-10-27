@@ -18,8 +18,8 @@ function loadStyles() {
 loadStyles();
 
 document.getElementById("idheader").innerHTML = `
-<div  id="idbanner">
-    <span id="idprueba">Pagina de prueba para TPO</span>
+<div id="idbanner">
+    <a href="index.html"><span id="idprueba">Pagina de prueba para TPO</span></a>
     <span id="idbannerofertas">
         <a href="ofertas.html" id="idmensajeoferta">Hasta 35% de descuento en OFERTAS.</a>    
     </span>
@@ -34,20 +34,26 @@ document.getElementById("idheader").innerHTML = `
             </div>
             <div id="idmarca">
                 <a href="index.html">
-                    Akshu
+                    <h1>Akshu</h1>
                 </a>
             </div>
         </div>
         <div id="idsearchform">
             <form>
                 <input type="text" placeholder="Buscar producto o servicio" id="idinputform">
-                <button type="submit" id="idbuttonform">
+                <button type="submit" id="idbuttonform" aria-label="Buscar">
                     <img id="idimgbusqueda" src="assets/icons/searchicongoogle.svg" alt="Imagen de una lupa que permite buscar productos o servicios tecnológicos provistos por Akshu">
                 </button>
             </form>
         </div>
     </div>
+    <button class="openmenu" aria-label="Desplegar menú">
+           <img src="assets/img/mburguer.png" alt="Desplegar menú">
+        </button>        
     <div id="idmenu">
+        <button class="closemenu" aria-label="Cerrar menú">
+           <img src="assets/img/close.png" alt="Cerrar menú">
+        </button>
         <ol>
             <li id="idnavlineitem">
                 <a href="index.html">Inicio</a>
@@ -71,14 +77,11 @@ document.getElementById("idheader").innerHTML = `
                 <a href="contacto.html">Contacto</a>
             </li>
             <li id="idnavlineitem">
-                <span>Carrito</span><i class="fa-solid fa-cart-shopping"></i>
+                <a href="carrito.html"><span>Carrito</span><i class="fa-solid fa-cart-shopping"></i></a>
                 <ol class="cart collapsible">
                     <li>
                         <div class="cart-products" id="idcartproducts"></div>
-                    </li>
-                    <li>
-                        <a href="carrito.html">Ir al carrito</a>
-                    </li>
+                    </li>                   
                 </ol>
             </li>
         </ol>
@@ -88,29 +91,17 @@ document.getElementById("idheader").innerHTML = `
 
 document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
-    <span id="idlogocontainer" class="hidden">
-        <span id="idlogo">
-            <a href="index.html">
-                <img src="assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" id="idlogoimagen" href="index.html"> 
-            </a>
-        </span>
-        <span id="idmarca">
-            <a href="index.html">
-                Akshu
-            </a>
-        </span>
-    </span>
+    <span class="hidden">akshu@bue.com.ar</span>
     <span id="idderechos">© Grupo akshu - Todos los derechos reservados</span>
     <span id="idicons">
-        <i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i>
-        <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i>
-        <i class="fa-brands fa-youtube fa-xl" id="idyoutube"></i>
-        <i class="fa-brands fa-twitter fa-xl" id="idtwitter"></i>
-        <i class="fa-brands fa-linkedin fa-xl" id="idlinkedin"></i>
-        <i class="fa-brands fa-github fa-xl" id="idgithub"></i>
-        <i class="fa-brands fa-stack-overflow fa-xl" id="idstackoverflow"></i>
-        <i class="fa-brands fa-twitch fa-xl" id="idtwitch"></i>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i></a>
+        <a href="https://www.youtube.com/" target="_blank">  <i class="fa-brands fa-youtube fa-xl" id="idyoutube"></i></a>
+        <a href="https://twitter.com/" target="_blank">  <i class="fa-brands fa-twitter fa-xl" id="idtwitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank">  <i class="fa-brands fa-linkedin fa-xl" id="idlinkedin"></i></a>
+        <a href="https://github.com/" target="_blank">   <i class="fa-brands fa-github fa-xl" id="idgithub"></i></a>
+        <a href="https://es.stackoverflow.com/" target="_blank">    <i class="fa-brands fa-stack-overflow fa-xl" id="idstackoverflow"></i></a>
+        <a href="https://www.twitch.tv/" target="_blank">    <i class="fa-brands fa-twitch fa-xl" id="idtwitch"></i></a>
     </span>
 </div>
 `;
-
