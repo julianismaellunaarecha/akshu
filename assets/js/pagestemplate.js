@@ -56,28 +56,28 @@ document.getElementById("idheader").innerHTML = `
                 <img src="assets/img/close.png" alt="Cerrar menú">
             </button>      
             <li id="idnavlineitem">
-                <a href="index.html">Inicio</a>
+                <a href="index.html"><h2>Inicio</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="quienessomos.html">Quienes somos</a>
+                <a href="quienessomos.html"><h2>Quienes somos</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="cuenta.html">Cuenta</a>
+                <a href="cuenta.html"><h2>Cuenta</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="ofertas.html">Ofertas</a>
+                <a href="ofertas.html"><h2>Ofertas</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="productos.html">Productos</a>
+                <a href="productos.html"><h2>Productos<h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="servicios.html">Servicios</a>
+                <a href="servicios.html"><h2>Servicios<h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="contacto.html">Contacto</a>
+                <a href="contacto.html"><h2>Contacto<h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="carrito.html"><span>Carrito</span><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="carrito.html"><span><h2>Carrito<h2></span><i class="fa-solid fa-cart-shopping"></i></a>
                 <ol class="cart collapsible">
                     <li>
                         <div class="cart-products" id="idcartproducts"></div>
@@ -92,7 +92,7 @@ document.getElementById("idheader").innerHTML = `
 document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
     <span class="hidden">akshu@bue.com.ar</span>
-    <span id="idderechos">© Grupo akshu - Todos los derechos reservados</span>
+    <span id="idderechos"><h3>© Grupo akshu - Todos los derechos reservados<h3></span>
     <span id="idicons">
         <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i></a>
         <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i></a>
