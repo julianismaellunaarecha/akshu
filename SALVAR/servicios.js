@@ -3,7 +3,7 @@ const armamos= ["Computadoras de escritorio", "Notebooks", "Tablets", "Conexione
 const mantenemos= ["Software", "Aplicaciones para celular", "Aplicaciones remotas", "Productos armados", "Telefonos IP"]; 
 const totalservicios=5
      
-    function agregarfila (ifila) {
+    async function agregarfila (ifila) {
     
     var tabla= document.querySelector(".tabla")
     var fila = document.createElement("div")
