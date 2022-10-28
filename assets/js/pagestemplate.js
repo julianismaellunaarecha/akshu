@@ -91,8 +91,7 @@ document.getElementById("idheader").innerHTML = `
 
 document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
-    <span class="hidden">akshu@bue.com.ar</span>
-    <span id="idderechos"><h3>© Grupo akshu - Todos los derechos reservados<h3></span>
+    <span id="idderechos"><h3>© Grupo akshu - Todos los derechos reservados<h3></span>   
     <span id="idicons">
         <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i></a>
         <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i></a>
