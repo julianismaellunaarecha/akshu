@@ -292,14 +292,14 @@ body {
       } 
 
 
-    /*Menú Hamburguesa*/
+    /*Menú Hamburguesa*/     
      nav {
       display: flex;      
       flex-direction: column;
+      font-size: calc(0.30rem + 1vw);
      }
  
-     #idmenu ol {
-      background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%);
+     #idmenu ol {      
       display:flex;
       flex-direction: column;
       position:fixed;
