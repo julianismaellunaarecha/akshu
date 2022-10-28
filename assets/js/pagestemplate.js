@@ -47,14 +47,14 @@ document.getElementById("idheader").innerHTML = `
             </form>
         </div>
     </div>
-    <button class="openmenu" aria-label="Desplegar menú">
-           <img src="assets/img/mburguer.png" alt="Desplegar menú">
-        </button>        
+            <button class="openmenu" aria-label="Desplegar menú">
+                <img src="assets/img/mburguer.png" alt="Desplegar menú">
+            </button>        
     <div id="idmenu">
-        <button class="closemenu" aria-label="Cerrar menú">
-           <img src="assets/img/close.png" alt="Cerrar menú">
-        </button>
         <ol>
+            <button class="closemenu" aria-label="Cerrar menú">
+                <img src="assets/img/close.png" alt="Cerrar menú">
+            </button>      
             <li id="idnavlineitem">
                 <a href="index.html">Inicio</a>
             </li>

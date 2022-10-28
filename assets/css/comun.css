@@ -237,14 +237,9 @@ body {
   gap: 65px;
 }
 
-.openmenu img {
-  width: 30px;
-  height: 30px;    
-}
-
-.closemenu img {
-  width: 30px;
-  height: 30px;  
+.openmenu img, .closemenu img {
+  width: 40px;
+  height: 40px;    
 }
 
 .openmenu, .closemenu {
@@ -253,6 +248,8 @@ body {
 
 /* Diseño responsivo para celulares-*/
 @media only screen and (min-width: 100px) and (max-width: 600px) { 
+
+  /*Adaptación del header y nav*/
       #idbanner{ 
         display: block;  
         text-align: center;
@@ -293,62 +290,50 @@ body {
       } 
 
 
-/*Menú Hamburguesa*/
-nav {
-  flex-direction: column;
-}
+    /*Menú Hamburguesa*/
+     nav {
+      display: flex;      
+      flex-direction: column;
+     }
+ 
+     #idmenu ol {
+      background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%);
+      display:flex;
+      flex-direction: column;
+      position:fixed;
+      left:0;
+      top:0;
+      width: 100%; 
+      align-items: left;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
 
-#idmenu {
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin-left: 10px;       
-  /*background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%); */        
-  opacity: 0.5;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  padding-top: -10px;
-}
+      .openmenu, 
+      .closemenu  {
+      display:block;
+      border:none;
+      background: none; 
+      cursor: pointer;     
+      align-self: flex-start;
+      } 
 
-/*.menuopened {
-  opacity: 1;
-  pointer-events: all;
-}*/
+     .closemenu {
+      padding-top: 120px;
+      }   
 
-.openmenu, 
-.closemenu  {
- display:flex;
- align-self: flex-start;
- border:none;
- background: none;
- cursor: pointer;
-} 
+      idmenu ol li {
+      padding: 0;
+      } 
 
-.openmenu {
- padding-left: 24px;
-}
+      #idmenu ol.menu_opened {
+       opacity: 1;
+       pointer-events: all;
+      }
 
-.closemenu {  
- cursor: pointer;
- align-self: flex-end;
- align-items: center;
- padding-left: 15px;
- padding-top: 10px;
-} 
-
-#idmenu ol {
- display: block;        
- height: 100%;
-}      
-
-#idmenu li {
- width: 100%;
- margin-top: 12px;
- overflow-x: hidden;         
-} 
-/*FIN DE LA CONSTRUCION DEL MENU HAMBRUGUESA*/ 
+/*Adaptación del footer*/ 
 
       #idfooter {
         display: flex;  
