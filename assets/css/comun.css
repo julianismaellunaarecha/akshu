@@ -1,4 +1,6 @@
- * {
+ *, 
+ h2, 
+ h3 {
   margin: 0;
   padding: 0;
   border:0;
@@ -6,7 +8,13 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  font-size: 1rem;
 }
+
+h1 {
+  font-size: 1.5rem;
+}
+
 
 @font-face {
   font-family: "Poppins";
@@ -149,14 +157,8 @@ body {
 #idfootercontainer{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: nowrap;
-}
-
-#idderechos{  
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #idicons{
@@ -333,23 +335,6 @@ body {
        pointer-events: all;
       }
 
-/*Adaptación del footer*/ 
-
-      #idfooter {
-        display: flex;  
-        flex-direction: column;
-      } 
-
-      #idfootercontainer {
-        display: block;  
-        flex-direction: column;
-        text-align: center;
-      } 
-
-      #idicons {
-        display:flex;
-        justify-content: center;
-      } 
 }
 
 
@@ -387,21 +372,5 @@ body {
      
       #idmenu li {
         width: 21%;
-      } 
-
-      #idfooter {
-        display: flex;  
-        flex-direction: column;
-      } 
-      
-      #idfootercontainer {
-        display: block;  
-        flex-direction: column;
-        text-align: center;
-      } 
-
-      #idicons {
-        display:flex;
-        justify-content: center;
       } 
 }
