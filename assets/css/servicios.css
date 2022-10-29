@@ -1,25 +1,65 @@
-   span {
-    font-weight: bold;   
-    font-size:1.2rem;
-   }   
+.vinietas {
+    color: white;
+    font-size: 1.5rem;
+}
 
-    .vinietas {
-        color:white ;
-        font-size:1.5rem; 
-    }
+.resaltado {
+    font-size: 1.3rem;
+    background-color: white;
+    margin: 5px;
+    padding: 7px;
+    text-decoration: underline;
+    border-radius: 6px;
+}
+
+.tabla {
+    margin: 20px auto;
+    display: table;
+    border-collapse: collapse;
+}
+
+.filas {
+    display: table-row;
+}
+
+.columnas {
+    display: table-cell;
+    padding: 20px;
+    border-top: none;
+    border-right: #636363 5px inset;
+    border-bottom: none;
+    border-left: none;
+}
+
+.monetizar {
+  width: auto;
+  height: auto;
+  margin: 45px 0 35px 0;
+  position:relative;
+  text-align:center;
+ }
+
+.titulo {
+  font-weight: bold;
+  font-size:1.2rem;
+ }
+
+.vinietas {
+  color:white ;
+  font-size:1.5rem;
+ }
 
  .resaltado {
   font-size:1.3rem;
-  background-color:white; 
+  background-color:white;
   margin:5px;
   padding:7px;
   text-decoration:underline;
-  border-radius: 6px;     
-  text-decoration:underline;  
+  border-radius: 6px;
  }
 
 
- 
+
 
 
 
