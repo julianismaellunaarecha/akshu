@@ -21,6 +21,7 @@ export async function retrieveCartItemsCount() {
   if (suma > 0) {
     let htmlToPut = `<span class="badge cart-items">${suma}</span>`;
     document.getElementById("idcartitems").innerHTML = htmlToPut;
+  } else {
+    document.getElementById("idcartitems").innerHTML = ``;
   }
-  console.log(suma);
 }

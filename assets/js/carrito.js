@@ -1,4 +1,5 @@
 import { productos } from "./producto.js";
+import { retrieveCartItemsCount } from "./comun.js";
 
 async function addHtmlToProductsCarts() {
   let outputspansprod = `<div>El carrito esta vacio.</div>`;
@@ -97,6 +98,7 @@ export async function addToCart(productoId, cantidad) {
   }
   localStorage.setItem("entry", JSON.stringify(entryItem));
   localStorage.setItem("allEntriesInCart", JSON.stringify(existingEntries));
+  retrieveCartItemsCount();
 }
 
 async function modifyCart(productoId, cantidad) {
@@ -125,6 +127,7 @@ async function modifyCart(productoId, cantidad) {
   localStorage.setItem("entry", JSON.stringify(entryItem));
   localStorage.setItem("allEntriesInCart", JSON.stringify(existingEntries));
   addHtmlToCartTotals();
+  retrieveCartItemsCount();
 }
 
 async function removeFromCart(productoId) {
@@ -134,15 +137,17 @@ async function removeFromCart(productoId) {
     if (indx >= 0) {
       existingEntries.splice(indx, 1);
     }
-  }
+  } 
   if (existingEntries.length == 0) {
     localStorage.clear();
     addHtmlToProductsCarts();
     addHtmlToCartTotals();
+    retrieveCartItemsCount();
   } else {
     localStorage.setItem("allEntriesInCart", JSON.stringify(existingEntries));
     addHtmlToProductsCarts();
     addHtmlToCartTotals();
+    retrieveCartItemsCount();
     addEventListenerItems();
     addEventListenerCarritoRemover();
   }

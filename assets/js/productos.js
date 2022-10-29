@@ -1,7 +1,6 @@
 import { productos } from "./producto.js";
 import { categorias } from "./categoria.js";
 import { addToCart } from "./carrito.js";
-import { retrieveCartItemsCount } from "./comun.js";
 
 let filteredProductos = productos;
 
