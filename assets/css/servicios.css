@@ -38,8 +38,8 @@ span {
  .resaltado {
   font-size:1.3rem;
   background-color:white; 
-  padding: 7px;  
-  margin: 5px;
+  margin:5px;
+  padding:7px;
   text-decoration:underline;
   border-radius: 6px;     
   text-decoration:underline;  
