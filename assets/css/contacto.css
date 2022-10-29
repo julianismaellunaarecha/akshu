@@ -45,17 +45,17 @@
 }
 
 .datos {
- text-decoration: underline; 
- line-height: 10px;
-}
-
+  text-decoration: underline; 
+  line-height: 10px;
+ }
+ 
 /* Diseño responsivo para celulares- Utiliza menú hamburguesa */
 @media only screen and (min-width: 100px) and (max-width: 600px) { 
   body {
     font-size: calc(0.50rem + 1vw);
     }
   
-  #idmapa {
+  .round-border {
     width: 400px;
     height: 350px;
   }  
