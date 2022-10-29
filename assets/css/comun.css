@@ -106,16 +106,19 @@ a {
   flex-grow: 0;
   font-weight: bolder;
   animation: color-prueba 20s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes color-prueba {
   0% {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+    color: black;
+    background-color: white;
   }
   50% {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    color: white;
+    background-color: black;
   }
   100% {
     color: black;
