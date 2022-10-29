@@ -154,9 +154,7 @@ function addEventListenerCarritoIndexToggleDisplaySidebar() {
   itemsToToggle.forEach((itemToToggle) => {
     itemToToggle.addEventListener("click", function () {
       let idItem = itemToToggle.getAttribute("id");
-      console.log(idItem);
       let idmenu = "idmenu" + idItem;
-      console.log(idmenu);
       toggleDisplay(idmenu);
     });
   });

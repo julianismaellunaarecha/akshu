@@ -19,16 +19,15 @@ const mantenemos = [
   "Productos armados",
   "Telefonos IP",
 ];
-const totalservicios = 5;
 
 function agregarfila(ifila) {
-  var tabla = document.querySelector(".tabla");
-  var fila = document.createElement("div");
+  let tabla = document.querySelector(".tabla");
+  let fila = document.createElement("div");
 
   fila.className = "filas";
 
-  for (col = 0; col < 3; col++) {
-    var columna = document.createElement("div");
+  for (let col = 0; col < 3; col++) {
+    let columna = document.createElement("div");
     columna.className = "columnas";
 
     if (col == 0)
@@ -43,7 +42,12 @@ function agregarfila(ifila) {
   tabla.appendChild(fila);
 }
 
-//agrego tantas filas como servicios con los que contamos
-for (i = 0; i < totalservicios; i++) {
-  agregarfila(i);
+function agregarFilas() {
+    let totalservicios = 5;
+  //agrego tantas filas como servicios con los que contamos
+  for (let i = 0; i < totalservicios; i++) {
+    agregarfila(i);
+  }
 }
+
+agregarFilas();

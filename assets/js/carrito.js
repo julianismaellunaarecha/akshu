@@ -62,8 +62,9 @@ async function addHtmlToCartTotals() {
     }
     outputspansprod += `
         <div class="total">
-          <span class="precio-total">${precioTotal}</span>
-          <span class="descuento-total">${descuentoTotal}</span>
+          <div class="precio-total">${precioTotal}</div>
+          <div class="descuento-total">${descuentoTotal}</div>
+          <div class="pointer clear-cart"><i class="fa-solid fa-recycle"></i></div>
         </div>
     `;
   }
@@ -71,8 +72,8 @@ async function addHtmlToCartTotals() {
 }
 
 export async function addToCart(productoId, cantidad) {
-  var existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
-  var entryItem = {
+  let existingEntries = await JSON.parse(localStorage.getItem("allEntriesInCart"));
+  let entryItem = {
     productoId: productoId,
     cantidad: cantidad,
   };
@@ -99,8 +100,8 @@ export async function addToCart(productoId, cantidad) {
 }
 
 async function modifyCart(productoId, cantidad) {
-  var existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
-  var entryItem = {
+  let existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
+  let entryItem = {
     productoId: productoId,
     cantidad: cantidad,
   };
@@ -127,7 +128,7 @@ async function modifyCart(productoId, cantidad) {
 }
 
 async function removeFromCart(productoId) {
-  var existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
+  let existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
   if (existingEntries != null) {
     const indx = existingEntries.findIndex((v) => v.productoId === productoId);
     if (indx >= 0) {
@@ -168,7 +169,18 @@ async function addEventListenerCarritoRemover() {
   });
 }
 
+async function addEventListenerCarritoVaciar() {
+  const clearItemsFromCart = document.querySelectorAll(".clear-cart");
+  clearItemsFromCart.forEach((clearCart) => {
+    clearCart.addEventListener("click", function () {
+      localStorage.removeItem("allEntriesInCart");
+      location.reload();
+    });
+  });
+}
+
 addHtmlToProductsCarts();
 addHtmlToCartTotals();
 addEventListenerItems();
 addEventListenerCarritoRemover();
+addEventListenerCarritoVaciar();

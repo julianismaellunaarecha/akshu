@@ -1,6 +1,11 @@
+import { retrieveCartItemsCount } from "./comun.js";
+
 function loadStyles() {
   const tarjetaproductolinknode = document.createElement("link");
-  tarjetaproductolinknode.setAttribute("href", "assets/css/tarjetaproducto.css");
+  tarjetaproductolinknode.setAttribute(
+    "href",
+    "assets/css/tarjetaproducto.css"
+  );
   tarjetaproductolinknode.setAttribute("rel", "stylesheet");
   document.getElementById("idhead").appendChild(tarjetaproductolinknode);
 
@@ -17,7 +22,8 @@ function loadStyles() {
 
 loadStyles();
 
-document.getElementById("idheader").innerHTML = `
+function loadHtml() {
+  document.getElementById("idheader").innerHTML = `
 <div  id="idbanner">
     <span id="idprueba">Pagina de prueba para TPO</span>
     <span id="idbannerofertas">
@@ -71,7 +77,9 @@ document.getElementById("idheader").innerHTML = `
                 <a href="contacto.html">Contacto</a>
             </li>
             <li id="idnavlineitem">
-                <span>Carrito</span><i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                    <span><i class="fa-solid fa-cart-shopping"></i></span><span id="idcartitems"></span>
+                </div>
                 <ol class="cart collapsible">
                     <li>
                         <div class="cart-products" id="idcartproducts"></div>
@@ -86,7 +94,7 @@ document.getElementById("idheader").innerHTML = `
 </nav>
 `;
 
-document.getElementById("idfooter").innerHTML = `
+  document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
     <span id="idlogocontainer" class="hidden">
         <span id="idlogo">
@@ -113,4 +121,6 @@ document.getElementById("idfooter").innerHTML = `
     </span>
 </div>
 `;
-
+}
+loadHtml();
+retrieveCartItemsCount();

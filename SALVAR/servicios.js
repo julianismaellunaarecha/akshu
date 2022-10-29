@@ -5,14 +5,14 @@ const totalservicios=5
      
     async function agregarfila (ifila) {
     
-    var tabla= document.querySelector(".tabla")
-    var fila = document.createElement("div")
+    let tabla= document.querySelector(".tabla")
+    let fila = document.createElement("div")
 
     fila.className="filas"
               
            for (col=0; col<3; col++) {
         
-              var columna = document.createElement("div");
+              let columna = document.createElement("div");
               columna.className="columnas"
        
               if (col==0) columna.innerHTML = "<span class=vinietas> ► </span>" + reparamos[ifila]
