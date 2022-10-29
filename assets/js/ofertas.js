@@ -1,4 +1,5 @@
-import {productos} from "./producto.js";
+import { productos } from "./producto.js";
+import { addToCart } from "./carrito.js";
 
 async function ofertas() {
   let outputspans = ``;
@@ -16,6 +17,10 @@ async function ofertas() {
       <div class="descripciondelproducto" id="iddescripciondelproducto">${productoOferta.descripcion} 
       </div>
       <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
+      <input type="number" value="1" min="1" name="cantidad" id="cantidad${productoOferta.id}" required>
+      <div class="pointer addtocart" id="${productoOferta.id}">
+        <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
+      </div>
     </span>
       `;
     }
@@ -24,3 +29,17 @@ async function ofertas() {
 }
 
 ofertas();
+
+async function addEventListenerCarritoOfertas() {
+  const addItemsToCart = document.querySelectorAll(".addtocart");
+  addItemsToCart.forEach((addItemToCart) => {
+    addItemToCart.addEventListener("click", function () {
+      let idProducto = addItemToCart.getAttribute("id");
+      let cant = "cantidad" + idProducto;
+      let cantidad = document.getElementById(cant).value;
+      addToCart(idProducto, cantidad);
+    });
+  });
+}
+
+addEventListenerCarritoOfertas();

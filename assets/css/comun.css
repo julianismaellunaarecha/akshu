@@ -1,11 +1,20 @@
-*{
+*, 
+ h2, 
+ h3 {
   margin: 0;
   padding: 0;
+  border:0;
   border: none;
   list-style: none;
   text-decoration: none;
   outline: none;
+  font-size: 1rem;
 }
+
+h1 {
+  font-size: 1.5rem;
+}
+
 
 @font-face {
   font-family: "Poppins";
@@ -37,11 +46,93 @@
   font-family: "Poppins", "Open Sans", "Nabla", Lato, -apple-system,
     BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.header {
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0rem;
+  background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+#idbanner{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+#idbannerofertas {
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  animation: color-banner 2s infinite;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes color-banner {
+  0% {
+    color: thistle;
+    background-color: goldenrod;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #7f00e6, 0 0 4px #7f00e6,
+      0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
+  }
+  50% {
+    color: white;
+    background-color: grey;
+    text-shadow: 0 0 0.1px #fff, 0 0 0.2px #ff4da6, 0 0 0.3px #ff4da6, 0 0 0.4px #ff4da6,
+      0 0 0.5px #ff4da6, 0 0 0.6px #ff4da6, 0 0 0.7px #ff4da6;
+  }
+  100% {
+    color: thistle;
+    background-color: goldenrod;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #7f00e6, 0 0 4px #7f00e6,
+      0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
+  }
+}
+
+#idprueba {
+  flex-grow: 0;
+  font-weight: bolder;
+  animation: color-prueba 20s infinite;
+}
+
+@keyframes color-prueba {
+  0% {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
+  50% {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+  }
+  100% {
+    color: black;
+    background-color: white;
+  }
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: relative;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
 }
 
 body {
@@ -123,87 +214,6 @@ body {
       0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
 }
 
-.nav {
-  background-color: rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  position: relative;
-  justify-content: space-around;
-  color: white;
-  font-weight: bold;
-}
-
-.header {
-  overflow: hidden;
-  padding-top: 0px;
-  padding-bottom: 0rem;
-  background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
-#idbanner{
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-#idbannerofertas {
-  font-weight: bolder;
-  letter-spacing: 0.2rem;
-  animation: color-banner 2s infinite;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@keyframes color-banner {
-  0% {
-    color: thistle;
-    background-color: goldenrod;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #7f00e6, 0 0 4px #7f00e6,
-      0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
-  }
-  50% {
-    color: white;
-    background-color: grey;
-    text-shadow: 0 0 0.1px #fff, 0 0 0.2px #ff4da6, 0 0 0.3px #ff4da6, 0 0 0.4px #ff4da6,
-      0 0 0.5px #ff4da6, 0 0 0.6px #ff4da6, 0 0 0.7px #ff4da6;
-  }
-  100% {
-    color: thistle;
-    background-color: goldenrod;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #7f00e6, 0 0 4px #7f00e6,
-      0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
-  }
-}
-
-#idprueba {
-  flex-grow: 0;
-  font-weight: bolder;
-  animation: color-prueba 20s infinite;
-}
-
-@keyframes color-prueba {
-  0% {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-  }
-  50% {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-  }
-  100% {
-    color: black;
-    background-color: white;
-  }
-}
-
 .hidden{
   visibility: hidden;
 }
@@ -233,4 +243,150 @@ body {
   flex-direction: column;
   flex-grow: 1;
   gap: 65px;
+}
+
+.openmenu img, .closemenu img {
+  width: 40px;
+  height: 40px;    
+}
+
+.openmenu, .closemenu {
+  display:none; 
+}
+
+/* Diseño responsivo para celulares-*/
+@media only screen and (min-width: 100px) and (max-width: 600px) { 
+
+  /*Adaptación del header y nav*/
+      #idbanner{ 
+        display: block;  
+        text-align: center;
+      } 
+
+      nav {
+        display: block;
+        flex-direction: column; 
+      }
+
+      #idlogoandsearch {
+        display: block;
+        flex-direction: column; 
+      }
+
+      #idlogocontainer {
+        display:block;  
+        flex-direction: column; 
+        text-align: center;
+        background-color: white;
+        padding: 0;
+        margin:0;
+      }
+
+      #idlogo {
+      margin: 0px 0px 0px auto;
+      vertical-align: middle;
+      }
+
+      #idmarca {
+      margin: 0px auto 0px 0px;
+      vertical-align: middle;
+      }
+
+      #idsearchform {
+        display: block;
+        flex-direction: column;   
+      } 
+
+
+    /*Menú Hamburguesa*/
+     nav {
+      display: flex;      
+      flex-direction: column;
+     }
+ 
+     #idmenu ol {
+      background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%);
+      display:flex;
+      flex-direction: column;
+      position:fixed;
+      left:0;
+      top:0;
+      width: 100%; 
+      align-items: left;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+      .openmenu, 
+      .closemenu  {
+      display:block;
+      border:none;
+      background: none; 
+      cursor: pointer;     
+      align-self: flex-start;
+      } 
+
+     .closemenu {
+      padding-top: 120px;
+      }   
+
+      #idmenu ol li {
+      padding: 0;
+      } 
+
+      #idmenu ol.menu_opened {
+       opacity: 1;
+       pointer-events: all;
+      }
+
+}
+
+
+/* Diseño responsivo para tablets- Habilitamos menú de dos filas en flex */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+      
+      #idbanner{ 
+       display: block;  
+       text-align: center;
+      } 
+  
+      nav {
+        display: block;
+        flex-direction: column; 
+      }
+
+      #idlogoandsearch {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      } 
+      
+      #idmenu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 65px;
+      }
+
+      #idmenu ol {
+        display: flex;        
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 15px;     
+      }      
+     
+      #idmenu li {
+        width: 21%;
+      } 
+}
+
+.badge {
+  box-sizing: border-box;
+  background-color: #e74c3c;
+  color: #ffffff;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.05rem 0.6rem;
 }

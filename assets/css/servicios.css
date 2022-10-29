@@ -8,49 +8,20 @@
         font-size:1.5rem; 
     }
 
-   .resaltado {
-    font-size:1.3rem;
-    background-color:white; 
-    padding: 6px;      
-    text-decoration:underline;
-    border-radius: 6px;     
-    text-decoration:underline;     
-   }
+ .resaltado {
+  font-size:1.3rem;
+  background-color:white; 
+  margin:5px;
+  padding:7px;
+  text-decoration:underline;
+  border-radius: 6px;     
+  text-decoration:underline;  
+ }
+
+
  
-  .section {
-    width: 100vw;
-    border-spacing: 10px;
-  }
 
-  .monetizar {
-    display: flex;
-    position:relative;
-    text-align:center; 
-    justify-content: center;
-    width: 100%;
-    height: 100%;    
-  }
 
-  .monetizar p {
-    margin:3% 2% 3% 3% 
-  }
 
-  .tabla{    
-    margin:20px auto;    
-    display: table;     
-    border-collapse: collapse;        
-   }
 
-  .filas{
-    display: table-row;      
-  }
-
-  .columnas{
-  display: table-cell;
-  padding: 7px;
-  border-top:none;  
-  border-right: #636363 5px inset;  
-  border-bottom:none;
-  border-left: none; 
-  }
 

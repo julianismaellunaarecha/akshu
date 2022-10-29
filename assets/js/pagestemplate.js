@@ -1,6 +1,11 @@
+import { retrieveCartItemsCount } from "./comun.js";
+
 function loadStyles() {
   const tarjetaproductolinknode = document.createElement("link");
-  tarjetaproductolinknode.setAttribute("href", "assets/css/tarjetaproducto.css");
+  tarjetaproductolinknode.setAttribute(
+    "href",
+    "assets/css/tarjetaproducto.css"
+  );
   tarjetaproductolinknode.setAttribute("rel", "stylesheet");
   document.getElementById("idhead").appendChild(tarjetaproductolinknode);
 
@@ -17,9 +22,10 @@ function loadStyles() {
 
 loadStyles();
 
-document.getElementById("idheader").innerHTML = `
+function loadHtml() {
+  document.getElementById("idheader").innerHTML = `
 <div  id="idbanner">
-    <span id="idprueba">Pagina de prueba para TPO</span>
+    <a href="index.html"><span id="idprueba">Pagina de prueba para TPO</span></a>
     <span id="idbannerofertas">
         <a href="ofertas.html" id="idmensajeoferta">Hasta 35% de descuento en OFERTAS.</a>    
     </span>
@@ -34,59 +40,57 @@ document.getElementById("idheader").innerHTML = `
             </div>
             <div id="idmarca">
                 <a href="index.html">
-                    Akshu
+                    <h1>Akshu</h1>
                 </a>
             </div>
         </div>
         <div id="idsearchform">
             <form>
                 <input type="text" placeholder="Buscar producto o servicio" id="idinputform">
-                <button type="submit" id="idbuttonform">
+                <button type="submit" id="idbuttonform" aria-label="Buscar">
                     <img id="idimgbusqueda" src="assets/icons/searchicongoogle.svg" alt="Imagen de una lupa que permite buscar productos o servicios tecnológicos provistos por Akshu">
                 </button>
             </form>
         </div>
     </div>
+            <button class="openmenu" aria-label="Desplegar menú">
+                <img src="assets/img/mburguer.png" alt="Desplegar menú">
+            </button>        
     <div id="idmenu">
         <ol>
+            <button class="closemenu" aria-label="Cerrar menú">
+                <img src="assets/img/close.png" alt="Cerrar menú">
+            </button>      
             <li id="idnavlineitem">
-                <a href="index.html">Inicio</a>
+                <a href="index.html"><h2>Inicio</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="quienessomos.html">Quienes somos</a>
+                <a href="quienessomos.html"><h2>Quienes somos</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="cuenta.html">Cuenta</a>
+                <a href="cuenta.html"><h2>Cuenta</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="ofertas.html">Ofertas</a>
+                <a href="ofertas.html"><h2>Ofertas</h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="productos.html">Productos</a>
+                <a href="productos.html"><h2>Productos<h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="servicios.html">Servicios</a>
+                <a href="servicios.html"><h2>Servicios<h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="contacto.html">Contacto</a>
+                <a href="contacto.html"><h2>Contacto<h2></a>
             </li>
             <li id="idnavlineitem">
-                <span>Carrito</span><i class="fa-solid fa-cart-shopping"></i>
-                <ol class="cart collapsible">
-                    <li>
-                        <div class="cart-products" id="idcartproducts"></div>
-                    </li>
-                    <li>
-                        <a href="carrito.html">Ir al carrito</a>
-                    </li>
-                </ol>
+            <a href="carrito.html"><span>Carrito<i class="fa-solid fa-cart-shopping"></i></span><span id="idcartitems"></span></a>
             </li>
         </ol>
     </div>
 </nav>
 `;
 
-document.getElementById("idfooter").innerHTML = `
+  document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
     <span id="idlogocontainer" class="hidden">
         <span id="idlogo">
@@ -102,43 +106,31 @@ document.getElementById("idfooter").innerHTML = `
     </span>
     <span id="idderechos">© Grupo akshu - Todos los derechos reservados</span>
     <span id="idicons">
-        <i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i>
-        <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i>
-        <i class="fa-brands fa-youtube fa-xl" id="idyoutube"></i>
-        <i class="fa-brands fa-twitter fa-xl" id="idtwitter"></i>
-        <i class="fa-brands fa-linkedin fa-xl" id="idlinkedin"></i>
-        <i class="fa-brands fa-github fa-xl" id="idgithub"></i>
-        <i class="fa-brands fa-stack-overflow fa-xl" id="idstackoverflow"></i>
-        <i class="fa-brands fa-twitch fa-xl" id="idtwitch"></i>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i></a>
+        <a href="https://www.youtube.com/" target="_blank">  <i class="fa-brands fa-youtube fa-xl" id="idyoutube"></i></a>
+        <a href="https://twitter.com/" target="_blank">  <i class="fa-brands fa-twitter fa-xl" id="idtwitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank">  <i class="fa-brands fa-linkedin fa-xl" id="idlinkedin"></i></a>
+        <a href="https://github.com/" target="_blank">   <i class="fa-brands fa-github fa-xl" id="idgithub"></i></a>
+        <a href="https://es.stackoverflow.com/" target="_blank">    <i class="fa-brands fa-stack-overflow fa-xl" id="idstackoverflow"></i></a>
+        <a href="https://www.twitch.tv/" target="_blank">    <i class="fa-brands fa-twitch fa-xl" id="idtwitch"></i></a>
     </span>
 </div>
 `;
-
-
-function toogleMenu() {
-    const menu = document.querySelector("#idmenu ol");
-    menu.classList.toggle("menu_opened");
-  }
-  
-  function toggleHamburguesa() {
-    const openMenuBtn = document.querySelector(".openmenu");
-    const closeMenuBtn = document.querySelector(".closemenu");
-    openMenuBtn.addEventListener("click", toogleMenu);
-    closeMenuBtn.addEventListener("click", toogleMenu);
-  }
-
-toggleHamburguesa();
+}
+loadHtml();
+retrieveCartItemsCount();
 
 function toogleMenu() {
-    const menu = document.querySelector("#idmenu ol");
-    menu.classList.toggle("menu_opened");
-  }
-  
-  function toggleHamburguesa() {
-    const openMenuBtn = document.querySelector(".openmenu");
-    const closeMenuBtn = document.querySelector(".closemenu");
-    openMenuBtn.addEventListener("click", toogleMenu);
-    closeMenuBtn.addEventListener("click", toogleMenu);
-  }
+  const menu = document.querySelector("#idmenu ol");
+  menu.classList.toggle("menu_opened");
+}
+
+function toggleHamburguesa() {
+  const openMenuBtn = document.querySelector(".openmenu");
+  const closeMenuBtn = document.querySelector(".closemenu");
+  openMenuBtn.addEventListener("click", toogleMenu);
+  closeMenuBtn.addEventListener("click", toogleMenu);
+}
 
 toggleHamburguesa();
