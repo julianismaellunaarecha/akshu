@@ -36,8 +36,34 @@
   align-items: center;
   flex-direction: column;
   font-weight: bold;
+  margin-top: 10px;
+  line-height: 27px;
 }
 
 #mensaje{
   height: 50px;
 }
+
+.datos {
+ text-decoration: underline; 
+ line-height: 10px;
+}
+
+/* Diseño responsivo para celulares- Utiliza menú hamburguesa */
+@media only screen and (min-width: 100px) and (max-width: 600px) { 
+  body {
+    font-size: calc(0.50rem + 1vw);
+    }
+  
+  #idmapa {
+    width: 400px;
+    height: 350px;
+  }  
+ }
+
+/* Diseño responsivo para tablets- Utiliza menú de dos filas */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  body {
+    font-size: calc(0.65rem + 0.5vw);
+    }
+ }
