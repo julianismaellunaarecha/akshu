@@ -157,8 +157,14 @@ body {
 #idfootercontainer{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: nowrap;
+}
+
+#idderechos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #idicons{
@@ -326,7 +332,7 @@ body {
       padding-top: 120px;
       }   
 
-      idmenu ol li {
+      #idmenu ol li {
       padding: 0;
       } 
 
@@ -373,4 +379,14 @@ body {
       #idmenu li {
         width: 21%;
       } 
+}
+
+.badge {
+  box-sizing: border-box;
+  background-color: #e74c3c;
+  color: #ffffff;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.05rem 0.6rem;
 }

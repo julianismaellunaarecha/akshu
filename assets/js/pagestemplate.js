@@ -1,6 +1,11 @@
+import { retrieveCartItemsCount } from "./comun.js";
+
 function loadStyles() {
   const tarjetaproductolinknode = document.createElement("link");
-  tarjetaproductolinknode.setAttribute("href", "assets/css/tarjetaproducto.css");
+  tarjetaproductolinknode.setAttribute(
+    "href",
+    "assets/css/tarjetaproducto.css"
+  );
   tarjetaproductolinknode.setAttribute("rel", "stylesheet");
   document.getElementById("idhead").appendChild(tarjetaproductolinknode);
 
@@ -17,8 +22,9 @@ function loadStyles() {
 
 loadStyles();
 
-document.getElementById("idheader").innerHTML = `
-<div id="idbanner">
+function loadHtml() {
+    document.getElementById("idheader").innerHTML = `
+<div  id="idbanner">
     <a href="index.html"><span id="idprueba">Pagina de prueba para TPO</span></a>
     <span id="idbannerofertas">
         <a href="ofertas.html" id="idmensajeoferta">Hasta 35% de descuento en OFERTAS.</a>    
@@ -77,21 +83,28 @@ document.getElementById("idheader").innerHTML = `
                 <a href="contacto.html"><h2>Contacto<h2></a>
             </li>
             <li id="idnavlineitem">
-                <a href="carrito.html"><span><h2>Carrito<h2></span><i class="fa-solid fa-cart-shopping"></i></a>
-                <ol class="cart collapsible">
-                    <li>
-                        <div class="cart-products" id="idcartproducts"></div>
-                    </li>                   
-                </ol>
+            <a href="carrito.html"><span>Carrito<i class="fa-solid fa-cart-shopping"></i></span><span id="idcartitems"></span></a>
             </li>
         </ol>
     </div>
 </nav>
 `;
 
-document.getElementById("idfooter").innerHTML = `
+  document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
-    <span id="idderechos"><h3>© Grupo akshu - Todos los derechos reservados<h3></span>   
+    <span id="idlogocontainer" class="hidden">
+        <span id="idlogo">
+            <a href="index.html">
+                <img src="assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" id="idlogoimagen" href="index.html"> 
+            </a>
+        </span>
+        <span id="idmarca">
+            <a href="index.html">
+                Akshu
+            </a>
+        </span>
+    </span>
+    <span id="idderechos">© Grupo akshu - Todos los derechos reservados</span>
     <span id="idicons">
         <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl" id="idinstagram"></i></a>
         <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook fa-xl" id="idfacebook"></i></a>
@@ -104,3 +117,6 @@ document.getElementById("idfooter").innerHTML = `
     </span>
 </div>
 `;
+}
+loadHtml();
+retrieveCartItemsCount();

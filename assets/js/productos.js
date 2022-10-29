@@ -1,5 +1,6 @@
-import {productos} from "./producto.js";
-import {categorias} from "./categoria.js";
+import { productos } from "./producto.js";
+import { categorias } from "./categoria.js";
+import { addToCart } from "./carrito.js";
 
 let filteredProductos = productos;
 
@@ -19,7 +20,10 @@ async function addHtmlToProducts() {
                 <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
                 </div>
                 <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <i class="fa-solid fa-cart-plus"></i>
+                <input type="number" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
+                <div class="pointer addtocart" id="${product.id}">
+                  <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
+                </div>
               </div>
               `;
     } else {
@@ -31,7 +35,10 @@ async function addHtmlToProducts() {
                 <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
                 </div>
                 <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <i class="fa-solid fa-cart-plus"></i>
+                <input type="number" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
+                <div class="pointer addtocart" id="${product.id}">
+                  <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
+                </div>
               </div>
 
               `;
@@ -53,9 +60,6 @@ async function addHtmlToCategories() {
   document.getElementById("idfiltros").innerHTML = outputspanscat;
 }
 
-addHtmlToProducts();
-addHtmlToCategories();
-
 async function filterProducts() {
   const filters = document.querySelectorAll(".filter");
   filters.forEach((filter) => {
@@ -76,8 +80,23 @@ async function filterProducts() {
   });
 }
 
-filterProducts();
+export async function addEventListenerCarrito() {
+  const addItemsToCart = document.querySelectorAll(".addtocart");
+  addItemsToCart.forEach((addItemToCart) => {
+    addItemToCart.addEventListener("click", function () {
+      let idProducto = addItemToCart.getAttribute("id");
+      let cant = "cantidad" + idProducto;
+      let cantidad = document.getElementById(cant).value;
+      addToCart(idProducto, cantidad);
+    });
+  });
+}
 
 export default function retnull() {
   return ``;
 }
+
+addHtmlToProducts();
+addHtmlToCategories();
+filterProducts();
+addEventListenerCarrito();
