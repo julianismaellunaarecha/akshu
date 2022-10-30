@@ -98,12 +98,12 @@ function loadHtml() {
   document.getElementById("idfooter").innerHTML = `
 <div id="idfootercontainer">
     <span id="idlogocontainer" class="hidden">
-        <span id="idlogo">
-            <a href="index.html">
+        <span id="idlogo" class="hidden">
+            <a href="index.html" class="hidden">
                 <img src="assets/icons/akshu.svg" alt="Imagen de una papa con el texto Akshu que representa la imagen de marca del sitio web" id="idlogoimagen" href="index.html"> 
             </a>
         </span>
-        <span id="idmarca">
+        <span id="idmarca" class="hidden">
             <a href="index.html">
                 Akshu
             </a>
