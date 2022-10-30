@@ -442,7 +442,6 @@ input[type="number"]::-webkit-outer-spin-button {
   color: rgba(0, 0, 0, 0.747);
   border-radius: 3rem;
   padding: 0.3rem 0.6rem;
-  border-radius: 3rem;
   text-align: center;
 }
 
