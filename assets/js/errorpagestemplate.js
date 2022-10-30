@@ -135,10 +135,10 @@ document.getElementById("idfooter").innerHTML = `
 `;
 
 document.getElementById("idmensajeerror").innerHTML = `
-<div>
-    <img src="../../assets/img/lolapuerta.jpg" alt=":)" id="idimagenlola">
+<div class="imagen-lola">
+    <img src="../../assets/img/lolapuerta.jpg" alt=":)" class="imagenlola">
 </div>
-<div class="marco">
+<div class="marco" id="idmarcoerror">
     <p>Por favor</p>
     <p id="idnoabra"><span id="idnospan">No</span> abra la puerta.</p>
     <p id="idrestodeltexto">Puede haber una persona dentro,</p>
