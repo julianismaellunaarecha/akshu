@@ -7,15 +7,16 @@
 }
 
 #idcarrousel {
-  padding: 10px 0px 0px 0px;
-  display: block;
+  padding: 10px 0px 0px 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 #idproductosindex {
   padding: 10px 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   row-gap: 10px;
   column-gap: 10px;
 }
@@ -84,4 +85,18 @@
     transform: translateX(0px);
     text-shadow: 0 0 0px;
   }
+}
+
+/* Diseño responsivo para celulares-*/
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+
+  #idmain {
+    flex-direction: column-reverse;
+  }
+
+}
+
+/* Diseño responsivo para tablets- Habilitamos menú de dos filas en flex */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+
 }
