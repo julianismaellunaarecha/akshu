@@ -11,34 +11,45 @@ async function addHtmlToProducts() {
       outputspansprod += `
               <div class="producto ${product.categoria}" id="idproducto">
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
-                <div class="preciodelproducto" id="idpreciodelproducto"> 
-                <span class="oldprice"> $ ${product.precioAntiguo} </span>
-                <span class="newprice"> $ ${product.precio} </span>
-                <span class="discount"> -${product.descuento} %</span>
-                </div> 
+                <span class="precio-cantidad-agregar">
+                  <div class="preciodelproducto" id="idpreciodelproducto"> 
+                    <span class="oldprice"> $ ${product.precioAntiguo} </span>
+                    <span class="newprice"> $ ${product.precio} </span>
+                    <span class="discount"> -${product.descuento} %</span>
+                  </div> 
+                  <div clss="cantidad-agregar">
+                    <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
+                    <button class="pointer addtocart" id="${product.id}">
+                      <i class="fa-solid fa-cart-plus"></i>
+                      <span class="text-add-to-cart">Agregar</span>
+                    </button>
+                  </div> 
+                </span> 
                 <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
                 <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
                 </div>
-                <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <input type="number" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
-                <div class="pointer addtocart" id="${product.id}">
-                  <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-                </div>
-              </div>
+                <button class="button">Ver mas</button>
+            </div>
               `;
     } else {
       outputspansprod += `
               <div class="producto ${product.categoria}" id="idproducto">
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
-                <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio}</div>
+                <span class="precio-cantidad-agregar">
+                  <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio}</div>
+                  <div clss="cantidad-agregar">
+                    <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
+                    <button class="pointer addtocart" id="${product.id}">
+                      <i class="fa-solid fa-cart-plus"></i>
+                      <span class="text-add-to-cart">Agregar</span>
+                    </button>
+                  </div>
+                </span>
                 <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
+                <div class="descripciondelproducto" id="iddescripciondelproducto">
+                  ${product.descripcion}
                 </div>
-                <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                <input type="number" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
-                <div class="pointer addtocart" id="${product.id}">
-                  <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-                </div>
+                <button class="button">Ver mas</button>
               </div>
 
               `;
