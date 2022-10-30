@@ -30,7 +30,7 @@ function loadHtml() {
         <a href="ofertas.html" id="idmensajeoferta">Hasta 35% de descuento en OFERTAS.</a>    
     </span>
 </div>
-<nav id="idnav">
+<nav class="nav" id="idnav">
     <div id="idlogoandsearch">
         <div id="idlogocontainer">
             <div id="idlogo">
@@ -52,41 +52,46 @@ function loadHtml() {
                 </button>
             </form>
         </div>
-    </div>
+    </div>  
+    <span class="menu" id="idmenu">
+        <span class="menuitems">
             <button class="openmenu" aria-label="Desplegar menú">
                 <img src="assets/img/mburguer.png" alt="Desplegar menú">
-            </button>        
-    <div id="idmenu">
-        <ol>
-            <button class="closemenu" aria-label="Cerrar menú">
-                <img src="assets/img/close.png" alt="Cerrar menú">
-            </button>      
-            <li id="idnavlineitem">
-                <a href="index.html"><h2>Inicio</h2></a>
-            </li>
-            <li id="idnavlineitem">
-                <a href="quienessomos.html"><h2>Quienes somos</h2></a>
-            </li>
-            <li id="idnavlineitem">
-                <a href="cuenta.html"><h2>Cuenta</h2></a>
-            </li>
-            <li id="idnavlineitem">
-                <a href="ofertas.html"><h2>Ofertas</h2></a>
-            </li>
-            <li id="idnavlineitem">
-                <a href="productos.html"><h2>Productos<h2></a>
-            </li>
-            <li id="idnavlineitem">
-                <a href="servicios.html"><h2>Servicios<h2></a>
-            </li>
-            <li id="idnavlineitem">
-                <a href="contacto.html"><h2>Contacto<h2></a>
-            </li>
-            <li id="idnavlineitem">
-            <a href="carrito.html"><span>Carrito<i class="fa-solid fa-cart-shopping"></i></span><span id="idcartitems"></span></a>
-            </li>
-        </ol>
-    </div>
+            </button>   
+            <ol>
+                <li id="idnavlineitem">
+                    <a href="index.html"><h2>Inicio</h2></a>
+                </li>
+                <li id="idnavlineitem">
+                    <a href="quienessomos.html"><h2>Quienes somos</h2></a>
+                </li>
+                <li id="idnavlineitem">
+                    <a href="cuenta.html"><h2>Cuenta</h2></a>
+                </li>
+                <li id="idnavlineitem">
+                    <a href="ofertas.html"><h2>Ofertas</h2></a>
+                </li>
+                <li id="idnavlineitem">
+                    <a href="productos.html"><h2>Productos<h2></a>
+                </li>
+                <li id="idnavlineitem">
+                    <a href="servicios.html"><h2>Servicios<h2></a>
+                </li>
+                <li id="idnavlineitem">
+                    <a href="contacto.html"><h2>Contacto<h2></a>
+                </li>
+            </ol>
+        </span>
+        <span class="menucarrito">
+            <a href="carrito.html">
+                <span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+                <span id="idcartitems">
+                </span>
+            </a>
+        </span>
+    </span>
 </nav>
 `;
 

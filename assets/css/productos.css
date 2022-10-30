@@ -16,20 +16,24 @@
 }
 
 .discount{
+  font-size: 1.5rem;
+  font-weight: bold;
   color: white;
   text-shadow: 0 0 1px green, 0 0 2px green, 0 0 3px green, 0 0 4px green,
       0 0 5px green, 0 0 6px green, 0 0 7px green;
-  font-size: 14px;
 }
 
 .newprice{
+  font-size: 1.5rem;
+  font-weight: bold;
   color: green;
 }
 
 .oldprice{
+  font-size: 1.5rem;
+  font-weight: bold;
   text-decoration: line-through;
   color: brown;
-  font-size: 12px;
 }
 
 #idlistadoproductos {
@@ -91,7 +95,6 @@
 
 .filtros{
   margin: 10px;
-  padding: 10px;
 }
 
 .categoria{

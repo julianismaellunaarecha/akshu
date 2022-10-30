@@ -10,21 +10,11 @@ function toggleDisplay(element) {
 }
 
 function carrouselProductos() {
+  let products = new Array();
   let outputdivs = ``;
   let indx1 = Math.floor(Math.random() * productos.length);
-  let item1 = productos[indx1];
-  outputdivs += `
-          <div class="producto" id="idcarta">
-            <div><img class="marcoimagen" src="${item1.urlImagen}" alt="${item1.descripcion}" id="idimagenproductocarta"></div>
-            <div id="idpreciodelproductocarta"> $ ${item1.precio}</div>
-            <div id="idtitulodeproductocarta">${item1.titulo}</div>
-            <input type="number" value="1" min="1" name="cantidad" id="cantidad${item1.id}" required>
-            <div class="pointer addtocart" id="${item1.id}">
-              <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-            </div>
-          </div>
-      `;
   let indx2 = Math.floor(Math.random() * productos.length);
+  let indx3 = Math.floor(Math.random() * productos.length);
   if (indx1 == indx2) {
     if (indx2 == productos.length) {
       indx2--;
@@ -32,19 +22,6 @@ function carrouselProductos() {
       indx2++;
     }
   }
-  let item2 = productos[indx2];
-  outputdivs += `
-  <div class="producto" id="idcarta">
-    <div><img class="marcoimagen" src="${item2.urlImagen}" alt="${item2.descripcion}" id="idimagenproductocarta"></div>
-    <div id="idpreciodelproductocarta"> $ ${item2.precio}</div>
-    <div id="idtitulodeproductocarta">${item2.titulo}</div>
-    <input type="number" value="1" min="1" name="cantidad" id="cantidad${item2.id}" required>
-    <div class="pointer addtocart" id="${item2.id}">
-      <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-    </div>
-  </div>
-`;
-  let indx3 = Math.floor(Math.random() * productos.length);
   if (indx1 == indx3 && item2 == indx3) {
     if (indx3 == productos.length) {
       indx3--;
@@ -52,18 +29,27 @@ function carrouselProductos() {
       indx3++;
     }
   }
-  let item3 = productos[indx3];
-  outputdivs += `
-  <div class="producto" id="idcarta">
-    <div><img class="marcoimagen" src="${item3.urlImagen}" alt="${item3.descripcion}" id="idimagenproductocarta"></div>
-    <div id="idpreciodelproductocarta"> $ ${item3.precio}</div>
-    <div id="idtitulodeproductocarta">${item3.titulo}</div>
-    <input type="number" value="1" min="1" name="cantidad" id="cantidad${item3.id}" required>
-    <div class="pointer addtocart" id="${item3.id}">
-      <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-    </div>
-  </div>
-`;
+  products.push(productos[indx1]);
+  products.push(productos[indx2]);
+  products.push(productos[indx3]);
+  for (let product of products) {
+    outputdivs += `
+          <div class="producto" id="idcarta">
+            <div><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproductocarta"></div>
+            <span class="precio-cantidad-agregar">
+              <span id="idpreciodelproductocarta"> $ ${product.precio}</span>
+              <div clss="cantidad-agregar">
+                <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
+                <button class="pointer addtocart" id="${product.id}">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="text-add-to-cart">Agregar</span>
+                </button>
+              </div>
+            </span>
+            <div id="idtitulodeproductocarta">${product.titulo}</div>
+          </div>
+      `;
+  }
   document.getElementById("idcartascontenido").innerHTML = outputdivs;
 }
 
@@ -71,19 +57,24 @@ function electronicProductsIndex() {
   let outputspans = ``;
   let i = 0;
   for (let producto of productos) {
-    if (producto.categoria == "electronicos") {
+    if (producto.categoria == "electronicos" && !producto.descuento > 0) {
       outputspans += `
                 <span class="producto" id="idproducto">
                   <div class="imagendelproducto"><img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto"></div>
-                  <div class="preciodelproducto" id="idpreciodelproducto"> $ ${producto.precio}</div>
+                  <span class="precio-cantidad-agregar">
+                    <span class="preciodelproducto" id="idpreciodelproducto"> $ ${producto.precio}</span>
+                    <div clss="cantidad-agregar">
+                      <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${producto.id}" required>
+                      <button class="pointer addtocart" id="${producto.id}">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span class="text-add-to-cart">Agregar</span>
+                      </button>
+                    </div>
+                  </span>
                   <div class="titulodeproducto" id="idtitulodeproducto">${producto.titulo}</div>
                   <div class="descripciondelproducto" id="iddescripciondelproducto">${producto.descripcion} 
                   </div>
-                  <span id="expand-sizer" style-target="host" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false">Ver mas</span>
-                  <input type="number" value="1" min="1" name="cantidad" id="cantidad${producto.id}" required>
-                  <div class="pointer addtocart" id="${producto.id}">
-                    <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-                  </div>
+                  <button class="button">Ver mas</button>
                 </span>
                 `;
       i++;
@@ -109,20 +100,26 @@ function addHtmlToIndexSidebar() {
       outputspans += `
       <div class="sectionfav">
                 <div class="titulodeproducto itema half pointer" id="${producto.id}">
-                  <span class="producttitlefav"> ${producto.titulo} </span>
-                  <span class="ratingandcount"> ${producto.percentageRating}% de ${producto.cantidadDeOpiniones} votos </span>                  
+                  <span class="producttitlefav half"> ${producto.titulo} </span>
+                  <span class="ratingandcount half"> ${producto.percentageRating}% de ${producto.cantidadDeOpiniones} votos </span>                  
                 </div>
                 <div class="productof" ${style} id="idmenu${producto.id}">  
                   <p>
-                    <div class="imagendelproductofav half"><img class="marcoimagen" src="${producto.urlImagen}" 
-                    alt="${producto.descripcion}" id="idimagenproducto"> 
-                      <span class="preciodelproductofav"> $ ${producto.precio}</span>
+                    <div class="imagendelproductofav half">
+                    <img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto"> 
+                      <span class="precio-cantidad-agregar">
+                        <div class="preciodelproductofav"> $ ${producto.precio}</div>
+                        <div clss="cantidad-agregar">
+                          <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${producto.id}" required>
+                          <button class="pointer addtocart" id="${producto.id}">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="text-add-to-cart">Agregar</span>
+                          </button>
+                        </div>
+                      </span>
                     </div>
                     <div class="descripciondelproducto half">${producto.descripcion}</div>
-                    <input type="number" value="1" min="1" name="cantidad" id="cantidad${producto.id}" required>
-                    <div class="pointer addtocart" id="${producto.id}">
-                      <i class="fa-solid fa-cart-plus">Agregar al carrito</i>
-                    </div>
+                    <button class="button">Ver mas</button>
                   </p>  
                 </div>  
       </div>
@@ -165,4 +162,3 @@ electronicProductsIndex();
 addHtmlToIndexSidebar();
 addEventListenerCarritoIndex();
 addEventListenerCarritoIndexToggleDisplaySidebar();
-

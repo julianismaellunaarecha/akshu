@@ -19,10 +19,18 @@ async function addHtmlToProductsCarts() {
                   <span class="newprice"> $ ${productos[indx].precio} </span>
                   <span class="discount"> -${productos[indx].descuento} %</span>
                 </span> 
-                <input type="number" value="${existingEntry.cantidad}" min="1" name="cantidad" id="cantidad${productos[indx].id}" required>
-                <div class="pointer removeFromCart" id="${productos[indx].id}">
-                  <i class="fa-solid fa-trash-can">Remover del carrito.</i>
+                <div>
+                  <span>
+                    <input type="number" class="input-cantidad-producto" value="${existingEntry.cantidad}" min="1" name="cantidad" id="cantidad${productos[indx].id}" required>
+                  </span>
+                  <span id="idtotalitem${productos[indx].id}">
+                    $ ${productos[indx].precio * existingEntry.cantidad}
+                  </span>
                 </div>
+                <button class="pointer removeFromCart" id="${productos[indx].id}">
+                  <i class="fa-solid fa-trash-can"></i>
+                  <span class="text-remove-from-cart">Remover del carrrito</span>
+                </button>
               </div>
               `;
         } else {
@@ -31,10 +39,18 @@ async function addHtmlToProductsCarts() {
                 <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}" id="idimagenproducto"></span>
                 <span class="titulodeproducto" id="idtitulodeproducto">${productos[indx].titulo}</span>
                 <span class="preciodelproducto" id="idpreciodelproducto"> $ ${productos[indx].precio}</span>
-                <input type="number" value="${existingEntry.cantidad}" min="1" name="cantidad" id="cantidad${productos[indx].id}" required>
-                <div class="pointer removeFromCart" id="${productos[indx].id}">
-                  <i class="fa-solid fa-trash-can">Remover del carrito.</i>
+                <div>
+                  <span>
+                    <input type="number" class="input-cantidad-producto" value="${existingEntry.cantidad}" min="1" name="cantidad" id="cantidad${productos[indx].id}" required>
+                  </span>
+                  <span id="idtotalitem${productos[indx].id}">
+                    $ ${productos[indx].precio * existingEntry.cantidad}
+                  </span>
                 </div>
+                <button class="pointer removeFromCart" id="${productos[indx].id}">
+                  <i class="fa-solid fa-trash-can"></i>
+                  <span class="text-remove-from-cart">Remover del carrrito</span>
+                </button>
               </div>
               `;
         }
@@ -63,9 +79,12 @@ async function addHtmlToCartTotals() {
     }
     outputspansprod += `
         <div class="total">
-          <div class="precio-total">${precioTotal}</div>
-          <div class="descuento-total">${descuentoTotal}</div>
-          <div class="pointer clear-cart"><i class="fa-solid fa-recycle"></i></div>
+          <div class="precio-total">Costo total: $ ${precioTotal}</div>
+          <div class="descuento-total">Descuento total: $ ${descuentoTotal}</div>
+          <button class="pointer clear-cart">
+            <i class="fa-solid fa-recycle"></i>
+            <span class="text-clear-cart">Vaciar carrito</span>
+          </button>
         </div>
     `;
   }
@@ -124,6 +143,11 @@ async function modifyCart(productoId, cantidad) {
     existingEntries = [];
     existingEntries.push(entryItem);
   }
+  const indxp = productos.findIndex((v) => v.id == entryItem.productoId);
+  let precioEntryItem = productos[indxp].precio * entryItem.cantidad;
+  let elementId = "idtotalitem" + entryItem.productoId;
+  let outputspanstotalitem = `$ ${precioEntryItem}`;
+  document.getElementById(elementId).innerHTML = outputspanstotalitem;
   localStorage.setItem("entry", JSON.stringify(entryItem));
   localStorage.setItem("allEntriesInCart", JSON.stringify(existingEntries));
   addHtmlToCartTotals();
