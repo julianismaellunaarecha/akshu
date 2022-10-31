@@ -1,23 +1,17 @@
-const reparamos = [
-  "Computadoras de escritorio",
-  "Notebooks",
-  "Tablets",
-  "Celulares",
-  "Teléfonos IP",
+
+const productos = [
+  "Electrónicos",
+  "Indumentaria",
+  "Joyería",
+  "Accesorios",
+  "y más...",
 ];
-const armamos = [
-  "Computadoras de escritorio",
-  "Notebooks",
-  "Tablets",
-  "Conexiones de red",
-  "Celulares",
-];
-const mantenemos = [
-  "Software",
-  "Aplicaciones para celular",
-  "Aplicaciones remotas",
-  "Productos armados",
-  "Telefonos IP",
+const soporte = [
+  "Armado de equipos informáticos",
+  "Reparación de celulares",
+  "Instalación de software remoto",
+  "Reacondicionamiento de equipos",
+  "Instalaciones de redes",
 ];
 
 function agregarfila(ifila) {
@@ -26,16 +20,14 @@ function agregarfila(ifila) {
 
   fila.className = "filas";
 
-  for (let col = 0; col < 3; col++) {
+  for (let col = 0; col < 2; col++) {
     let columna = document.createElement("div");
     columna.className = "columnas divisor marco cuadro";
 
     if (col == 0)
-      columna.innerHTML = "<span class=vinietas> ► </span>" + reparamos[ifila];
+      columna.innerHTML = "<span class=vinietas> * </span>" + productos[ifila];
     if (col == 1)
-      columna.innerHTML = "<span class=vinietas> ► </span>" + armamos[ifila];
-    if (col == 2)
-      columna.innerHTML = "<span class=vinietas> ► </span>" + mantenemos[ifila];
+      columna.innerHTML = "<span class=vinietas> * </span>" + soporte[ifila];    
 
     fila.appendChild(columna);
   }
