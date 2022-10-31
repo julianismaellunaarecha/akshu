@@ -2,7 +2,7 @@ import { productos } from "./producto.js";
 import { retrieveCartItemsCount } from "./comun.js";
 
 async function addHtmlToProductsCarts() {
-  let outputspansprod = `<div>El carrito esta vacio.</div>`;
+  let outputspansprod = `<div class="marco rounded empty-cart">El carrito esta vacio.</div>`;
   let existingEntries = JSON.parse(localStorage.getItem("allEntriesInCart"));
   if (existingEntries != null && existingEntries.length > 0) {
     outputspansprod = ``;
@@ -12,44 +12,44 @@ async function addHtmlToProductsCarts() {
         if (productos[indx].descuento > 0) {
           outputspansprod += `
               <div class="producto ${productos[indx].categoria}" id="${productos[indx].id}">
-                <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}" id="idimagenproducto"></span>
+                <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}"></span>
                 <span class="titulodeproducto" id="idtitulodeproducto">${productos[indx].titulo}</span>
                 <span class="preciodelproducto" id="idpreciodelproducto"> 
-                  <span class="oldprice"> $ ${productos[indx].precioAntiguo} </span>
-                  <span class="newprice"> $ ${productos[indx].precio} </span>
+                  <span class="oldprice"> $ ${productos[indx].precioAntiguo.toLocaleString()} </span>
+                  <span class="newprice"> $ ${productos[indx].precio.toLocaleString()} </span>
                   <span class="discount"> -${productos[indx].descuento} %</span>
                 </span> 
                 <div>
                   <span>
                     <input type="number" class="input-cantidad-producto" value="${existingEntry.cantidad}" min="1" name="cantidad" id="cantidad${productos[indx].id}" required>
                   </span>
-                  <span id="idtotalitem${productos[indx].id}">
-                    $ ${productos[indx].precio * existingEntry.cantidad}
+                  <span class="precio-total-item" id="idtotalitem${productos[indx].id}">
+                    $ ${(productos[indx].precio * existingEntry.cantidad).toLocaleString()}
                   </span>
                 </div>
                 <button class="pointer removeFromCart" id="${productos[indx].id}">
                   <i class="fa-solid fa-trash-can"></i>
-                  <span class="text-remove-from-cart">Remover del carrrito</span>
+                  <span class="text-remove-from-cart">Remover del carrito</span>
                 </button>
               </div>
               `;
         } else {
           outputspansprod += `
               <div class="producto ${productos[indx].categoria}" id="${productos[indx].id}">
-                <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}" id="idimagenproducto"></span>
+                <span class="imagendelproducto"><img class="marcoimagen" src="${productos[indx].urlImagen}" alt="${productos[indx].descripcion}"></span>
                 <span class="titulodeproducto" id="idtitulodeproducto">${productos[indx].titulo}</span>
-                <span class="preciodelproducto" id="idpreciodelproducto"> $ ${productos[indx].precio}</span>
+                <span class="preciodelproducto" id="idpreciodelproducto"> $ ${productos[indx].precio.toLocaleString()}</span>
                 <div>
                   <span>
                     <input type="number" class="input-cantidad-producto" value="${existingEntry.cantidad}" min="1" name="cantidad" id="cantidad${productos[indx].id}" required>
                   </span>
-                  <span id="idtotalitem${productos[indx].id}">
-                    $ ${productos[indx].precio * existingEntry.cantidad}
+                  <span class="precio-total-item" id="idtotalitem${productos[indx].id}">
+                    $ ${(productos[indx].precio * existingEntry.cantidad).toLocaleString()}
                   </span>
                 </div>
                 <button class="pointer removeFromCart" id="${productos[indx].id}">
                   <i class="fa-solid fa-trash-can"></i>
-                  <span class="text-remove-from-cart">Remover del carrrito</span>
+                  <span class="text-remove-from-cart">Remover del carrito</span>
                 </button>
               </div>
               `;
@@ -78,9 +78,9 @@ async function addHtmlToCartTotals() {
       }
     }
     outputspansprod += `
-        <div class="total">
-          <div class="precio-total">Costo total: $ ${precioTotal}</div>
-          <div class="descuento-total">Descuento total: $ ${descuentoTotal}</div>
+        <div class="total cuadro">
+          <div class="precio-total">Costo total: $ ${precioTotal.toLocaleString()}</div>
+          <div class="descuento-total">Descuento total: $ ${descuentoTotal.toLocaleString()}</div>
           <button class="pointer clear-cart">
             <i class="fa-solid fa-recycle"></i>
             <span class="text-clear-cart">Vaciar carrito</span>

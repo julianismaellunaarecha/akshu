@@ -1,7 +1,7 @@
 import { productos } from "./producto.js";
 import { addToCart } from "./carrito.js";
 
-function toggleDisplay(element) {
+async function toggleDisplay(element) {
   if (document.getElementById(element).style.display == "none") {
     document.getElementById(element).style.display = "initial";
   } else {
@@ -9,7 +9,7 @@ function toggleDisplay(element) {
   }
 }
 
-function carrouselProductos() {
+async function carrouselProductos() {
   let products = new Array();
   let outputdivs = ``;
   let indx1 = Math.floor(Math.random() * productos.length);
@@ -37,7 +37,7 @@ function carrouselProductos() {
           <div class="producto" id="idcarta">
             <div><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproductocarta"></div>
             <span class="precio-cantidad-agregar">
-              <span id="idpreciodelproductocarta"> $ ${product.precio}</span>
+              <span id="idpreciodelproductocarta"> $ ${product.precio.toLocaleString()}</span>
               <div clss="cantidad-agregar">
                 <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
                 <button class="pointer addtocart" id="${product.id}">
@@ -53,16 +53,17 @@ function carrouselProductos() {
   document.getElementById("idcartascontenido").innerHTML = outputdivs;
 }
 
-function electronicProductsIndex() {
+async function electronicProductsIndex() {
   let outputspans = ``;
   let i = 0;
   for (let producto of productos) {
     if (producto.categoria == "electronicos" && !producto.descuento > 0) {
       outputspans += `
-                <span class="producto" id="idproducto">
-                  <div class="imagendelproducto"><img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto"></div>
+                <div class="producto" id="idproducto">
+                  <div class="imagendelproducto"><img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto">
+                  </div>
                   <span class="precio-cantidad-agregar">
-                    <span class="preciodelproducto" id="idpreciodelproducto"> $ ${producto.precio}</span>
+                    <span class="preciodelproducto" id="idpreciodelproducto"> $ ${producto.precio.toLocaleString()}</span>
                     <div clss="cantidad-agregar">
                       <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${producto.id}" required>
                       <button class="pointer addtocart" id="${producto.id}">
@@ -75,7 +76,7 @@ function electronicProductsIndex() {
                   <div class="descripciondelproducto" id="iddescripciondelproducto">${producto.descripcion} 
                   </div>
                   <button class="button">Ver mas</button>
-                </span>
+                </div>
                 `;
       i++;
     }
@@ -86,7 +87,7 @@ function electronicProductsIndex() {
   document.getElementById("idproductosindex").innerHTML = outputspans;
 }
 
-function addHtmlToIndexSidebar() {
+async function addHtmlToIndexSidebar() {
   let outputspans = ``;
   let i = 1;
   for (let producto of productos) {
@@ -108,7 +109,7 @@ function addHtmlToIndexSidebar() {
                     <div class="imagendelproductofav half">
                     <img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto"> 
                       <span class="precio-cantidad-agregar">
-                        <div class="preciodelproductofav"> $ ${producto.precio}</div>
+                        <div class="preciodelproductofav"> $ ${producto.precio.toLocaleString()}</div>
                         <div clss="cantidad-agregar">
                           <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${producto.id}" required>
                           <button class="pointer addtocart" id="${producto.id}">
@@ -119,7 +120,6 @@ function addHtmlToIndexSidebar() {
                       </span>
                     </div>
                     <div class="descripciondelproducto half">${producto.descripcion}</div>
-                    <button class="button">Ver mas</button>
                   </p>  
                 </div>  
       </div>
@@ -134,7 +134,7 @@ function addHtmlToIndexSidebar() {
   document.getElementById("idfavoritos").innerHTML = outputspans;
 }
 
-function addEventListenerCarritoIndex() {
+async function addEventListenerCarritoIndex() {
   const addItemsToCart = document.querySelectorAll(".addtocart");
   addItemsToCart.forEach((addItemToCart) => {
     addItemToCart.addEventListener("click", function () {
@@ -146,7 +146,7 @@ function addEventListenerCarritoIndex() {
   });
 }
 
-function addEventListenerCarritoIndexToggleDisplaySidebar() {
+async function addEventListenerCarritoIndexToggleDisplaySidebar() {
   const itemsToToggle = document.querySelectorAll(".itema");
   itemsToToggle.forEach((itemToToggle) => {
     itemToToggle.addEventListener("click", function () {

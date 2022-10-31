@@ -13,8 +13,8 @@ async function addHtmlToProducts() {
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
                 <span class="precio-cantidad-agregar">
                   <div class="preciodelproducto" id="idpreciodelproducto"> 
-                    <span class="oldprice"> $ ${product.precioAntiguo} </span>
-                    <span class="newprice"> $ ${product.precio} </span>
+                    <span class="oldprice"> $ ${product.precioAntiguo.toLocaleString()} </span>
+                    <span class="newprice"> $ ${product.precio.toLocaleString()} </span>
                     <span class="discount"> -${product.descuento} %</span>
                   </div> 
                   <div clss="cantidad-agregar">
@@ -36,7 +36,7 @@ async function addHtmlToProducts() {
               <div class="producto ${product.categoria}" id="idproducto">
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
                 <span class="precio-cantidad-agregar">
-                  <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio}</div>
+                  <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio.toLocaleString()}</div>
                   <div clss="cantidad-agregar">
                     <input type="number" class="input-cantidad-producto" value="1" min="1" name="cantidad" id="cantidad${product.id}" required>
                     <button class="pointer addtocart" id="${product.id}">

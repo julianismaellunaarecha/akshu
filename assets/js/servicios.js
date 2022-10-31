@@ -28,7 +28,7 @@ function agregarfila(ifila) {
 
   for (let col = 0; col < 3; col++) {
     let columna = document.createElement("div");
-    columna.className = "columnas";
+    columna.className = "columnas divisor marco cuadro";
 
     if (col == 0)
       columna.innerHTML = "<span class=vinietas> ► </span>" + reparamos[ifila];
