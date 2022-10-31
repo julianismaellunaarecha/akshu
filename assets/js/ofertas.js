@@ -10,8 +10,8 @@ async function ofertas() {
       <div class="imagendelproducto"><img class="marcoimagen" src="${productoOferta.urlImagen}" alt="${productoOferta.descripcion}" id="idimagenproducto"></div>
       <span class="precio-cantidad-agregar">
         <div class="preciodelproducto" id="idpreciodelproducto"> 
-          <span class="oldprice"> $ ${productoOferta.precioAntiguo} </span>
-          <span class="newprice"> $ ${productoOferta.precio} </span>
+          <span class="oldprice"> $ ${productoOferta.precioAntiguo.toLocaleString()} </span>
+          <span class="newprice"> $ ${productoOferta.precio.toLocaleString()} </span>
           <span class="discount"> -${productoOferta.descuento} %</span>
         </div> 
         <div clss="cantidad-agregar">
