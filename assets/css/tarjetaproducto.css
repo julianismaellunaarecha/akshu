@@ -1,0 +1,26 @@
+#idimagenproducto {
+  padding: 10px 10px;
+  display: block;
+  max-width: 150px;
+  max-height: 75px;
+  width: auto;
+  height: auto;
+}
+
+#idtitulodeproducto {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#idpreciodelproducto {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.descripciondelproducto {
+  font-size: 0.75rem;
+  text-justify: auto;
+  text-align: left;
+  overflow: hidden;
+}

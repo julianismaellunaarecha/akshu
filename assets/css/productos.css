@@ -1,0 +1,121 @@
+#idmain {
+  display: flex;
+  align-items: space-between;
+  flex-direction: row;
+  background-color: #ffdd09;
+  flex-grow: 1;
+}
+
+#idofertas {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.discount{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 1px green, 0 0 2px green, 0 0 3px green, 0 0 4px green,
+      0 0 5px green, 0 0 6px green, 0 0 7px green;
+}
+
+.newprice{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: green;
+}
+
+.oldprice{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: line-through;
+  color: brown;
+}
+
+#idlistadoproductos {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 10px;
+  column-gap: 0px;
+}
+
+.hide {
+  animation: hide .3s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+.show {
+    animation: show .3s ease 0s 1 normal forwards;    
+    transform-origin: center;
+}
+
+@keyframes hide {
+  0%{
+    margin: 10px;
+    padding: 10px;
+    display: initial;
+    visibility: visible;
+    transform: scale(1);        
+  }
+  100% {
+    margin: 0px;
+    padding: 0px;
+    visibility: hidden;
+    display: none;
+    transform: scale(0);        
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+@keyframes show {
+  0%{
+    margin: 0px;
+    padding: 0px;
+    visibility: hidden;
+    display: none;
+    transform: scale(0);     
+    width: 0;
+    height: 0;
+    margin: 0;   
+  }
+  100% {
+    margin: 10px;
+    padding: 10px;
+    visibility: visible;
+    display: initial;
+    transform: scale(1);    
+  }
+}
+
+.categoria{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.filter{
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 20px 5px 20px;
+  margin: 10px 0px 10px 0px;
+  text-transform: uppercase;
+  text-shadow: 1px;
+  font-weight: bold;
+}
+
+.filtros{
+  padding: 10px 0px 10px 0px;
+}
+
+.filtercategory{
+  text-align: center;
+  font-size: 125%;
+}
+
+.filter:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,491 @@
+*,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nabla";
+  src: url("../fonts/Nabla-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Skygraze";
+  src: url("../fonts/Skygraze-PKYod.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TechnoBoard";
+  src: url("../fonts/TechnoBoard-1.ttf") format("truetype");
+}
+
+:root {
+  font-style: normal;
+  font-family: "Poppins", "Open Sans", "Nabla", Lato, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0rem;
+  background: linear-gradient(0deg, #ffdd09 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+#idbanner {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+#idbannerofertas {
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  animation: color-banner 2s infinite;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes color-banner {
+  0% {
+    color: thistle;
+    background-color: goldenrod;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #7f00e6, 0 0 4px #7f00e6,
+      0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
+  }
+  50% {
+    color: white;
+    background-color: grey;
+    text-shadow: 0 0 0.1px #fff, 0 0 0.2px #ff4da6, 0 0 0.3px #ff4da6,
+      0 0 0.4px #ff4da6, 0 0 0.5px #ff4da6, 0 0 0.6px #ff4da6, 0 0 0.7px #ff4da6;
+  }
+  100% {
+    color: thistle;
+    background-color: goldenrod;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #7f00e6, 0 0 4px #7f00e6,
+      0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
+  }
+}
+
+#idprueba {
+  flex-grow: 0;
+  font-weight: bolder;
+  animation: color-prueba 20s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes color-prueba {
+  0% {
+    color: black;
+    background-color: white;
+  }
+  50% {
+    color: white;
+    background-color: black;
+  }
+  100% {
+    color: black;
+    background-color: white;
+  }
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  position: relative;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 10px;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  background-color: #ffdd09;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+
+#idfootercontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+#idderechos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#idicons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px;
+}
+
+#idinstagram {
+  text-shadow: 0 0 1px #ff4da6, 0 0 2px #ff4da6, 0 0 3px #ff4da6,
+    0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 6px #ff4da6, 0 0 7px #ff4da6;
+}
+
+#idfacebook {
+  text-shadow: 0 0 1px #1877f2, 0 0 2px #1877f2, 0 0 3px #1877f2,
+    0 0 4px #1877f2, 0 0 5px #1877f2, 0 0 6px #1877f2, 0 0 7px #1877f2;
+}
+
+#idyoutube {
+  text-shadow: 0 0 1px #f00, 0 0 2px #f00, 0 0 3px #f00, 0 0 4px #f00,
+    0 0 5px #f00, 0 0 6px #f00, 0 0 7px #f00;
+}
+
+#idtwitter {
+  text-shadow: 0 0 1px #1d9bf0, 0 0 2px #1d9bf0, 0 0 3px #1d9bf0,
+    0 0 4px #1d9bf0, 0 0 5px #1d9bf0, 0 0 6px #1d9bf0, 0 0 7px #1d9bf0;
+}
+
+#idlinkedin {
+  text-shadow: 0 0 1px #0a66c2, 0 0 2px #0a66c2, 0 0 3px #0a66c2,
+    0 0 4px #0a66c2, 0 0 5px #0a66c2, 0 0 6px #0a66c2, 0 0 7px #0a66c2;
+}
+
+#idgithub {
+  text-shadow: 0 0 1px #161b22, 0 0 2px #161b22, 0 0 3px #161b22,
+    0 0 4px #161b22, 0 0 5px #161b22, 0 0 6px #161b22, 0 0 7px #161b22;
+}
+
+#idstackoverflow {
+  text-shadow: 0 0 1px #f48225, 0 0 2px #f48225, 0 0 3px #f48225,
+    0 0 4px #f48225, 0 0 5px #f48225, 0 0 6px #f48225, 0 0 7px #f48225;
+}
+
+#idtwitch {
+  text-shadow: 0 0 1px #7f00e6, 0 0 2px #7f00e6, 0 0 3px #7f00e6,
+    0 0 4px #7f00e6, 0 0 5px #8200e6, 0 0 6px #9200e6, 0 0 7px #9200e6;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.invisible {
+  display: none;
+}
+
+.marcoimagen {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.aside {
+  background-color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 65px;
+}
+
+.openmenu img,
+.closemenu img {
+  width: 40px;
+  height: 40px;
+}
+
+.openmenu,
+.closemenu {
+  display: none;
+}
+
+.menucarrito {
+  padding: 10px 10px 10px 10px;
+  flex-wrap: nowrap;
+}
+
+.badge {
+  box-sizing: border-box;
+  background-color: #e74c3c;
+  color: #ffffff;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.05rem 0.6rem;
+}
+
+.input-cantidad-producto {
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  box-shadow: 1px;
+  padding: 0px;
+}
+
+.precio-cantidad-agregar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cantidad-agregar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 15px;
+  padding: 10px;
+}
+
+.addtocart {
+  box-sizing: border-box;
+  background-color: rgba(29, 255, 29, 0.596);
+  color: rgba(0, 0, 0, 0.747);
+  border-radius: 3rem;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 230px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  box-shadow: 0 0 0.25px rgba(255, 255, 255, 0.8), 0 0 1px rgba(255, 255, 255, 0.8), 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.8),
+  0 0 4px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(0, 0, 0, 0.8);
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Diseño responsivo para celulares-*/
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  /*Adaptación del header y nav*/
+  #idbanner {
+    display: block;
+    text-align: center;
+  }
+
+  #idlogoandsearch {
+    display: block;
+    flex-direction: column;
+  }
+
+  #idlogocontainer {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #idlogo {
+    margin: 0px 0px 0px auto;
+    vertical-align: middle;
+  }
+
+  #idmarca {
+    margin: 0px auto 0px 0px;
+    vertical-align: middle;
+  }
+
+  #idsearchform {
+    display: block;
+    flex-direction: column;
+  }
+
+  /*Menú Hamburguesa*/
+  nav {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-content: center;
+  }
+
+  #idmenu ol {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    align-items: left;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    flex-grow: 0;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+
+  .openmenu,
+  .closemenu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  .closemenu {
+    padding-top: 120px;
+  }
+
+  #idmenu ol li {
+    padding: 0;
+  }
+
+  #idmenu ol.menu_opened {
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #idfootercontainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #idderechos{
+    text-align: center;
+  }
+}
+
+/* Diseño responsivo para tablets- Habilitamos menú de dos filas en flex */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  #idbanner {
+    display: block;
+    text-align: center;
+  }
+
+  nav {
+    display: block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #idlogoandsearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  #idmenu ol {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #idmenu li {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #idfootercontainer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+}
+
+.rounded{
+  border-radius: 1rem;
+}

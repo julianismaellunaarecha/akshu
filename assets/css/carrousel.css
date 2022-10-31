@@ -1,0 +1,110 @@
+#idcartas {
+  width: 380px;
+  height: 250px;
+  margin: 0;
+  color: black;
+  perspective: 1000px;
+}
+
+#idcartascontenido {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(-30vw) rotateY(0);
+  -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+  animation: carousel 20s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+#idcartascontenido.step-animation {
+  -webkit-animation: carousel 16s infinite steps(1) forwards;
+  animation: carousel 16s infinite steps(1) forwards;
+}
+#idcarta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70vw;
+  height: 40vw;
+  max-width: 350px;
+  max-height: 275px;
+  min-width: 350px;
+  min-height: 275px;
+  border-radius: 10px;
+  transform-origin: center;
+  background-color: rgba(244, 233, 255, 0.9);
+  box-shadow: 0 10px 40px rgba(165, 76, 255, 0.8);
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+
+#idcarta:nth-child(1) {
+  transform: rotateY(0) translateZ(35vw);
+}
+#idcarta:nth-child(2) {
+  transform: rotateY(120deg) translateZ(35vw);
+}
+#idcarta:nth-child(3) {
+  transform: rotateY(240deg) translateZ(35vw);
+}
+
+@-webkit-keyframes carousel {
+  0%,
+  17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%,
+  45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%,
+  72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%,
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+@keyframes carousel {
+  0%,
+  17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%,
+  45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%,
+  72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%,
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+#idimagenproductocarta {
+  padding: 10px 10px;
+  max-width: 275px;
+  max-height: 125px;
+  width: auto;
+  height: auto;
+}
+
+#idtitulodeproductocarta {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+#idpreciodelproductocarta {
+  font-size: 2rem;
+  font-weight: bold;
+}
+

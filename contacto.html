@@ -1,53 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head id="idhead">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshu - Contacto</title>
+    <meta name="author" content="Grupo akshu">
     <link rel="shortcut icon" href="assets/favicon/akshu.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/comun.css">
+    <link rel="stylesheet" href="assets/css/contacto.css">
+    <title>Akshu - Contacto</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ol>
-                <li>
-                    <a href="index.html">
-                        <img src="assets/icons/akshu.png" alt="akshu" width="35" height="24" href="index.html"> Akshu
-                    </a>
-                </li>
-                <li>
-                    <form>
-                        <button type="submit">
-                            <img src="assets/icons/searchicongoogle.svg" alt="Buscar" width="12" height="12">
-                        </button>
-                        <input type="text" placeholder="Buscar producto o servicio">
-                    </form>
-                </li>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="tienda.html">Tienda</a>
-                </li>
-                <li>
-                    <a href="cuenta.html">Cuenta</a>
-                </li>
-                <li>
-                    <a href="notificaciones.html">Notificaciones</a>
-                </li>
-                <li>
-                    <a href="carrito.html">Carrito</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ol>
-        </nav>
+    <header id="idheader">
     </header>
+    <main>
+        <div id="idcontacto">
+            <div class="container marco cuadro round-border" id="idformulario">
+                <section class="contact-form">
+                    <form id="idformcontacto" name = "mensaje" onsubmit = "return validate();">
+                        <div>
+                            <div>
+                                <label for="apellido">Apellido:</label>
+                            </div>
+                            <div>
+                                <input type="text" name="sourceLastName" id="apellido" placeholder="Apellido" required>
+                                <span>*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="nombre">Nombre:</label>
+                            </div>
+                            <div>
+                                <input type="text" name="sourceFirstName" id="nombre" placeholder="Nombre" required>
+                                <span>*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="email">Email:</label>
+                            </div>
+                            <div>
+                                <input type="email" name="sourceEmail" id="email" placeholder="E-mail" required>
+                                <span>*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="telefono">Telefono:</label>
+                            </div>
+                            <div>
+                                <input type="tel" name="sourcePhone" id="telefono" placeholder="Telefono">
+                                <span>(Opcional)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="asunto">Asunto:</label>
+                            </div>
+                            <div>
+                                <input type="text" name="sourceMessageTitle" id="asunto"
+                                    placeholder="Asunto de su mensaje" required>
+                                <span>*</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Motivo de contacto:</span>
+                            </div>
+                            <div>
+                                <label><input type="radio" name="sourceMatter" value="consulta" checked>Consulta</label>
+                                <label><input type="radio" name="sourceMatter" value="reclamo">Reclamo</label>
+                                <label><input type="radio" name="sourceMatter" value="otro">Otro</label>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Mensaje:</span>
+                            <div class="container" id="idcontainermensaje">
+                                <div id="idmensaje">
+                                    <label for="mensaje"></label>
+                                    <textarea name="sourceMessage" id="mensaje" cols="30" rows="10"
+                                                                           placeholder="Ingrese su mensaje aqui." wrap="soft" required></textarea>
+                                    <div id="idmensajeobligatorio">*</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div id="idinfocontacto">
+                <iframe id="idmapa" class="round-border"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.9848862299971!2d-58.37978547078013!3d-34.60569019877868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbf0becc648b%3A0xdbe6d15242d1db0c!2sGrupo%20Akshu!5e0!3m2!1ses-419!2sar!4v1665917679290!5m2!1ses-419!2sar"
+                    width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="idinfo" class="marco-oscuro cuadro round-border">
+                    <div><span class="datos">Horarios de atención:</span></div>
+                    <div>Lunes a Sábados de 18 a 20 hs.</div>
+                    <div><span class="datos">Teléfono: </span></div>
+                    <div>1133333333</div>
+                    <div><span class="datos">Email: </span></div>        
+                    <div>akshu@akshu.ar</div>                             
+               </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer" id="idfooter">
+    </footer>
+    <script type="module" src="assets/js/pagestemplate.js"></script>
+    <script src="assets/js/mensaje.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4d8eec12f1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
