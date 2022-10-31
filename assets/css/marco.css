@@ -1,0 +1,23 @@
+.marco {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.marco-oscuro {
+  width: auto;
+  height: auto;
+  background: rgb(218, 165, 32);
+  color: rgb(0, 0, 0);
+}
+
+.round-border {
+  border-radius: 6px;
+}
+
+.red-background {
+  background: rgba(255, 0, 0, 0.9);
+  color: #fff;
+}
+
+.cuadro{
+  padding: 10px 10px;
+}

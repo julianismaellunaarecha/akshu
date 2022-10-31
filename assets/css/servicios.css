@@ -1,0 +1,80 @@
+.vinietas {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.resaltado {
+    font-size: 1.3rem;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+.tabla {
+    margin: 20px auto;
+    display: table;
+}
+
+.filas {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.columnas {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.marco{
+    width: 260px;
+}
+
+.divisor{
+    border-right: #636363 5px inset;
+    border-left: #636363 5px outset;
+}
+
+.monetizar {
+  width: auto;
+  height: auto;
+  margin: 45px 0 35px 0;
+  position:relative;
+  text-align:center;
+ }
+
+.titulo {
+  font-weight: bold;
+  font-size:1.2rem;
+ }
+
+.vinietas {
+  color:white ;
+  font-size:1.5rem;
+ }
+
+ .resaltado {
+  font-size:1.3rem;
+  background-color:white;
+  margin:5px;
+  padding:7px;
+  border-radius: 6px;
+ }
+
+ .titulomarco{
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    background-color: rgb(255, 255, 255, 0.2); 
+ }
+
+
+
+
+
+

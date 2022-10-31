@@ -1,53 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head id="idhead">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshu - Cuenta</title>
+    <meta name="author" content="Grupo akshu">
     <link rel="shortcut icon" href="assets/favicon/akshu.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/comun.css">
+    <link rel="stylesheet" href="assets/css/cuenta.css">    
+    <title>Akshu - Cuenta</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ol>
-                <li>
-                    <a href="index.html">
-                        <img src="assets/icons/akshu.png" alt="akshu" width="35" height="24" href="index.html"> Akshu
-                    </a>
-                </li>
-                <li>
-                    <form>
-                        <button type="submit">
-                            <img src="assets/icons/searchicongoogle.svg" alt="Buscar" width="12" height="12">
-                        </button>
-                        <input type="text" placeholder="Buscar producto o servicio">
-                    </form>
-                </li>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="tienda.html">Tienda</a>
-                </li>
-                <li>
-                    <a href="cuenta.html">Cuenta</a>
-                </li>
-                <li>
-                    <a href="notificaciones.html">Notificaciones</a>
-                </li>
-                <li>
-                    <a href="carrito.html">Carrito</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ol>
-        </nav>
+    <header class="header" id="idheader">
     </header>
+
+    <main class="main">        
+
+       <div id="containercuenta">
+            <section>
+                <div id="ingresarcuenta" class="containering">
+                    <p><span class="resaltado1">Iniciar sesión:</span></p>
+
+                        <form id="formingresarcuenta">
+                          
+                            <div>
+                                <div>
+                                    <label for="usuario">Usuario:</label>
+                                </div>
+                                <div>
+                                    <input type="text" name="sourceUser" id="usuario" placeholder="Usuario" required>
+                                    <span>*</span>
+                                </div>
+
+                                <div>
+                                    <label for="clave">Contraseña:</label>
+                                </div>
+                                <div>
+                                    <input type="password" name="sourcePassword" id="clave" placeholder="Contraseña" required>
+                                    <span>*</span>
+                                </div> 
+                            </div>  
+                        
+                            <div>
+                                <button type="submit">Ingresar</button>
+                            </div>
+                          
+                        </form> 
+                 </div>
+             </section>             
+
+            <aside>
+                 <div id="registrarcuenta" class="containerreg">
+                    <p><span class="resaltado2">¿No tenés cuenta?</span></p>
+                    <p><span class="resaltado2">Registrate ahora:</span></p>
+                        <form id="formregistrarcuenta">
+                            <div>
+                                <div>
+                                    <label for="apellido">Apellido:</label>
+                                </div>
+                                <div>
+                                    <input type="text" name="sourceLastName" id="apellido" placeholder="Apellido" required>
+                                    <span>*</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="nombre">Nombre:</label>
+                                </div>
+                                <div>
+                                    <input type="text" name="sourceFirstName" id="nombre" placeholder="Nombre" required>
+                                    <span>*</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="email">Email:</label>
+                                </div>
+                                <div>
+                                    <input type="email" name="sourceEmail" id="email" placeholder="E-mail" required>
+                                    <span>*</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="fechanac">Fecha de nacimiento:</label>
+                                </div>
+                                <div>
+                                    <input type="date" name="sourceDate" id="fechanac" placeholder="Fecha de nacimiento">
+                                    <span>*</span>
+                                </div>
+                            </div>   
+                            <div>            
+                               <div>
+                                   <label for="clave">Contraseña:</label>
+                               </div>
+                               <div>
+                                   <input type="password" name="sourcePassword" id="clave" placeholder="Contraseña" required>
+                                   <span>*</span>
+                               </div> 
+                            </div>
+                            <div>
+                                <button type="submit">Registrar</button>
+                            </div>
+                        </form>
+                 </div>
+            </aside>
+        </div>
+     </main>         
+
+    <footer class="footer" id="idfooter">
+    </footer>
+    <script type="module" src="assets/js/pagestemplate.js"></script>    
+    <script src="https://kit.fontawesome.com/4d8eec12f1.js" crossorigin="anonymous"></script>
+    <script src="assets/js/ingresarcuenta.js"></script>
+    <script src="assets/js/registrarcuenta.js"></script>
+
 </body>
 
 </html>

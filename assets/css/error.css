@@ -1,0 +1,96 @@
+#idrow {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#idcolumn {
+  flex: 50%;
+}
+
+#idnoabra {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#idypodria {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#idnospan {
+  text-transform: uppercase;
+  font-size: 200%;
+}
+
+#idrestodeltexto {
+  font-size: 75%;
+}
+
+.imagenlola {
+  max-width: 270px;
+  max-height: auto;
+  animation: color-imagenlola 1s infinite;
+}
+
+@keyframes color-imagenlola {
+  0% {
+    box-shadow: 0 0 1px #ff0000, 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 12px #ff0000,
+      0 0 24px #ff0000, 0 0 48px #ff0000, 0 0 96px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 0.1px #fff, 0 0 0.2px #ff4da6, 0 0 0.3px #ff4da6,
+      0 0 0.4px #ff4da6, 0 0 0.5px #ff4da6, 0 0 0.6px #ff4da6, 0 0 0.40px #ff4da6;
+  }
+  100% {
+    box-shadow: 0 0 1px #ff0000, 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 12px #ff0000,
+      0 0 24px #ff0000, 0 0 48px #ff0000, 0 0 96px #ff0000;
+  }
+}
+
+.imagen-lola{
+  padding: 10px 10px;
+}
+
+#idmensajeerror {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#idmarcoerror{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 320px;
+  animation: color-marcoerror 10s infinite;
+  border-radius: 0.2rem;
+}
+
+@keyframes color-marcoerror {
+  0% {
+    box-shadow: 0 0 1px #000000, 0 0 3px #000000, 0 0 6px #000000, 0 0 12px #000000,
+      0 0 24px #000000, 0 0 48px #000000, 0 0 96px #000000;
+  }
+  50% {
+    box-shadow: 0 0 0.1px #fff, 0 0 0.2px #ff4da6, 0 0 0.3px #ff4da6,
+      0 0 0.4px #ff4da6, 0 0 0.5px #ff4da6, 0 0 0.6px #ff4da6, 0 0 0.40px #ff4da6;
+  }
+  100% {
+    box-shadow: 0 0 1px #000000, 0 0 3px #000000, 0 0 6px #000000, 0 0 12px #000000,
+      0 0 24px #000000, 0 0 48px #000000, 0 0 96px #000000;
+  }
+}
+
+/* Diseño responsivo para celulares-*/
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+
+  #idmensajeerror {
+    flex-direction: column;
+  }
+
+}

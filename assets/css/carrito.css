@@ -1,0 +1,129 @@
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.producto {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  align-content: baseline;
+}
+
+.titulodeproducto{
+    max-width: 300px;
+}
+
+.marcoimagen {
+    max-width: 60px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+}
+
+#idcarritototales{
+    align-self: flex-start;
+}
+
+.total{
+    border-radius: 6px;
+    box-shadow: 0 0 0.25px rgba(29, 52, 255, 0.7), 0 0 1px rgba(29, 52, 255, 0.7), 0 0 1px rgba(29, 52, 255, 0.7), 0 0 2px rgba(29, 52, 255, 0.7),
+    0 0 4px rgba(29, 52, 255, 0.7), 0 0 8px rgba(29, 52, 255, 0.7), 0 0 16px rgba(29, 52, 255, 0.7);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(29, 52, 255, 0.7);
+}
+
+.aside {
+    background-color: unset;
+    max-width: auto;
+    min-width: auto;
+}
+
+.clear-cart{
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: rgba(148, 233, 250, 0.9);
+    color: rgba(0, 0, 0, 0.747);
+    border-radius: 3rem;
+    margin: 10px;
+    padding: 0.3rem 0.6rem;
+    text-align: center;
+    box-shadow: 0 0 0.25px rgba(148, 233, 250, 0.9), 0 0 1px rgba(148, 233, 250, 0.9), 0 0 1px rgba(0, 0, 0, 0.9), 0 0 2px rgba(0, 0, 0, 0.9),
+    0 0 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(148, 233, 250, 0.9), 0 0 16px rgba(148, 233, 250, 0.9);
+}
+
+.removeFromCart{
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: rgba(255, 29, 29, 0.9);
+    color: rgba(255, 255, 255, 0.747);
+    border-radius: 3rem;
+    padding: 0.3rem 0.6rem;
+    text-align: center;
+    box-shadow: 0 0 1px rgba(255, 29, 29, 0.9), 0 0 2px rgba(255, 29, 29, 0.9), 0 0 3px rgba(255, 255, 255, 0.9), 0 0 4px rgba(255, 255, 255, 0.9),
+    0 0 5px rgba(255, 255, 255, 0.9), 0 0 6px rgba(255, 29, 29, 0.9), 0 0 7px rgba(255, 29, 29, 0.9);
+}
+
+.precio-total-item{
+    font-weight: bold;
+}
+
+.precio-total{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.descuento-total{
+    font-weight: bold;
+    color: rgba(29, 255, 29, 0.9);
+}
+
+#idimagenproducto {
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.empty-cart{
+    font-weight: bold;
+    text-shadow: 0 0 0.25px rgb(0, 0, 0, 0.2), 0 0 0.5px rgb(0, 0, 0, 0.2), 0 0 0.75px rgb(0, 0, 0, 0.2),
+    0 0 1px rgb(0, 0, 0, 0.2), 0 0 1.25px rgb(0, 0, 0, 0.2), 0 0 1.5px rgb(0, 0, 0, 0.2), 0 0 1.75px rgb(0, 0, 0, 0.2);
+    padding: 50px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  .section {
+    flex-direction: column;
+  }
+  #idcarritototales{
+    align-self: center;
+
+}
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+    .section {
+        flex-direction: column;
+
+      }
+      #idcarritototales{
+        align-self: center;
+
+    }
+
+}

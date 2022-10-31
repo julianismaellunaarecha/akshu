@@ -1,0 +1,112 @@
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [x0] 100vw [x1];
+  grid-template-rows: [y0] auto [y1] auto [y2];
+}
+
+.main {
+  grid-area: main;
+  grid-column: x0/x1;
+  grid-row: y0/y2;
+}
+
+.section1 {
+  grid-area: section1;
+  grid-column: x0/x1;
+  grid-row: y0/y1;
+}
+
+.section2 {
+  grid-area: section2;
+  grid-column: x0/x1;
+  grid-row: y1/y2;
+}
+
+#qsomos {
+  padding: 25px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.grupoa {
+  text-decoration-line: underline;
+  animation-name: cambiarTamanio;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  font-size: 1.8rem;
+  color: darkslateblue;
+  font-weight: bold;
+}
+
+@keyframes cambiarTamanio {
+  0% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1.8rem;
+  }
+}
+
+.ingresa {
+  text-decoration-line: underline;
+  color: darkslateblue;
+  font-weight: bold;
+}
+
+#grupoakshu {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#grupoakshu.figure {
+  float: center;
+  width: 25%;
+  border: thin silver solid;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+#grupoakshu img {
+  border-radius: 2%;
+  scale: 1;
+  height: 45vh;
+  margin: 10px 30px 10px 10px;
+}
+
+figcaption{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 10px 30px 10px 10px;
+}
+
+/* Diseño responsivo para celulares- Utiliza menú hamburguesa */
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  body {
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  #grupoakshu img {
+    border-radius: 2%;
+    height: 40vh;
+    margin: 10px 30px 10px 10px;
+  }
+
+  #grupoakshu {
+    flex-direction: column;
+  }
+}
+
+/* Diseño responsivo para tablets- Utiliza menú de dos filas */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  body {
+    font-size: calc(0.65rem + 0.5vw);
+  }
+}

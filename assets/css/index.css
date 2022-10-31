@@ -1,0 +1,98 @@
+#idmain {
+  display: flex;
+  align-items: space-between;
+  flex-direction: row;
+  background-color: #ffdd09;
+  flex-grow: 1;
+}
+
+#idcarrousel {
+  padding: 10px 0px 0px 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#idproductosindex {
+  padding: 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.sectionfav .itema {
+  padding: 5px 10px 5px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid goldenrod;
+}
+
+.half {
+  font-size: 10px;
+}
+
+.imagendelproductofav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.preciodelproductofav {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+}
+
+.titulofav {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  padding: 5px 5px;
+  animation: titulo-traslada 2s linear;
+  text-shadow: 0 0 0px;
+}
+
+@keyframes titulo-traslada {
+  0% {
+    transform: translateX(0px);
+    text-shadow: 0 0 0px;
+  }
+  30% {
+    transform: translateX(50px);
+    text-shadow: 0 0 2px goldenrod, 0 0 3px gold;
+  }
+  90% {
+    transform: translateX(0px);
+    text-shadow: 0 0 0px;
+  }
+  95% {
+    transform: translateX(-5px);
+    text-shadow: 0 0 1px crimson, 0 0 2px crimson;
+  }
+  100% {
+    transform: translateX(0px);
+    text-shadow: 0 0 0px;
+  }
+}
+
+/* Diseño responsivo para celulares-*/
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+
+  #idmain {
+    flex-direction: column-reverse;
+  }
+
+}
+
+/* Diseño responsivo para tablets- Habilitamos menú de dos filas en flex */
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+
+}
