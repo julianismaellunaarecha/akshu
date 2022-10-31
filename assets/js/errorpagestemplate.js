@@ -152,12 +152,12 @@ document.getElementById("idmensajeerror").innerHTML = `
 loadHtml();
 retrieveCartItemsCount();
 
-function toogleMenu() {
+async function toogleMenu() {
   const menu = document.querySelector("#idmenu ol");
   menu.classList.toggle("menu_opened");
 }
 
-function toggleHamburguesa() {
+async function toggleHamburguesa() {
   const openMenuBtn = document.querySelector(".openmenu");
   const closeMenuBtn = document.querySelector(".closemenu");
   openMenuBtn.addEventListener("click", toogleMenu);

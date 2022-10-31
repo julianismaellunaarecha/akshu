@@ -1,7 +1,7 @@
 import { productos } from "./producto.js";
 import { addToCart } from "./carrito.js";
 
-function toggleDisplay(element) {
+async function toggleDisplay(element) {
   if (document.getElementById(element).style.display == "none") {
     document.getElementById(element).style.display = "initial";
   } else {
@@ -9,7 +9,7 @@ function toggleDisplay(element) {
   }
 }
 
-function carrouselProductos() {
+async function carrouselProductos() {
   let products = new Array();
   let outputdivs = ``;
   let indx1 = Math.floor(Math.random() * productos.length);
@@ -53,7 +53,7 @@ function carrouselProductos() {
   document.getElementById("idcartascontenido").innerHTML = outputdivs;
 }
 
-function electronicProductsIndex() {
+async function electronicProductsIndex() {
   let outputspans = ``;
   let i = 0;
   for (let producto of productos) {
@@ -87,7 +87,7 @@ function electronicProductsIndex() {
   document.getElementById("idproductosindex").innerHTML = outputspans;
 }
 
-function addHtmlToIndexSidebar() {
+async function addHtmlToIndexSidebar() {
   let outputspans = ``;
   let i = 1;
   for (let producto of productos) {
@@ -134,7 +134,7 @@ function addHtmlToIndexSidebar() {
   document.getElementById("idfavoritos").innerHTML = outputspans;
 }
 
-function addEventListenerCarritoIndex() {
+async function addEventListenerCarritoIndex() {
   const addItemsToCart = document.querySelectorAll(".addtocart");
   addItemsToCart.forEach((addItemToCart) => {
     addItemToCart.addEventListener("click", function () {
@@ -146,7 +146,7 @@ function addEventListenerCarritoIndex() {
   });
 }
 
-function addEventListenerCarritoIndexToggleDisplaySidebar() {
+async function addEventListenerCarritoIndexToggleDisplaySidebar() {
   const itemsToToggle = document.querySelectorAll(".itema");
   itemsToToggle.forEach((itemToToggle) => {
     itemToToggle.addEventListener("click", function () {
