@@ -1,12 +1,13 @@
 import { productos } from "./producto.js";
 import { addToCart } from "./carrito.js";
+import { addEventListenerCarritoIndexToggleDisplayDesc } from "./productos.js";
 
 async function ofertas() {
   let outputspans = ``;
   for (let productoOferta of productos) {
     if (productoOferta.descuento > 0) {
       outputspans += `
-      <span class="producto" id="idproducto">
+      <span class="producto" id="desplegable${productoOferta.id}" style="height: 230px;">
       <div class="imagendelproducto"><img class="marcoimagen" src="${productoOferta.urlImagen}" alt="${productoOferta.descripcion}" id="idimagenproducto"></div>
       <span class="precio-cantidad-agregar">
         <div class="preciodelproducto" id="idpreciodelproducto"> 
@@ -23,9 +24,9 @@ async function ofertas() {
         </div>
       </span>
       <div class="titulodeproducto" id="idtitulodeproducto">${productoOferta.titulo}</div>
-      <div class="descripciondelproducto" id="iddescripciondelproducto">${productoOferta.descripcion} 
+      <div class="descripciondelproducto" id="iddesc${productoOferta.id}" style="overflow: hidden;">${productoOferta.descripcion} 
       </div>
-      <button class="button">Ver mas</button>
+      <button class="button vermas pointer" id="${productoOferta.id}"><i class="fa-solid fa-angle-down"></i></button>
     </span>
       `;
     }
@@ -48,3 +49,4 @@ async function addEventListenerCarritoOfertas() {
 }
 
 addEventListenerCarritoOfertas();
+addEventListenerCarritoIndexToggleDisplayDesc();

@@ -133,9 +133,7 @@ function toogleMenu() {
 
 function toggleHamburguesa() {
   const openMenuBtn = document.querySelector(".openmenu");
-  const closeMenuBtn = document.querySelector(".closemenu");
   openMenuBtn.addEventListener("click", toogleMenu);
-  closeMenuBtn.addEventListener("click", toogleMenu);
 }
 
 toggleHamburguesa();

@@ -4,12 +4,27 @@ import { addToCart } from "./carrito.js";
 
 let filteredProductos = productos;
 
+async function toggleDisplayOverflow(idItem) {
+  let iddesc = "iddesc" + idItem;
+  let idItemContainer = "desplegable" + idItem;
+  if (document.getElementById(idItemContainer).style.height == "230px") {
+    document.getElementById(idItemContainer).style.height = "auto";
+  } else {
+    document.getElementById(idItemContainer).style.height = "230px";
+  }
+  if (document.getElementById(iddesc).style.overflow == "hidden") {
+    document.getElementById(iddesc).style.overflow = "initial";
+  } else {
+    document.getElementById(iddesc).style.overflow = "hidden";
+  }
+}
+
 async function addHtmlToProducts() {
   let outputspansprod = ``;
   for (let product of filteredProductos) {
     if (product.descuento > 0) {
       outputspansprod += `
-              <div class="producto ${product.categoria}" id="idproducto">
+              <div class="producto ${product.categoria}" id="desplegable${product.id}" style="height: 230px;">
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
                 <span class="precio-cantidad-agregar">
                   <div class="preciodelproducto" id="idpreciodelproducto"> 
@@ -26,14 +41,14 @@ async function addHtmlToProducts() {
                   </div> 
                 </span> 
                 <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">${product.descripcion} 
+                <div class="descripciondelproducto" id="iddesc${product.id}" style="overflow: hidden;">${product.descripcion} 
                 </div>
-                <button class="button">Ver mas</button>
+                <button class="button vermas pointer" id="${product.id}"><i class="fa-solid fa-angle-down"></i></button>
             </div>
               `;
     } else {
       outputspansprod += `
-              <div class="producto ${product.categoria}" id="idproducto">
+              <div class="producto ${product.categoria}" id="desplegable${product.id}" style="height: 230px;">
                 <div class="imagendelproducto"><img class="marcoimagen" src="${product.urlImagen}" alt="${product.descripcion}" id="idimagenproducto"></div>
                 <span class="precio-cantidad-agregar">
                   <div class="preciodelproducto" id="idpreciodelproducto"> $ ${product.precio.toLocaleString()}</div>
@@ -46,10 +61,10 @@ async function addHtmlToProducts() {
                   </div>
                 </span>
                 <div class="titulodeproducto" id="idtitulodeproducto">${product.titulo}</div>
-                <div class="descripciondelproducto" id="iddescripciondelproducto">
+                <div class="descripciondelproducto" id="iddesc${product.id}" style="overflow: hidden;">
                   ${product.descripcion}
                 </div>
-                <button class="button">Ver mas</button>
+                <button class="button vermas pointer" id="${product.id}"><i class="fa-solid fa-angle-down"></i></button>
               </div>
 
               `;
@@ -103,6 +118,16 @@ export async function addEventListenerCarrito() {
   });
 }
 
+export async function addEventListenerCarritoIndexToggleDisplayDesc() {
+  const itemsToToggle = document.querySelectorAll(".vermas");
+  itemsToToggle.forEach((itemToToggle) => {
+    itemToToggle.addEventListener("click", function () {
+      let idItem = itemToToggle.getAttribute("id");
+      toggleDisplayOverflow(idItem);
+    });
+  });
+}
+
 export default function retnull() {
   return ``;
 }
@@ -111,3 +136,4 @@ addHtmlToProducts();
 addHtmlToCategories();
 filterProducts();
 addEventListenerCarrito();
+addEventListenerCarritoIndexToggleDisplayDesc();

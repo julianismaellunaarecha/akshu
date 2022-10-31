@@ -1,5 +1,6 @@
 import { productos } from "./producto.js";
 import { addToCart } from "./carrito.js";
+import { addEventListenerCarritoIndexToggleDisplayDesc } from "./productos.js";
 
 async function toggleDisplay(element) {
   if (document.getElementById(element).style.display == "none") {
@@ -59,7 +60,7 @@ async function electronicProductsIndex() {
   for (let producto of productos) {
     if (producto.categoria == "electronicos" && !producto.descuento > 0) {
       outputspans += `
-                <div class="producto" id="idproducto">
+                <div class="producto" id="desplegable${producto.id}" style="height: 230px;">
                   <div class="imagendelproducto"><img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto">
                   </div>
                   <span class="precio-cantidad-agregar">
@@ -73,9 +74,9 @@ async function electronicProductsIndex() {
                     </div>
                   </span>
                   <div class="titulodeproducto" id="idtitulodeproducto">${producto.titulo}</div>
-                  <div class="descripciondelproducto" id="iddescripciondelproducto">${producto.descripcion} 
+                  <div class="descripciondelproducto" id="iddesc${producto.id}" style="overflow: hidden;">${producto.descripcion} 
                   </div>
-                  <button class="button">Ver mas</button>
+                  <button class="button vermas pointer" id="${producto.id}"><i class="fa-solid fa-angle-down"></i></button>
                 </div>
                 `;
       i++;
@@ -162,3 +163,4 @@ electronicProductsIndex();
 addHtmlToIndexSidebar();
 addEventListenerCarritoIndex();
 addEventListenerCarritoIndexToggleDisplaySidebar();
+addEventListenerCarritoIndexToggleDisplayDesc();
