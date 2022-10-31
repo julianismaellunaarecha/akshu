@@ -5,30 +5,39 @@
 
 .resaltado {
     font-size: 1.3rem;
-    background-color: white;
     margin: 5px;
     padding: 7px;
-    text-decoration: underline;
     border-radius: 6px;
 }
 
 .tabla {
     margin: 20px auto;
     display: table;
-    border-collapse: collapse;
 }
 
 .filas {
-    display: table-row;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: nowrap;
 }
 
 .columnas {
-    display: table-cell;
-    padding: 20px;
     border-top: none;
-    border-right: #636363 5px inset;
     border-bottom: none;
     border-left: none;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.marco{
+    width: 260px;
+}
+
+.divisor{
+    border-right: #636363 5px inset;
+    border-left: #636363 5px outset;
 }
 
 .monetizar {
@@ -54,11 +63,15 @@
   background-color:white;
   margin:5px;
   padding:7px;
-  text-decoration:underline;
   border-radius: 6px;
  }
 
-
+ .titulomarco{
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    background-color: rgb(255, 255, 255, 0.2); 
+ }
 
 
 

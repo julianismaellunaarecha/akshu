@@ -1,12 +1,8 @@
 .marco {
-  padding: 20px 20px;
-  width: auto;
-  height: auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .marco-oscuro {
-  padding: 20px 20px;
   width: auto;
   height: auto;
   background: rgb(218, 165, 32);
@@ -20,4 +16,8 @@
 .red-background {
   background: rgba(255, 0, 0, 0.9);
   color: #fff;
+}
+
+.cuadro{
+  padding: 10px 10px;
 }

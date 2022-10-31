@@ -244,6 +244,7 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   flex-grow: 1;
   max-width: 500px;
+  min-width: 250px;
 }
 
 .section {
@@ -323,11 +324,12 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   width: 300px;
   height: 230px;
-  max-width: 300px;
-  max-height: 230px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
-  transform-origin: center;
+  box-shadow: 0 0 0.25px rgba(255, 255, 255, 0.8), 0 0 1px rgba(255, 255, 255, 0.8), 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.8),
+  0 0 4px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(0, 0, 0, 0.8);
+  margin: 10px;
+  padding: 10px;
 }
 
 /* Diseño responsivo para celulares-*/
@@ -478,4 +480,8 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-wrap: wrap;
   }
 
+}
+
+.rounded{
+  border-radius: 1rem;
 }

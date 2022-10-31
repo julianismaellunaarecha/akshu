@@ -59,8 +59,9 @@ function electronicProductsIndex() {
   for (let producto of productos) {
     if (producto.categoria == "electronicos" && !producto.descuento > 0) {
       outputspans += `
-                <span class="producto" id="idproducto">
-                  <div class="imagendelproducto"><img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto"></div>
+                <div class="producto" id="idproducto">
+                  <div class="imagendelproducto"><img class="marcoimagen" src="${producto.urlImagen}" alt="${producto.descripcion}" id="idimagenproducto">
+                  </div>
                   <span class="precio-cantidad-agregar">
                     <span class="preciodelproducto" id="idpreciodelproducto"> $ ${producto.precio}</span>
                     <div clss="cantidad-agregar">
@@ -75,7 +76,7 @@ function electronicProductsIndex() {
                   <div class="descripciondelproducto" id="iddescripciondelproducto">${producto.descripcion} 
                   </div>
                   <button class="button">Ver mas</button>
-                </span>
+                </div>
                 `;
       i++;
     }
@@ -119,7 +120,6 @@ function addHtmlToIndexSidebar() {
                       </span>
                     </div>
                     <div class="descripciondelproducto half">${producto.descripcion}</div>
-                    <button class="button">Ver mas</button>
                   </p>  
                 </div>  
       </div>
