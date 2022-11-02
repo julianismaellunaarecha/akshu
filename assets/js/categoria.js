@@ -1,4 +1,4 @@
-export let categorias = new Array();
+export let categorias = [];
 
 export function retrieveCategory(x) {
     switch (x) {

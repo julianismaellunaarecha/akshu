@@ -1,7 +1,7 @@
 import { precisePrice, precise } from "./comun.js";
 import { retrieveCategory } from "./categoria.js";
 
-export let productos = new Array();
+export let productos = [];
 
 export default class Producto {
   constructor(producto) {

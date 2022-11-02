@@ -11,7 +11,7 @@ async function toggleDisplay(element) {
 }
 
 async function carrouselProductos() {
-  let products = new Array();
+  let products = [];
   let outputdivs = ``;
   let indx1 = Math.floor(Math.random() * productos.length);
   let indx2 = Math.floor(Math.random() * productos.length);
