@@ -64,7 +64,8 @@
 }
 
 #idimgbusqueda{
-  height: 0.6rem;
+  height: 20px;
+  padding: 2px;
 }
 
 .collapsible {
@@ -78,4 +79,21 @@ li:hover>ol {
 
 .cart{
   background-color:rgba(255, 255, 255, 0.7);
+}
+
+#idinputform{
+  height: 18px;
+  border-radius: 2px 0px 0px 2px;
+  padding: 3px;
+}
+
+#idbuttonform{
+  width: 24px;
+  height: 24px;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.searchform{
+  display: flex;
+  align-items: center;
 }

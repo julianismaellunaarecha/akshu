@@ -1,6 +1,6 @@
 import { productos } from "./producto.js";
 
-function getMatchingWords(palabra) {
+export function getMatchingWords(palabra) {
   let respuesta = [];
   productos.forEach((producto) => {
     console.log(producto.titulo.match(new RegExp(palabra, "i")));

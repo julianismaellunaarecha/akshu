@@ -45,7 +45,7 @@ function loadHtml() {
             </div>
         </div>
         <div id="idsearchform">
-            <form>
+            <form class="searchform">
                 <input type="text" placeholder="Buscar producto o servicio" id="idinputform">
                 <button type="submit" id="idbuttonform" aria-label="Buscar">
                     <img id="idimgbusqueda" src="assets/icons/searchicongoogle.svg" alt="Imagen de una lupa que permite buscar productos o servicios tecnológicos provistos por Akshu">
