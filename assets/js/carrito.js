@@ -203,7 +203,7 @@ async function addEventListenerCarritoVaciar() {
   clearItemsFromCart.forEach((clearCart) => {
     clearCart.addEventListener("click", function () {
       localStorage.removeItem("allEntriesInCart");
-      location.reload();
+      location.reload(true);
     });
   });
 }
