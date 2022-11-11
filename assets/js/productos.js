@@ -75,7 +75,6 @@ async function addHtmlToProducts() {
 
 async function addHtmlToCategories() {
   let outputspanscat = `
-  <h4 class="titulocategoria filtercategory" id="idtitulocategoria">Categorias</h4>
   <div class="filter all" id="todo">Todo</div>
   `;
   for (let category of categorias) {
